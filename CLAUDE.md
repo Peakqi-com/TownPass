@@ -100,6 +100,7 @@ assets/svg/        108 個圖示（snake_case）
 - 新增服務、雙向溝通、自訂 Handler、WebView 注意事項：[`docs/townpass/adding-a-service.md`](docs/townpass/adding-a-service.md)
 - UI 設計系統（Figma UI Kit、色票、字級、無障礙、Figma MCP 讀取流程）：[`docs/townpass/design-system.md`](docs/townpass/design-system.md)
 - 後端與部署（Firebase／Cloud Run／Next.js + Vercel、串回城市通）：[`docs/townpass/deployment.md`](docs/townpass/deployment.md)
+- 開放資料（data.taipei 已驗證的 30 個資料集、編碼／座標／CORS 問題、題目方向）：[`docs/townpass/open-data.md`](docs/townpass/open-data.md)。找新資料集時先搜尋 `docs/townpass/open-data/data-taipei-catalog.csv`（全部 2,816 筆）
 
 ## 4. 開發慣例
 
