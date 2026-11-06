@@ -29,6 +29,8 @@ enum MyServiceItemId {
   library,
   locationSearch,
   zoo,
+  // 參賽作品：Peakqi-com/townpass2026-peakqi
+  peakqiService,
   ;
 }
 
@@ -182,6 +184,14 @@ extension MyServiceIdExt on MyServiceItemId {
           icon: Assets.svg.iconZoo24.svg(),
           category: MyServiceCategory.explore,
           destinationUrl: '',
+        ),
+      // TODO: 服務名稱、說明、分類確定後更新；正式圖示從 Figma 匯出後放進 assets/svg/ 並重跑 build_runner
+      MyServiceItemId.peakqiService => MyServiceItem(
+          title: '我的新服務',
+          description: '一句話介紹這個服務',
+          icon: Assets.svg.iconInfo.svg(),
+          category: MyServiceCategory.other,
+          destinationUrl: 'https://townpass2026-peakqi.vercel.app/',
         ),
     };
   }

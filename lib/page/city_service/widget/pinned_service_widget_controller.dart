@@ -7,6 +7,8 @@ class PinnedServiceWidgetController extends GetxController {
       MyServiceItemId.locationSearch,
       MyServiceItemId.districtOffice,
       MyServiceItemId.dashboard,
+      // 置頂清單只存在記憶體，App 重啟會回到這份預設清單；放在這裡讓 Demo 一打開就看得到
+      MyServiceItemId.peakqiService,
     ],
   );
 
