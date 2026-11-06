@@ -89,3 +89,5 @@ app.*.map.json
 
 # FVM Version Cache
 .fvm/
+# 城市通黑客松賽前工作坊指引（僅供本機參考，不進版控）
+/2026 城市通入門指引*.html
