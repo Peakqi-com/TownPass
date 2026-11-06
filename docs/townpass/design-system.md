@@ -121,6 +121,25 @@ curl -s -H "X-Figma-Token: $FIGMA_TOKEN" \
 }
 ```
 
+### 4.1b 語意色（Figma `3:390` Semantic colors，2026-11-06 讀取，見 `figma/tokens.json`）
+
+寫 UI 時**優先用語意色**，不要直接挑色階：
+
+| Figma 變數 | 色值 | 對應色階 | 用途 |
+|---|---|---|---|
+| `text-color/primary` | `#30383D` | grayscale-800 | 主要文字 |
+| `text-color/second` | `#475259` | grayscale-700 | 次要文字 |
+| `text-color/derection` | `#91A0A8` | grayscale-400 | 說明文字、placeholder |
+| `background-color/light` | `#FFFFFF` | white | 頁面背景 |
+| `background-color/dark` | `#F1F3F4` | grayscale-50 | 區塊背景、列表底色 |
+| `disable-color` | `#E3E7E9` | grayscale-100 | 停用狀態 |
+| `alarm-color/default`／`hover` | `#D45251`／`#E29494` | red-500／red-300 | 警示、錯誤、刪除（按鈕 Alarm） |
+| `reminder-color/default`／`hover` | `#FD853A`／`#F4B992` | orange-500／orange-300 | 提醒（按鈕 Reminder） |
+| `Primary/500` | `#5AB4C5` | primary-500 | 主要按鈕、強調色 |
+| `Grey/200` | `#CAD1D5` | grayscale-200 | 分隔線、邊框 |
+
+Figma 的色系名稱是 `Grey`，程式碼是 `grayscale`，兩者指的是同一組色票。
+
 ### 4.2 Tailwind（官方 Vue 範例的做法）
 
 ```js
@@ -139,14 +158,14 @@ export default {
 
 ### 4.3 字級（`TPTextStyles`，單位是 Flutter 邏輯像素，相當於 CSS px）
 
-| Token | 大小 | 字重 | Flutter |
-|---|---|---|---|
-| h1 | 36 | 400／600 | `h1Regular`、`h1SemiBold` |
-| h2 | 24 | 400／600 | `h2Regular`、`h2SemiBold` |
-| title | 18 | 600 | `titleSemiBold` |
-| h3 | 16 | 400／600 | `h3Regular`、`h3SemiBold` |
-| body | 14 | 400／600 | `bodyRegular`、`bodySemiBold` |
-| caption | 12 | 600（見 §7） | `caption` |
+| Token | 大小 | 行高（Figma） | 字重 | Flutter |
+|---|---|---|---|---|
+| h1 | 36 | **48** | 400／600 | `h1Regular`、`h1SemiBold` |
+| h2 | 24 | **32** | 400／600 | `h2Regular`、`h2SemiBold` |
+| title | 18 | 未讀取 | 600 | `titleSemiBold` |
+| h3 | 16 | 未讀取 | 400／600 | `h3Regular`、`h3SemiBold` |
+| body | 14 | **20** | 400／600 | `bodyRegular`、`bodySemiBold` |
+| caption | 12 | 未讀取 | 600（見 §7） | `caption` |
 
 字體：中文 **PingFang TC**，英數 **Roboto**。
 
@@ -200,11 +219,16 @@ export default {
 
 ---
 
-## 7. 已知差異／待確認（Figma 盤點後更新）
+## 7. 已知差異／待確認
 
-| 項目 | 程式碼 | 待確認 |
-|---|---|---|
-| `red400` 與 `red500` | 兩個都是 `#D45251` | 疑似原始碼筆誤，以 Figma 為準 |
-| `caption` 字重 | 註解寫 regular(w400)，實際是 `w600` | 以 Figma 為準 |
-| Figma frame 基準寬度 | — | 盤點後填入 |
-| 間距、圓角 scale | 程式碼沒有統一的 token（例如卡片圓角是 6.0） | 盤點後整理 |
+盤點結果（2026-11-06）：元件清單與 node id 見 [`figma/inventory.md`](figma/inventory.md)，語意色與行高見 [`figma/tokens.json`](figma/tokens.json)。
+
+| 項目 | 程式碼 | Figma | 結論 |
+|---|---|---|---|
+| 設計基準寬度 | — | **375px** | 以 375 設計，360～430 都要能正常顯示 |
+| `red400` 與 `red500` | 兩個都是 `#D45251` | `alarm-color/default` = `#D45251` | 實際使用的是 `#D45251`；red400 的正確值仍未確認，**不要用 red-400** |
+| 行高 | 未定義 | H1 48、H2 32、Body 20 | 已補進網頁 token；title、h3、caption 待讀 |
+| 字體名稱 | `PingFangTC` | 文字樣式寫 `PingFang SC`，Typography 頁寫「PingFang 蘋方」 | 維持用 **PingFang TC**（繁中字形），SC 是設計稿的設定 |
+| Green 色系 | **沒有** | Main colors 有 Green（`3:313`） | 色值未讀；地圖大頭針、check 圖示有用到綠色 |
+| `caption` 字重 | 註解寫 regular(w400)，實際是 `w600` | 未讀取 | 待確認 |
+| 間距、圓角 scale | 沒有統一的 token（卡片圓角是 6.0） | 未讀取 | 實作元件時用 `get_design_context` 確認 |

@@ -1,0 +1,1187 @@
+<canvas id="1:2" name="📱Foundation &amp; UI kit" x="0" y="0" width="0" height="0">
+  <frame id="3:15" name="Typography" x="-680" y="-886" width="1360" height="1770">
+    <frame id="3:16" name="Frame 35664" x="0" y="0" width="1360" height="1770">
+      <text id="3:17" name="Font-Familiy" x="70" y="201" width="220" height="48" />
+      <text id="3:18" name="Font-Size" x="71" y="574" width="171" height="48" />
+      <line id="3:19" name="Line 1" x="335" y="225" width="955" height="0" />
+      <line id="3:20" name="Line 2" x="280" y="595" width="1010" height="0" />
+      <frame id="3:21" name="Frame 35660" x="120" y="280" width="304" height="44">
+        <text id="3:22" name="中文 |" x="0" y="0" width="100" height="44" />
+        <text id="3:23" name="PingFang 蘋方" x="120" y="0" width="204" height="44" />
+      </frame>
+      <frame id="3:24" name="Frame 35661" x="120" y="364" width="304" height="44">
+        <text id="3:25" name="英文 |" x="0" y="0" width="100" height="44" />
+        <text id="3:26" name="Roboto" x="120" y="0" width="204" height="44" />
+      </frame>
+      <frame id="3:27" name="Frame 35662" x="120" y="448" width="304" height="44">
+        <text id="3:28" name="數字 |" x="0" y="0" width="100" height="44" />
+        <text id="3:29" name="Roboto" x="120" y="0" width="204" height="44" />
+      </frame>
+      <frame id="3:30" name="Style" x="447" y="654" width="57" height="1017">
+        <text id="3:31" name="Style" x="0" y="0" width="57" height="66" />
+        <text id="3:32" name="H1" x="0" y="106" width="57" height="66" />
+        <text id="3:33" name="H1" x="0" y="212" width="57" height="66" />
+        <text id="3:34" name="H2" x="0" y="318" width="57" height="66" />
+        <text id="3:35" name="H2" x="0" y="424" width="57" height="65" />
+        <text id="3:36" name="H3" x="0" y="529" width="57" height="66" />
+        <text id="3:37" name="H3" x="0" y="635" width="57" height="66" />
+        <text id="3:38" name="Body" x="0" y="741" width="57" height="65" />
+        <text id="3:39" name="Body" x="0" y="846" width="57" height="65" />
+        <text id="3:40" name="Caption" x="0" y="951" width="57" height="66" />
+      </frame>
+      <frame id="3:41" name="Style" x="530" y="654" width="48" height="1017">
+        <text id="3:42" name="Size" x="0" y="0" width="48" height="66" />
+        <text id="3:43" name="36" x="0" y="106" width="48" height="66" />
+        <text id="3:44" name="36" x="0" y="212" width="48" height="66" />
+        <text id="3:45" name="24" x="0" y="318" width="48" height="66" />
+        <text id="3:46" name="24" x="0" y="424" width="48" height="65" />
+        <text id="3:47" name="16" x="0" y="529" width="48" height="66" />
+        <text id="3:48" name="16" x="0" y="635" width="48" height="66" />
+        <text id="3:49" name="14" x="0" y="741" width="48" height="65" />
+        <text id="3:50" name="14" x="0" y="846" width="48" height="65" />
+        <text id="3:51" name="12" x="0" y="951" width="48" height="66" />
+      </frame>
+      <frame id="3:52" name="Style" x="623" y="654" width="99" height="1017">
+        <text id="3:53" name="Height" x="0" y="0" width="99" height="66" />
+        <text id="3:54" name="48" x="0" y="106" width="99" height="66" />
+        <text id="3:55" name="48" x="0" y="212" width="99" height="66" />
+        <text id="3:56" name="32" x="0" y="318" width="99" height="66" />
+        <text id="3:57" name="32" x="0" y="424" width="99" height="65" />
+        <text id="3:58" name="22" x="0" y="529" width="99" height="66" />
+        <text id="3:59" name="22" x="0" y="635" width="99" height="66" />
+        <text id="3:60" name="20" x="0" y="741" width="99" height="65" />
+        <text id="3:61" name="20" x="0" y="846" width="99" height="65" />
+        <text id="3:62" name="18" x="0" y="951" width="99" height="66" />
+      </frame>
+      <frame id="3:63" name="Style" x="748" y="654" width="167" height="1017">
+        <text id="3:64" name="Weight" x="0" y="0" width="181" height="66" />
+        <text id="3:65" name="regular" x="0" y="106" width="167" height="66" />
+        <text id="3:66" name="semibold" x="0" y="212" width="167" height="66" />
+        <text id="3:67" name="regular" x="0" y="318" width="167" height="66" />
+        <text id="3:68" name="semibold" x="0" y="424" width="167" height="65" />
+        <text id="3:69" name="regular" x="0" y="529" width="167" height="66" />
+        <text id="3:70" name="semibold" x="0" y="635" width="167" height="66" />
+        <text id="3:71" name="regular" x="0" y="741" width="167" height="65" />
+        <text id="3:72" name="semibold" x="0" y="846" width="167" height="65" />
+        <text id="3:73" name="regular" x="0" y="951" width="167" height="66" />
+      </frame>
+      <frame id="3:74" name="Style" x="941" y="654" width="306" height="1017">
+        <text id="3:75" name="Usage" x="0" y="0" width="306" height="66" />
+        <text id="3:76" name="重點強調文字" x="0" y="106" width="306" height="66" />
+        <text id="3:77" name="重點強調文字" x="0" y="212" width="306" height="66" />
+        <text id="3:78" name="頁面標題" x="0" y="318" width="306" height="66" />
+        <text id="3:79" name="頁面標題" x="0" y="424" width="306" height="65" />
+        <text id="3:80" name="區塊標題、功能卡片標題、試算結果" x="0" y="529" width="306" height="66" />
+        <text id="3:81" name="區塊標題、功能卡片標題、試算結果" x="0" y="635" width="306" height="66" />
+        <text id="3:82" name="內文主要文字（列表、彈窗、錯訊等）" x="0" y="741" width="306" height="65" />
+        <text id="3:83" name="內文主要文字（列表、彈窗、錯訊等）" x="0" y="846" width="306" height="65" />
+        <text id="3:84" name="盡量不要使用" x="0" y="951" width="306" height="66" />
+      </frame>
+      <frame id="3:85" name="Size" x="120" y="654" width="301" height="1017">
+        <text id="3:86" name="Tokens" x="0" y="0" width="301" height="66" />
+        <text id="3:87" name="font-H1-regular" x="0" y="106" width="301" height="66" />
+        <text id="3:88" name="font-H1-semibold" x="0" y="212" width="301" height="66" />
+        <text id="3:89" name="font-H2-regular" x="0" y="318" width="301" height="66" />
+        <text id="3:90" name="font-H2-semibold" x="0" y="424" width="301" height="65" />
+        <text id="3:91" name="font-H3-regular" x="0" y="529" width="301" height="66" />
+        <text id="3:92" name="font-H3-semibold" x="0" y="635" width="301" height="66" />
+        <text id="3:93" name="font-Body-regular" x="0" y="741" width="301" height="65" />
+        <text id="3:94" name="font-Body-semibold" x="0" y="846" width="301" height="65" />
+        <text id="3:95" name="font-Caption-regular" x="0" y="951" width="301" height="66" />
+      </frame>
+      <text id="3:96" name="｜Town Pass Design System" x="62" y="45" width="328" height="32" />
+    </frame>
+  </frame>
+  <frame id="3:141" name="Main colors" x="790" y="-886" width="1360" height="2559">
+    <frame id="3:142" name="Frame 35664" x="0" y="0" width="1360" height="3192">
+      <text id="3:143" name="Primary" x="70" y="200" width="132" height="48" />
+      <text id="3:144" name="Secondary" x="70" y="690" width="182" height="48" />
+      <text id="3:145" name="Grey" x="70" y="1180" width="81" height="48" />
+      <text id="3:146" name="Red" x="70" y="1670" width="68" height="48" />
+      <text id="3:147" name="Orange" x="70" y="1960" width="125" height="48" />
+      <line id="3:148" name="Line 1" x="245" y="224" width="1045" height="0.000091356808979981" />
+      <line id="3:149" name="Line 2" x="283" y="714" width="1007" height="0" />
+      <line id="3:150" name="Line 3" x="186" y="1204" width="1104" height="0.00008908380789307557" />
+      <line id="3:151" name="Line 4" x="163" y="1694" width="1127" height="0.00008908380493721779" />
+      <line id="3:152" name="Line 5" x="219" y="1984" width="1071" height="0.00008908380686989403" />
+      <frame id="3:153" name="Group 35678" x="120" y="770" width="1170" height="330">
+        <frame id="3:154" name="color-Primary/50" x="120" y="770" width="185.42636108398438" height="130">
+          <frame id="3:155" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:156" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:157" name="Secondary / 50" x="10" y="8" width="112" height="20" />
+              <text id="3:158" name="#FDF8ED" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:159" name="color-Secondary/50" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:160" name="color-Primary/100" x="316.5116271972656" y="769.9999999999998" width="186.43411254882812" height="130">
+          <frame id="3:161" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+            <frame id="3:162" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:163" name="Secondary / 100" x="10" y="8" width="112" height="20" />
+              <text id="3:164" name="#FCF2DF" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:165" name="color-Secondary/100" x="0" y="110" width="186.43411254882812" height="20" />
+        </frame>
+        <frame id="3:166" name="color-Primary/200" x="514.031005859375" y="769.9999999999998" width="185.42636108398438" height="130">
+          <frame id="3:167" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:168" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:169" name="Secondary / 200" x="10" y="8" width="112" height="20" />
+              <text id="3:170" name="#F8E3BC" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:171" name="color-Secondary/200" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:172" name="color-Primary/300" x="711.5504150390625" y="769.9999999999998" width="185.42636108398438" height="130">
+          <frame id="3:173" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:174" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:175" name="Secondary / 300" x="10" y="8" width="112" height="20" />
+              <text id="3:176" name="#F4D69E" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:177" name="color-Secondary/300" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:178" name="color-Primary/400" x="908.06201171875" y="769.9999999999998" width="186.43411254882812" height="130">
+          <frame id="3:179" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+            <frame id="3:180" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:181" name="Secondary / 400" x="10" y="8" width="112" height="20" />
+              <text id="3:182" name="#F0C87C" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:183" name="color-Secondary/400" x="0" y="110" width="186.43411254882812" height="20" />
+        </frame>
+        <frame id="3:184" name="color-Primary/500" x="1105.5814208984375" y="769.9999999999998" width="184.41860961914062" height="130">
+          <frame id="3:185" name="Frame 35695" x="0" y="0" width="184.41860961914062" height="100">
+            <frame id="3:186" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:187" name="Secondary / 500" x="10" y="8" width="112" height="20" />
+              <text id="3:188" name="#F5BA4B" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:189" name="color-Secondary/500" x="0" y="110" width="184.41860961914062" height="20" />
+        </frame>
+        <frame id="3:190" name="color-Primary/600" x="120" y="970" width="185.42636108398438" height="130">
+          <frame id="3:191" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:192" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:193" name="Secondary / 600" x="10" y="8" width="112" height="20" />
+              <text id="3:194" name="#E7A43C" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:195" name="color-Secondary/600" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:196" name="color-Primary/700" x="316.5116271972656" y="970" width="186.43411254882812" height="130">
+          <frame id="3:197" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+            <frame id="3:198" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:199" name="Secondary / 700" x="10" y="8" width="112" height="20" />
+              <text id="3:200" name="#AD7B2B" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:201" name="color-Secondary/700" x="0" y="110" width="186.43411254882812" height="20" />
+        </frame>
+        <frame id="3:202" name="color-Primary/800" x="514.031005859375" y="970" width="185.42636108398438" height="130">
+          <frame id="3:203" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:204" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:205" name="Secondary / 800" x="10" y="8" width="112" height="20" />
+              <text id="3:206" name="#74521B" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:207" name="color-Secondary/800" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:208" name="color-Primary/900" x="711.5504150390625" y="970" width="185.42636108398438" height="130">
+          <frame id="3:209" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:210" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:211" name="Secondary / 900" x="10" y="8" width="112" height="20" />
+              <text id="3:212" name="#3C2B0B" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:213" name="color-Primary/900" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:214" name="color-Primary/950" x="908.06201171875" y="970" width="186.43411254882812" height="130">
+          <frame id="3:215" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+            <frame id="3:216" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:217" name="Secondary / 950" x="10" y="8" width="112" height="20" />
+              <text id="3:218" name="#1C1304" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:219" name="color-Primary/950" x="0" y="110" width="186.43411254882812" height="20" />
+        </frame>
+      </frame>
+      <frame id="3:220" name="Group 35679" x="120" y="1260" width="1170" height="330">
+        <frame id="3:221" name="color-Primary/50" x="120" y="1260" width="185.42636108398438" height="130">
+          <frame id="3:222" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:223" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:224" name="Grey / 50" x="10" y="8" width="112" height="20" />
+              <text id="3:225" name="#F1F3F4" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:226" name="color-Grey/50" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:227" name="color-Primary/100" x="316.5116271972656" y="1259.9999999999998" width="186.43411254882812" height="130">
+          <frame id="3:228" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+            <frame id="3:229" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:230" name="Grey / 100" x="10" y="8" width="112" height="20" />
+              <text id="3:231" name="#E3E7E9" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:232" name="color-Grey/100" x="0" y="110" width="186.43411254882812" height="20" />
+        </frame>
+        <frame id="3:233" name="color-Primary/200" x="514.031005859375" y="1259.9999999999998" width="185.42636108398438" height="130">
+          <frame id="3:234" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:235" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:236" name="Grey / 200" x="10" y="8" width="112" height="20" />
+              <text id="3:237" name="#CAD1D5" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:238" name="color-Grey/200" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:239" name="color-Primary/300" x="711.5504150390625" y="1259.9999999999998" width="185.42636108398438" height="130">
+          <frame id="3:240" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:241" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:242" name="Grey / 300" x="10" y="8" width="112" height="20" />
+              <text id="3:243" name="#ADB8BE" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:244" name="color-Grey/300" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:245" name="color-Primary/400" x="908.06201171875" y="1259.9999999999998" width="186.43411254882812" height="130">
+          <frame id="3:246" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+            <frame id="3:247" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:248" name="Grey / 400" x="10" y="8" width="112" height="20" />
+              <text id="3:249" name="#91A0A8" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:250" name="color-Grey/400" x="0" y="110" width="186.43411254882812" height="20" />
+        </frame>
+        <frame id="3:251" name="color-Primary/500" x="1105.5814208984375" y="1259.9999999999998" width="184.41860961914062" height="130">
+          <frame id="3:252" name="Frame 35695" x="0" y="0" width="184.41860961914062" height="100">
+            <frame id="3:253" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:254" name="Grey / 500" x="10" y="8" width="112" height="20" />
+              <text id="3:255" name="#738995" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:256" name="color-Grey/500" x="0" y="110" width="184.41860961914062" height="20" />
+        </frame>
+        <frame id="3:257" name="color-Primary/600" x="120" y="1460" width="185.42636108398438" height="130">
+          <frame id="3:258" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:259" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:260" name="Grey / 600" x="10" y="8" width="112" height="20" />
+              <text id="3:261" name="#5E6D76" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:262" name="color-Grey/600" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:263" name="color-Primary/700" x="316.5116271972656" y="1460" width="186.43411254882812" height="130">
+          <frame id="3:264" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+            <frame id="3:265" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:266" name="Grey / 700" x="10" y="8" width="112" height="20" />
+              <text id="3:267" name="#475259" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:268" name="color-Grey/700" x="0" y="110" width="186.43411254882812" height="20" />
+        </frame>
+        <frame id="3:269" name="color-Primary/800" x="514.031005859375" y="1460" width="185.42636108398438" height="130">
+          <frame id="3:270" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:271" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:272" name="Grey / 800" x="10" y="8" width="112" height="20" />
+              <text id="3:273" name="#30383D" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:274" name="color-Grey/800" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:275" name="color-Primary/900" x="711.5504150390625" y="1460" width="185.42636108398438" height="130">
+          <frame id="3:276" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:277" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:278" name="Grey / 900" x="10" y="8" width="112" height="20" />
+              <text id="3:279" name="#171B1D" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:280" name="color-Grey/900" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:281" name="color-Primary/950" x="908.06201171875" y="1460" width="186.43411254882812" height="130">
+          <frame id="3:282" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+            <frame id="3:283" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:284" name="Grey / 950" x="10" y="8" width="112" height="20" />
+              <text id="3:285" name="#0B0D0E" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:286" name="color-Grey/950" x="0" y="110" width="186.43411254882812" height="20" />
+        </frame>
+      </frame>
+      <frame id="3:287" name="Group 35680" x="120" y="1750" width="382.94573974609375" height="130">
+        <frame id="3:288" name="color-Primary/50" x="120" y="1750" width="185.42636108398438" height="130">
+          <frame id="3:289" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:290" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:291" name="Red / 300" x="10" y="8" width="112" height="20" />
+              <text id="3:292" name="#E29494" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:293" name="color-Red/300" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:294" name="color-Primary/100" x="316.5116271972656" y="1749.9999999999998" width="186.43411254882812" height="130">
+          <frame id="3:295" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+            <frame id="3:296" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:297" name="Red / 500" x="10" y="8" width="112" height="20" />
+              <text id="3:298" name="#D45251" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:299" name="color-Red/500" x="0" y="110" width="186.43411254882812" height="20" />
+        </frame>
+      </frame>
+      <frame id="3:300" name="Group 35681" x="120" y="2040" width="382.94573974609375" height="130">
+        <frame id="3:301" name="color-Primary/50" x="120" y="2040" width="185.42636108398438" height="130">
+          <frame id="3:302" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+            <frame id="3:303" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:304" name="Orange / 300" x="10" y="8" width="112" height="20" />
+              <text id="3:305" name="#F4B992" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:306" name="color-Orange/300" x="0" y="110" width="185.42636108398438" height="20" />
+        </frame>
+        <frame id="3:307" name="color-Primary/100" x="316.5116271972656" y="2039.9999999999998" width="186.43411254882812" height="130">
+          <frame id="3:308" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+            <frame id="3:309" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:310" name="Orange / 500" x="10" y="8" width="112" height="20" />
+              <text id="3:311" name="#FD853A" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:312" name="color-Orange/500" x="0" y="110" width="186.43411254882812" height="20" />
+        </frame>
+      </frame>
+    </frame>
+    <text id="3:313" name="Green" x="70" y="2250" width="103" height="48" />
+    <line id="3:314" name="Line 5" x="195" y="2274" width="1095" height="0.00008908380777938874" />
+    <frame id="3:315" name="Group 35681" x="120" y="2330" width="185.42636108398438" height="130">
+      <frame id="3:316" name="color-Primary/50" x="120" y="2330" width="185.42636108398438" height="130">
+        <frame id="3:317" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+          <frame id="3:318" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:319" name="Green / 500" x="10" y="8" width="112" height="20" />
+            <text id="3:320" name="#76A732" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:321" name="color-Green/500" x="0" y="110" width="185.42636108398438" height="20" />
+      </frame>
+    </frame>
+    <frame id="3:322" name="Group 35678" x="120" y="280" width="1170" height="330">
+      <frame id="3:323" name="color-Primary/50" x="120" y="280" width="185.42636108398438" height="130">
+        <frame id="3:324" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+          <frame id="3:325" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:326" name="Primary / 50" x="10" y="8" width="112" height="20" />
+            <text id="3:327" name="#EDF8FA" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:328" name="color-Primary/50" x="0" y="110" width="185.42636108398438" height="20" />
+      </frame>
+      <frame id="3:329" name="color-Primary/100" x="316.5116271972656" y="280" width="186.43411254882812" height="130">
+        <frame id="3:330" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+          <frame id="3:331" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:332" name="Primary / 100" x="10" y="8" width="112" height="20" />
+            <text id="3:333" name="#DBF1F5" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:334" name="color-Primary/100" x="0" y="110" width="186.43411254882812" height="20" />
+      </frame>
+      <frame id="3:335" name="color-Primary/200" x="514.031005859375" y="280" width="185.42636108398438" height="130">
+        <frame id="3:336" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+          <frame id="3:337" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:338" name="Primary / 200" x="10" y="8" width="112" height="20" />
+            <text id="3:339" name="#B4E2EA" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:340" name="color-Primary/200" x="0" y="110" width="185.42636108398438" height="20" />
+      </frame>
+      <frame id="3:341" name="color-Primary/300" x="711.5504150390625" y="280" width="185.42636108398438" height="130">
+        <frame id="3:342" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+          <frame id="3:343" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:344" name="Primary / 300" x="10" y="8" width="112" height="20" />
+            <text id="3:345" name="#93D4DF" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:346" name="color-Primary/300" x="0" y="110" width="185.42636108398438" height="20" />
+      </frame>
+      <frame id="3:347" name="color-Primary/400" x="908.06201171875" y="280" width="186.43411254882812" height="130">
+        <frame id="3:348" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+          <frame id="3:349" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:350" name="Primary / 400" x="10" y="8" width="112" height="20" />
+            <text id="3:351" name="#71C5D5" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:352" name="color-Primary/400" x="0" y="110" width="186.43411254882812" height="20" />
+      </frame>
+      <frame id="3:353" name="color-Primary/500" x="1105.5814208984375" y="280" width="184.41860961914062" height="130">
+        <frame id="3:354" name="Frame 35695" x="0" y="0" width="184.41860961914062" height="100">
+          <frame id="3:355" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:356" name="Primary / 500" x="10" y="8" width="112" height="20" />
+            <text id="3:357" name="#5AB4C5" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:358" name="color-Primary/500" x="0" y="110" width="184.41860961914062" height="20" />
+      </frame>
+      <frame id="3:359" name="color-Primary/600" x="120" y="480" width="185.42636108398438" height="130">
+        <frame id="3:360" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+          <frame id="3:361" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:362" name="Primary / 600" x="10" y="8" width="112" height="20" />
+            <text id="3:363" name="#468D9B" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:364" name="color-Primary/600" x="0" y="110" width="185.42636108398438" height="20" />
+      </frame>
+      <frame id="3:365" name="color-Primary/700" x="316.5116271972656" y="480" width="186.43411254882812" height="130">
+        <frame id="3:366" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+          <frame id="3:367" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:368" name="Primary / 700" x="10" y="8" width="112" height="20" />
+            <text id="3:369" name="#356C77" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:370" name="color-Primary/700" x="0" y="110" width="186.43411254882812" height="20" />
+      </frame>
+      <frame id="3:371" name="color-Primary/800" x="514.031005859375" y="480" width="185.42636108398438" height="130">
+        <frame id="3:372" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+          <frame id="3:373" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:374" name="Primary / 800" x="10" y="8" width="112" height="20" />
+            <text id="3:375" name="#22474E" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:376" name="color-Primary/800" x="0" y="110" width="185.42636108398438" height="20" />
+      </frame>
+      <frame id="3:377" name="color-Primary/900" x="711.5504150390625" y="480" width="185.42636108398438" height="130">
+        <frame id="3:378" name="Frame 35695" x="0" y="0" width="185.42636108398438" height="100">
+          <frame id="3:379" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:380" name="Primary / 900" x="10" y="8" width="112" height="20" />
+            <text id="3:381" name="#112629" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:382" name="color-Primary/900" x="0" y="110" width="185.42636108398438" height="20" />
+      </frame>
+      <frame id="3:383" name="color-Primary/950" x="908.06201171875" y="480" width="186.43411254882812" height="130">
+        <frame id="3:384" name="Frame 35695" x="0" y="0" width="186.43411254882812" height="100">
+          <frame id="3:385" name="Frame 35694" x="0" y="42" width="132" height="58">
+            <text id="3:386" name="Primary / 950" x="10" y="8" width="112" height="20" />
+            <text id="3:387" name="#081315" x="10" y="28" width="112" height="20" />
+          </frame>
+        </frame>
+        <text id="3:388" name="color-Primary/950" x="0" y="110" width="186.43411254882812" height="20" />
+      </frame>
+    </frame>
+    <text id="3:389" name="｜Town Pass Design System" x="62" y="45" width="328" height="32" />
+  </frame>
+  <frame id="3:390" name="Semantic colors" x="2250" y="-886" width="1360" height="1670">
+    <frame id="3:391" name="Frame 35664" x="0" y="0" width="1360" height="1670">
+      <text id="3:392" name="Background" x="70" y="200" width="206" height="48" />
+      <text id="3:393" name="Reminder" x="70" y="780" width="164" height="48" />
+      <text id="3:394" name="Disable" x="70" y="1070" width="127" height="48" />
+      <text id="3:395" name="Text" x="70" y="1360" width="75" height="48" />
+      <text id="3:396" name="Alarm" x="70" y="490" width="100" height="48" />
+      <line id="3:397" name="Line 4" x="295" y="224" width="995" height="2.2737367544323206e-13" />
+      <line id="3:398" name="Line 6" x="252" y="804" width="1038" height="2.5579538487363607e-13" />
+      <line id="3:399" name="Line 7" x="221" y="1094" width="1069" height="2.5579538487363607e-13" />
+      <line id="3:400" name="Line 8" x="170" y="1384" width="1120" height="2.8421709430404007e-13" />
+      <line id="3:401" name="Line 5" x="195" y="514" width="1095" height="2.8421709430404007e-13" />
+      <frame id="3:402" name="Group 35680" x="120" y="280" width="579.4189453125" height="130">
+        <frame id="3:403" name="color-Primary/50" x="120" y="280" width="284.12835693359375" height="130">
+          <frame id="3:404" name="Frame 35695" x="0" y="0" width="284.12835693359375" height="100">
+            <frame id="3:405" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:406" name="White / 50" x="10" y="8" width="112" height="20" />
+              <text id="3:407" name="#FFFFF" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:408" name="background-color-White/50" x="0" y="110" width="284.12835693359375" height="20" />
+        </frame>
+        <frame id="3:409" name="color-Primary/100" x="415.2905578613281" y="280" width="284.12835693359375" height="130">
+          <frame id="3:410" name="Frame 35695" x="0" y="0" width="284.12835693359375" height="100">
+            <frame id="3:411" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:412" name="Grey / 50" x="10" y="8" width="112" height="20" />
+              <text id="3:413" name="#E3E7E9" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:414" name="background-color-Grey/50" x="0" y="110" width="284.12835693359375" height="20" />
+        </frame>
+      </frame>
+      <frame id="3:415" name="Group 35682" x="120" y="860" width="579.4189453125" height="130">
+        <frame id="3:416" name="color-Primary/50" x="120" y="860" width="284.12835693359375" height="130">
+          <frame id="3:417" name="Frame 35695" x="0" y="0" width="284.12835693359375" height="100">
+            <frame id="3:418" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:419" name="Ｏrange / 300" x="10" y="8" width="112" height="20" />
+              <text id="3:420" name="#F4B992" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:421" name="reminder-hover-color-Orang/300" x="0" y="110" width="284.12835693359375" height="20" />
+        </frame>
+        <frame id="3:422" name="color-Primary/100" x="415.2905578613281" y="860" width="284.12835693359375" height="130">
+          <frame id="3:423" name="Frame 35695" x="0" y="0" width="284.12835693359375" height="100">
+            <frame id="3:424" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:425" name="Orange / 500" x="10" y="8" width="112" height="20" />
+              <text id="3:426" name="#FD853A" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:427" name="reminder-default-color-Orang/500" x="0" y="110" width="284.12835693359375" height="20" />
+        </frame>
+      </frame>
+      <frame id="3:428" name="Group 35683" x="120" y="1150" width="284.12835693359375" height="130">
+        <frame id="3:429" name="color-Primary/50" x="120" y="1150" width="284.12835693359375" height="130">
+          <frame id="3:430" name="Frame 35695" x="0" y="0" width="284.12835693359375" height="100">
+            <frame id="3:431" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:432" name="Gray / 100" x="10" y="8" width="112" height="20" />
+              <text id="3:433" name="#CAD1D5" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:434" name="disable-color-Gray/100" x="0" y="110" width="284.12835693359375" height="20" />
+        </frame>
+      </frame>
+      <frame id="3:435" name="Group 35684" x="120" y="1440" width="874.70947265625" height="130">
+        <frame id="3:436" name="color-Primary/50" x="120" y="1440" width="284.12835693359375" height="130">
+          <frame id="3:437" name="Frame 35695" x="0" y="0" width="284.12835693359375" height="100">
+            <frame id="3:438" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:439" name="Gray / 400" x="10" y="8" width="112" height="20" />
+              <text id="3:440" name="#91A0A8" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:441" name="text-derection-color-Gray/400" x="0" y="110" width="284.12835693359375" height="20" />
+        </frame>
+        <frame id="3:442" name="color-Primary/100" x="415.2905578613281" y="1440" width="284.12835693359375" height="130">
+          <frame id="3:443" name="Frame 35695" x="0" y="0" width="284.12835693359375" height="100">
+            <frame id="3:444" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:445" name="Grey / 700" x="10" y="8" width="112" height="20" />
+              <text id="3:446" name="#475259" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:447" name="text-second-color-Gray/700" x="0" y="110" width="284.12835693359375" height="20" />
+        </frame>
+        <frame id="3:448" name="color-Primary/100" x="710.5811157226562" y="1440" width="284.12835693359375" height="130">
+          <frame id="3:449" name="Frame 35695" x="0" y="0" width="284.12835693359375" height="100">
+            <frame id="3:450" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:451" name="Grey / 800" x="10" y="8" width="112" height="20" />
+              <text id="3:452" name="#30383D" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:453" name="text-primary-color-Gray/800" x="0" y="110" width="284.12835693359375" height="20" />
+        </frame>
+      </frame>
+      <frame id="3:454" name="Group 35681" x="120" y="570" width="579.4189453125" height="130">
+        <frame id="3:455" name="color-Primary/50" x="120" y="570" width="284.12835693359375" height="130">
+          <frame id="3:456" name="Frame 35695" x="0" y="0" width="284.12835693359375" height="100">
+            <frame id="3:457" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:458" name="Red / 300" x="10" y="8" width="112" height="20" />
+              <text id="3:459" name="#E29494" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:460" name="alarm-hover-color-Red/300" x="0" y="110" width="284.12835693359375" height="20" />
+        </frame>
+        <frame id="3:461" name="color-Primary/100" x="415.2905578613281" y="570" width="284.12835693359375" height="130">
+          <frame id="3:462" name="Frame 35695" x="0" y="0" width="284.12835693359375" height="100">
+            <frame id="3:463" name="Frame 35694" x="0" y="42" width="132" height="58">
+              <text id="3:464" name="Red / 500" x="10" y="8" width="112" height="20" />
+              <text id="3:465" name="#D45251" x="10" y="28" width="112" height="20" />
+            </frame>
+          </frame>
+          <text id="3:466" name="alarm-default-color-red/500" x="0" y="110" width="284.12835693359375" height="20" />
+        </frame>
+      </frame>
+    </frame>
+    <text id="3:467" name="｜Town Pass Design System" x="62" y="45" width="328" height="32" />
+  </frame>
+  <frame id="3:1591" name="icon" x="-620" y="2299" width="1360" height="2248">
+    <frame id="3:1592" name="Frame 1" x="119" y="1417" width="1072" height="86">
+      <instance id="3:1593" name="tp_icon_essential_goods" x="10" y="10" width="24" height="24" />
+      <instance id="3:1594" name="tp_icon_water_meter" x="44" y="10" width="24" height="24" />
+      <instance id="3:1595" name="tp_icon_explore_taipei " x="78" y="10" width="24" height="24" />
+      <instance id="3:1596" name="tp_icon_checkin" x="112" y="10" width="24" height="24" />
+      <instance id="3:1597" name="tp_icon_report " x="146" y="10" width="24" height="24" />
+      <instance id="3:1598" name="tp_icon_municipal_navigation" x="180" y="10" width="24" height="24" />
+      <instance id="3:1599" name="tp_icon_building_management" x="214" y="10" width="24" height="24" />
+      <instance id="3:1600" name="tp_icon_pet" x="248" y="10" width="24" height="24" />
+      <instance id="3:1601" name="tp_icon_crowd_density" x="282" y="10" width="24" height="24" />
+      <instance id="3:1602" name="tp_icon_food_safety" x="316" y="10" width="24" height="24" />
+      <instance id="3:1603" name="tp_icon_cone_traffic" x="350" y="10" width="24" height="24" />
+      <instance id="3:1604" name="tp_icon_illegal_parking" x="384" y="10" width="24" height="24" />
+      <instance id="3:1605" name="tp_icon_tree" x="418" y="10" width="24" height="24" />
+      <instance id="3:1606" name="tp_icon_environmental_inspection" x="452" y="10" width="24" height="24" />
+      <instance id="3:1607" name="tp_icon_talk" x="486" y="10" width="24" height="24" />
+      <instance id="3:1608" name="tp_icon_blood donation" x="520" y="10" width="24" height="24" />
+      <instance id="3:1609" name="tp_icon_security" x="554" y="10" width="24" height="24" />
+      <instance id="3:1610" name="tp_icon_history 1" x="588" y="10" width="24" height="24" />
+      <instance id="3:1611" name="tp_icon_others" x="622" y="10" width="24" height="24" />
+      <instance id="3:1612" name="tp_icon_1999phone_s" x="656" y="10" width="24" height="24" />
+      <instance id="3:1613" name="tp_icon_poster" x="690" y="10" width="32" height="32" />
+      <instance id="3:1614" name="tp_icon_info" x="732" y="10" width="24" height="24" />
+      <instance id="3:1615" name="tp_icon_bus" x="766" y="10" width="24" height="24" />
+      <instance id="3:1616" name="tp_icon_dashboard_person" x="800" y="10" width="24" height="24" />
+      <instance id="3:1617" name="tp_icon_remove" x="834" y="10" width="24" height="24" />
+      <instance id="3:1618" name="tp_icon_unchecked" x="868" y="10" width="24" height="24" />
+      <instance id="3:1619" name="tp_icon_library_borrow " x="902" y="10" width="24" height="24" />
+      <instance id="3:1620" name="tp_icon_reservation" x="936" y="10" width="24" height="24" />
+      <instance id="3:1621" name="tp_icon_forest" x="970" y="10" width="24" height="24" />
+      <instance id="3:1622" name="tp_icon_feedback" x="1004" y="10" width="24" height="24" />
+      <instance id="3:1623" name="tpicon_vote_ballot " x="1038" y="10" width="24" height="24" />
+      <instance id="3:1624" name="tp_icon_faq" x="10" y="52" width="24" height="24" />
+      <instance id="3:1625" name="tp_icon_community_service" x="44" y="52" width="24" height="24" />
+      <instance id="3:1626" name="tp_icon_parking_ticket" x="78" y="52" width="24" height="24" />
+      <instance id="3:1627" name="tp_icon_taipei city hospital" x="112" y="52" width="24" height="24" />
+    </frame>
+    <frame id="3:1628" name="Frame 4" x="120" y="1527" width="178" height="52">
+      <instance id="3:1629" name="tp_icon_1999_speak" x="10" y="10" width="32" height="32" />
+      <instance id="3:1630" name="tp_icon_question" x="52" y="10" width="32" height="32" />
+      <instance id="3:1631" name="tp_icon_protect" x="94" y="10" width="32" height="32" />
+      <instance id="3:1632" name="tp_icon_1999_phone" x="136" y="10" width="32" height="32" />
+    </frame>
+    <frame id="3:1633" name="Frame 3" x="119" y="1695" width="406" height="76">
+      <instance id="3:1634" name="tp_icon_reusable_cup" x="10" y="10" width="56" height="56" />
+      <instance id="3:1635" name="tp_icon_zoo" x="76" y="10" width="56" height="56" />
+      <instance id="3:1636" name="tp_icon_taipei_radio" x="142" y="10" width="56" height="56" />
+      <instance id="3:1637" name="tp_icon_playground" x="208" y="10" width="56" height="56" />
+      <instance id="3:1638" name="tp_icon_add" x="274" y="10" width="56" height="56" />
+      <instance id="3:1639" name="tp_icon_vaccine" x="340" y="10" width="56" height="56" />
+    </frame>
+    <frame id="3:1640" name="Frame 2" x="119" y="1603" width="300" height="68">
+      <instance id="3:1641" name="tp_icon_more" x="10" y="10" width="48" height="48" />
+      <instance id="3:1642" name="tp_icon_1999" x="68" y="10" width="48" height="48" />
+      <instance id="3:1643" name="tp_icon_police" x="126" y="10" width="48" height="48" />
+      <instance id="3:1644" name="tp_icon_festival" x="184" y="10" width="48" height="48" />
+      <instance id="3:1645" name="tp_icon_covid_medical" x="242" y="10" width="48" height="48" />
+    </frame>
+    <frame id="3:1646" name="Frame 5" x="121" y="1795" width="242" height="68">
+      <instance id="3:1647" name="tp_icon_camera" x="10" y="10" width="48" height="48" />
+      <instance id="3:1648" name="tp_icon_health" x="68" y="10" width="48" height="48" />
+      <instance id="3:1649" name="tp_icon_location_search" x="126" y="10" width="48" height="48" />
+      <instance id="3:1650" name="tp_icon_dashboard_reports" x="184" y="10" width="48" height="48" />
+    </frame>
+    <frame id="3:1651" name="Frame 6" x="118" y="2021" width="262" height="71">
+      <symbol id="3:1652" name="logo_townpass_horizontal" x="-1.5" y="10" width="156" height="51" />
+      <symbol id="3:1654" name="logo_townpass" x="171.5" y="11" width="92" height="49" />
+    </frame>
+    <frame id="3:1659" name="primary_icon_check and cancel" x="345" y="434" width="418" height="44">
+      <symbol id="3:1660" name="type=check, ring=no, color=default, fill=no" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1663" name="type=check, ring=no, color=primary, fill=no" x="44" y="10" width="24" height="24" />
+      <symbol id="3:1666" name="type=check, ring=yes, color=default, fill=no" x="78" y="10" width="24" height="24" />
+      <symbol id="3:1671" name="type=check, ring=yes, color=primary, fill=no" x="112" y="10" width="24" height="24" />
+      <symbol id="3:1676" name="type=check, ring=yes, color=grey, fill=no" x="146" y="10" width="24" height="24" />
+      <symbol id="3:1681" name="type=check, ring=yes, color=primary, fill=yes" x="180" y="10" width="24" height="24" />
+      <symbol id="3:1684" name="type=check, ring=yes, color=green, fill=yes" x="214" y="10" width="24" height="24" />
+      <symbol id="3:1687" name="type=cancel, ring=no, color=default, fill=no" x="248" y="10" width="24" height="24" />
+      <symbol id="3:1690" name="type=cancel, ring=yes, color=default, fill=no" x="282" y="10" width="24" height="24" />
+      <symbol id="3:1694" name="type=cancel, ring=yes, color=primary, fill=no" x="316" y="10" width="24" height="24" />
+      <symbol id="3:1698" name="type=cancel, ring=yes, color=primary, fill=yes" x="350" y="10" width="24" height="24" />
+      <symbol id="3:1704" name="type=cancel, ring=yes, color=grey, fill=yes" x="384" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1710" name="primary_icon_import and export" x="208" y="280" width="78" height="44">
+      <symbol id="3:1711" name="type=export" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1717" name="type=import" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1722" name="primary_icon_mention" x="297" y="280" width="78" height="44">
+      <symbol id="3:1723" name="news=no" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1726" name="news=yes" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1732" name="primary_icon_add and remove" x="120" y="434" width="214" height="44">
+      <symbol id="3:1733" name="type=add, ring=no, fill=no, color=default" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1738" name="type=add, ring=yes, fill=no, color=default" x="44" y="10" width="24" height="24" />
+      <symbol id="3:1742" name="type=add, ring=yes, fill=yes, color=primary" x="78" y="10" width="24" height="24" />
+      <symbol id="3:1746" name="type=add, ring=yes, fill=yes, color=grey" x="112" y="10" width="24" height="24" />
+      <symbol id="3:1750" name="type=remove, ring=no, fill=no, color=default" x="146" y="10" width="24" height="24" />
+      <symbol id="3:1753" name="type=remove, ring=no, fill=yes, color=grey" x="180" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1756" name="primary_icon_expand" x="653" y="280" width="146" height="44">
+      <symbol id="3:1757" name="type=left" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1759" name="type=rght" x="44" y="10" width="24" height="24" />
+      <symbol id="3:1761" name="type=up" x="78" y="10" width="24" height="24" />
+      <symbol id="3:1763" name="type=down" x="112" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1765" name="primary_icon_menu" x="386" y="280" width="78" height="44">
+      <symbol id="3:1766" name="news=no" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1770" name="news=yes" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1775" name="primary_icon_refound" x="475" y="280" width="78" height="44">
+      <symbol id="3:1776" name="type=back" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1778" name="type=forward" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1780" name="primary_icon_sound and view" x="810" y="280" width="146" height="44">
+      <symbol id="3:1781" name="type=sound, turn=on" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1785" name="type=sound, turn=off" x="44" y="10" width="24" height="24" />
+      <symbol id="3:1789" name="type=view, turn=on" x="78" y="10" width="24" height="24" />
+      <symbol id="3:1792" name="type=view, turn=off" x="112" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1800" name="primary_icon_trash" x="564" y="280" width="78" height="44">
+      <symbol id="3:1801" name="type=default" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1809" name="type=open" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1817" name="primary_icon_notification toggle" x="486" y="357" width="110" height="46">
+      <symbol id="3:1818" name="type=turn on" x="10" y="10" width="40" height="26" />
+      <symbol id="3:1821" name="type=turn off" x="60" y="10" width="40" height="26" />
+    </frame>
+    <frame id="3:1824" name="primary_icon_scan" x="119" y="280" width="78" height="44">
+      <symbol id="3:1825" name="style=gray" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1832" name="white" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1839" name="primary_icon_like and bookmark" x="607" y="357" width="146" height="44">
+      <symbol id="3:1840" name="type=Like, fill=yes" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1842" name="type=Like, fill=no" x="44" y="10" width="24" height="24" />
+      <symbol id="3:1844" name="type=bookmark, fill=yes" x="78" y="10" width="24" height="24" />
+      <symbol id="3:1846" name="type=bookmark, fill=no" x="112" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1848" name="primary_icon_phone" x="397" y="357" width="78" height="44">
+      <symbol id="3:1849" name="type=default" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1851" name="type=fill" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1853" name="primary_icon_electricity" x="119" y="357" width="78" height="44">
+      <symbol id="3:1854" name="type=default" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1857" name="type=fill" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1860" name="primary_icon_question" x="208" y="357" width="78" height="44">
+      <symbol id="3:1861" name="type=defult" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1865" name="type=fill" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1869" name="primary_icon_person" x="297" y="357" width="89" height="44">
+      <symbol id="3:1870" name="style=default" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1875" name="style=with notify" x="44" y="10" width="35" height="24" />
+    </frame>
+    <frame id="3:1882" name="primary_icon_check-square" x="764" y="357" width="214" height="44">
+      <symbol id="3:1883" name="check=no, color=default, fill=no" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1887" name="check=no, color=grey, fill=no" x="44" y="10" width="24" height="24" />
+      <symbol id="3:1891" name="check=yes, color=default, fill=no" x="78" y="10" width="24" height="24" />
+      <symbol id="3:1896" name="check=yes, color=grey, fill=no" x="112" y="10" width="24" height="24" />
+      <symbol id="3:1901" name="check=yes, color=default, fill=yes" x="146" y="10" width="24" height="24" />
+      <symbol id="3:1906" name="check=yes, color=grey, fill=yes" x="180" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:1911" name="primary_icon_others" x="119" y="509" width="859" height="78">
+      <symbol id="3:1912" name="type=file_add" x="10" y="10" width="24" height="24" />
+      <symbol id="3:1919" name="type=camera" x="44" y="10" width="24" height="24" />
+      <symbol id="3:1922" name="type=file_search" x="78" y="10" width="24" height="24" />
+      <symbol id="3:1930" name="type=map" x="112" y="10" width="24" height="24" />
+      <symbol id="3:1934" name="type=darhboard" x="146" y="10" width="24" height="24" />
+      <symbol id="3:1939" name="type=print" x="180" y="10" width="24" height="24" />
+      <symbol id="3:1945" name="type=calenda" x="214" y="10" width="24" height="24" />
+      <symbol id="3:1954" name="type=filter" x="248" y="10" width="24" height="24" />
+      <symbol id="3:1961" name="type=edit" x="282" y="10" width="24" height="24" />
+      <symbol id="3:1964" name="type=info" x="316" y="10" width="24" height="24" />
+      <symbol id="3:1968" name="type=money" x="350" y="10" width="22" height="24" />
+      <symbol id="3:1974" name="type=alert" x="382" y="10" width="24" height="24" />
+      <symbol id="3:1980" name="type=share_ios" x="416" y="10" width="24" height="24" />
+      <symbol id="3:1985" name="type=settings" x="450" y="10" width="24" height="24" />
+      <symbol id="3:1991" name="type=case done" x="484" y="10" width="24" height="24" />
+      <symbol id="3:1996" name="type=case accept" x="518" y="10" width="24" height="24" />
+      <symbol id="3:1999" name="type=sort" x="552" y="10" width="24" height="24" />
+      <symbol id="3:2006" name="type=Ticket" x="586" y="10" width="24" height="24" />
+      <symbol id="3:2014" name="type=store" x="620" y="10" width="24" height="24" />
+      <symbol id="3:2018" name="type=file" x="654" y="10" width="24" height="24" />
+      <symbol id="3:2023" name="type=Pin" x="688" y="10" width="24" height="24" />
+      <symbol id="3:2027" name="type=mic" x="722" y="10" width="24" height="24" />
+      <symbol id="3:2031" name="type=mail" x="756" y="10" width="24" height="24" />
+      <symbol id="3:2036" name="type=paper_clip" x="790" y="10" width="24" height="24" />
+      <symbol id="3:2038" name="type=Time" x="824" y="10" width="24" height="24" />
+      <symbol id="3:2045" name="type=clock" x="10" y="44" width="24" height="24" />
+      <symbol id="3:2050" name="type=Compass" x="44" y="44" width="24" height="24" />
+      <symbol id="3:2054" name="type=temperature" x="78" y="44" width="24" height="24" />
+      <symbol id="3:2062" name="type=icon" x="112" y="44" width="24" height="24" />
+      <symbol id="3:2065" name="type=mobile" x="146" y="44" width="24" height="24" />
+      <symbol id="3:2072" name="type=id crd" x="180" y="44" width="24" height="24" />
+      <symbol id="3:2076" name="type=signout" x="214" y="44" width="24" height="24" />
+      <symbol id="3:2081" name="type=icon_site 1" x="248" y="44" width="24" height="24" />
+      <symbol id="3:2086" name="type=icon_ticket content 1" x="282" y="44" width="24" height="24" />
+      <symbol id="3:2092" name="type=hide" x="316" y="44" width="24" height="24" />
+      <symbol id="3:2100" name="type=visibility" x="350" y="44" width="24" height="24" />
+      <symbol id="3:2104" name="type=search" x="384" y="44" width="24" height="24" />
+      <symbol id="3:2108" name="type=icon_location" x="418" y="44" width="24" height="24" />
+      <symbol id="3:2112" name="type=coupon_ticket" x="452" y="44" width="24" height="24" />
+    </frame>
+    <frame id="3:2126" name="tabber_icon_card" x="119" y="747" width="78" height="44">
+      <symbol id="3:2127" name="state=default" x="10" y="10" width="24" height="24" />
+      <symbol id="3:2132" name="state=select" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:2137" name="tabber_icon_service" x="208" y="747" width="78" height="44">
+      <symbol id="3:2138" name="state=default" x="10" y="10" width="24" height="24" />
+      <symbol id="3:2143" name="state=select" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:2148" name="tabber_icon_home" x="297" y="747" width="78" height="44">
+      <symbol id="3:2149" name="state=default" x="10" y="10" width="24" height="24" />
+      <symbol id="3:2158" name="state=select" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:2167" name="tabber_icon_coupon" x="386" y="747" width="78" height="44">
+      <symbol id="3:2168" name="state=Default" x="10" y="10" width="24" height="24" />
+      <symbol id="3:2173" name="state=select" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:2178" name="tabber_icon_account" x="475" y="748" width="78" height="44">
+      <symbol id="3:2179" name="state=Default" x="10" y="10" width="24" height="24" />
+      <symbol id="3:2188" name="state=select" x="44" y="10" width="24" height="24" />
+    </frame>
+    <frame id="3:2197" name="pop up_icon_alert and ckeck" x="119" y="1137" width="230" height="120">
+      <symbol id="3:2198" name="type=alert" x="10" y="10" width="100" height="100" />
+      <symbol id="3:2205" name="type=check" x="120" y="10" width="100" height="100" />
+    </frame>
+    <text id="3:2209" name="Primary icon" x="70" y="200" width="217" height="48" />
+    <text id="3:2210" name="Tabber icon" x="71" y="667" width="205" height="48" />
+    <text id="3:2211" name="Town pass icon" x="70" y="1337" width="270" height="48" />
+    <text id="3:2212" name="Logo icon" x="70" y="1941" width="171" height="48" />
+    <text id="3:2213" name="Pop up icon" x="70" y="1057" width="207" height="48" />
+    <text id="3:2214" name="List item icon" x="70" y="869" width="235" height="48" />
+    <line id="3:2215" name="Line 1" x="307" y="224" width="983" height="0.00009135681284533348" />
+    <line id="3:2216" name="Line 2" x="308" y="691" width="983" height="0.00009135681284533348" />
+    <line id="3:2217" name="Line 3" x="371" y="1361" width="919" height="0.00009135681239058613" />
+    <line id="3:2218" name="Line 5" x="272" y="1965" width="1018" height="0.00009135680829785997" />
+    <line id="3:2219" name="Line 6" x="345" y="893" width="945" height="0.00009135681602856494" />
+    <frame id="3:2220" name="list item_icon_dots" x="120" y="949" width="50" height="30">
+      <symbol id="3:2221" name="typle=unread" x="10" y="10" width="10" height="10" />
+      <symbol id="3:2223" name="typle=read" x="30" y="10" width="10" height="10" />
+    </frame>
+    <instance id="3:2225" name="list item_icon_divider_default" x="183" y="963" width="343" height="1" />
+    <text id="3:2226" name="｜Town Pass Design System" x="62" y="45" width="328" height="32" />
+  </frame>
+  <frame id="3:2227" name="icon2" x="840" y="2299" width="1360" height="840">
+    <text id="3:2228" name="Map icon" x="70" y="200" width="160" height="48" />
+    <line id="3:2229" name="Line 1" x="260" y="224" width="1030" height="0.00009135681239058613" />
+    <frame id="3:2230" name="map_icon_mappin" x="709" y="280" width="114" height="36">
+      <symbol id="3:2231" name="style=mappin-blue" x="10" y="10" width="16" height="16" />
+      <symbol id="3:2237" name="style=mappin-red" x="36" y="10" width="16" height="16" />
+      <symbol id="3:2243" name="style=mappin-green" x="62" y="10" width="16" height="16" />
+      <symbol id="3:2248" name="style=mappin-yellow" x="88" y="10" width="16" height="16" />
+    </frame>
+    <frame id="3:2254" name="map_icon_vaccine" x="360" y="280" width="88" height="36">
+      <symbol id="3:2255" name="Property 1=icon-info-vaccine-blue" x="10" y="10" width="16" height="16" />
+      <symbol id="3:2267" name="Property 1=icon-info-vaccine-green" x="36" y="10" width="16" height="16" />
+      <symbol id="3:2279" name="Property 1=icon-info-vaccine-red" x="62" y="10" width="16" height="16" />
+    </frame>
+    <frame id="3:2291" name="map__icon_info_ubike" x="459" y="280" width="114" height="36">
+      <symbol id="3:2292" name="Property 1=icon-info-ubike-green" x="10" y="10" width="16" height="16" />
+      <symbol id="3:2297" name="Property 1=icon-info-ubike-grey" x="36" y="10" width="16" height="16" />
+      <symbol id="3:2302" name="Property 1=icon-info-ubike-red" x="62" y="10" width="16" height="16" />
+      <symbol id="3:2307" name="Property 1=icon-info-ubike-yellow" x="88" y="10" width="16" height="16" />
+    </frame>
+    <frame id="3:2312" name="map_icon_info_wifi" x="261" y="280" width="88" height="36">
+      <symbol id="3:2313" name="Property 1=icon-info-wifi-blue" x="10" y="10" width="16" height="16" />
+      <symbol id="3:2317" name="Property 1=icon-info-wifi-green" x="36" y="10" width="16" height="16" />
+      <symbol id="3:2321" name="Property 1=icon-info-wifi-red" x="62" y="10" width="16" height="16" />
+    </frame>
+    <frame id="3:2325" name="map_icon_aed" x="188" y="280" width="62" height="36">
+      <symbol id="3:2326" name="Property 1=icon-aed-normal" x="10" y="10" width="16" height="16" />
+      <symbol id="3:2334" name="Property 1=icon-aed-pause" x="36" y="10" width="16" height="16" />
+    </frame>
+    <frame id="3:2342" name="map_icon_info_parking" x="584" y="280" width="114" height="36">
+      <symbol id="3:2343" name="Property 1=icon-info-parking-blue" x="10" y="10" width="16" height="16" />
+      <symbol id="3:2347" name="Property 1=icon-info-parking-green" x="36" y="10" width="16" height="16" />
+      <symbol id="3:2351" name="Property 1=icon-info-parking-red" x="62" y="10" width="16" height="16" />
+      <symbol id="3:2355" name="Property 1=icon-info-parking-yellow" x="88" y="10" width="16" height="16" />
+    </frame>
+    <frame id="3:2359" name="map_icon_search_s" x="119" y="280" width="58" height="34">
+      <symbol id="3:2360" name="Property 1=icon-search-press" x="10" y="10" width="14" height="14" />
+      <symbol id="3:2365" name="Property 1=icon-search" x="34" y="10" width="14" height="14" />
+    </frame>
+    <frame id="3:2370" name="map_icon_refuge" x="834" y="280" width="166" height="36">
+      <symbol id="3:2371" name="Property 1=icon-refuge-lightblue" x="10" y="10" width="16" height="16" />
+      <symbol id="3:2386" name="Property 1=icon-refuge-normal" x="36" y="10" width="16" height="16" />
+      <symbol id="3:2401" name="Property 1=icon-refuge-pink" x="62" y="10" width="16" height="16" />
+      <symbol id="3:2416" name="Property 1=icon-refuge-red" x="88" y="10" width="16" height="16" />
+      <symbol id="3:2431" name="Property 1=icon-refuge-yellow" x="114" y="10" width="16" height="16" />
+      <symbol id="3:2446" name="Property 1=icon-refuge-blue" x="140" y="10" width="16" height="16" />
+    </frame>
+    <frame id="3:2461" name="map_icon_mappin_refuge" x="902" y="348" width="310" height="80">
+      <symbol id="3:2462" name="style=mappin-refuge-blue-pressed" x="10" y="10" width="40" height="60" />
+      <symbol id="3:2480" name="style=mappin-refuge-green-pressed" x="60" y="10" width="40" height="60" />
+      <symbol id="3:2498" name="style=mappin-refuge-lightblue-pressed" x="110" y="10" width="40" height="60" />
+      <symbol id="3:2516" name="style=mappin-refuge-pink-pressed" x="160" y="10" width="40" height="60" />
+      <symbol id="3:2534" name="style=mappin-refuge-red-pressed" x="210" y="10" width="40" height="60" />
+      <symbol id="3:2553" name="style=mappin-refuge-yellow-pressed" x="260" y="10" width="40" height="60" />
+    </frame>
+    <frame id="3:2571" name="map_icon_mappin_parking" x="681" y="347" width="210" height="80">
+      <symbol id="3:2572" name="Property 1=mappin-parking-blue-pressed" x="10" y="10" width="40" height="60" />
+      <symbol id="3:2583" name="Property 1=mappin-parking-green-pressed" x="60" y="10" width="40" height="60" />
+      <symbol id="3:2594" name="Property 1=mappin-parking-red-pressed" x="110" y="10" width="40" height="60" />
+      <symbol id="3:2605" name="Property 1=mappin-parking-yellow-pressed" x="160" y="10" width="40" height="60" />
+    </frame>
+    <frame id="3:2616" name="map_icon_mappin_taipeifree" x="118" y="348" width="160" height="80">
+      <symbol id="3:2617" name="Property 1=mappin-taipeifree-green-pressed" x="10" y="10" width="40" height="60" />
+      <symbol id="3:2628" name="Property 1=mappin-taipeifree-red-pressed" x="60" y="10" width="40" height="60" />
+      <symbol id="3:2639" name="Property 1=mappin-taipeifree-blue-pressed" x="110" y="10" width="40" height="60" />
+    </frame>
+    <frame id="3:2650" name="map_icon_mappin_ubike" x="460" y="348" width="210" height="80">
+      <symbol id="3:2651" name="Property 1=mappin-ubike-green-pressed" x="10" y="10" width="40" height="60" />
+      <symbol id="3:2662" name="Property 1=mappin-ubike-grey-pressed" x="60" y="10" width="40" height="60" />
+      <symbol id="3:2673" name="Property 1=mappin-ubike-red-pressed" x="110" y="10" width="40" height="60" />
+      <symbol id="3:2684" name="Property 1=mappin-ubike-yellow-pressed" x="160" y="10" width="40" height="60" />
+    </frame>
+    <frame id="3:2695" name="map_icon_mappin_vaccine" x="289" y="348" width="160" height="80">
+      <symbol id="3:2696" name="Property 1=mappin-vaccine-blue-pressed" x="10" y="10" width="40" height="60" />
+      <symbol id="3:2719" name="Property 1=mappin-vaccine-green-pressed" x="60" y="10" width="40" height="60" />
+      <symbol id="3:2737" name="Property 1=mappin-vaccine-red-pressed" x="110" y="10" width="40" height="60" />
+    </frame>
+    <frame id="3:2760" name="Frame 7" x="119" y="459" width="1093" height="159">
+      <instance id="3:2761" name="map_icon_mappin_aed_grey_pressed" x="10" y="10" width="40" height="60" />
+      <instance id="3:2762" name="map_icon_mappin_announcement_green_pressed" x="60" y="10" width="40" height="60" />
+      <instance id="3:2763" name="map_icon_mappin_baby_green_pressed" x="110" y="10" width="40" height="60" />
+      <instance id="3:2764" name="map_icon_mappin_bikestation_green_pressed" x="160" y="10" width="40" height="60" />
+      <instance id="3:2765" name="map_icon_mappin_blood_donation_green_pressed" x="210" y="10" width="40" height="60" />
+      <instance id="3:2766" name="map_icon_mappin_accessible_green_pressed" x="260" y="10" width="40" height="60" />
+      <instance id="3:2767" name="map_icon_mappin_break_green_pressed" x="310" y="10" width="40" height="60" />
+      <instance id="3:2768" name="map_icon_mappin_charge_green_pressed" x="360" y="10" width="40" height="60" />
+      <instance id="3:2769" name="map_icon_mappin_clinic_green_pressed" x="410" y="10" width="40" height="60" />
+      <instance id="3:2770" name="map_icon_mappin_clothes_green_pressed" x="460" y="10" width="40" height="60" />
+      <instance id="3:2771" name="map_icon_mappin_counseling_foundation_green_pressed" x="510" y="10" width="40" height="60" />
+      <instance id="3:2772" name="map_icon_mappin_counseling_nstitute_green_pressed" x="560" y="10" width="40" height="60" />
+      <instance id="3:2773" name="map_icon_mappin_district_office_green_pressed" x="610" y="10" width="40" height="60" />
+      <instance id="3:2774" name="map_icon_mappin_dog_green_pressed" x="660" y="10" width="40" height="60" />
+      <instance id="3:2775" name="map_icon_mappin_drinking_green_pressed" x="710" y="10" width="40" height="60" />
+      <instance id="3:2776" name="map_icon_mappin_english_green_pressed" x="760" y="10" width="40" height="60" />
+      <instance id="3:2777" name="map_icon_mappin_ezpost" x="810" y="10" width="40" height="60" />
+      <instance id="3:2778" name="map_icon_mappin_foodwaste_green_pressed" x="860" y="10" width="40" height="60" />
+      <instance id="3:2779" name="map_icon_mappin_garbage_green_pressed" x="910" y="10" width="40" height="60" />
+      <instance id="3:2780" name="map_icon_mappin_garbagetruck_green_pressed" x="960" y="10" width="47.45199966430664" height="69" />
+      <instance id="3:2781" name="map_icon_mappin_aed_green_pressed" x="1017.4520263671875" y="10" width="40" height="60" />
+      <instance id="3:2782" name="map_icon_mappin_hospital_green_pressed" x="10" y="89" width="40" height="60" />
+      <instance id="3:2783" name="map_icon_mappin_japanese_green_pressed" x="60" y="89" width="40" height="60" />
+      <instance id="3:2784" name="map_icon_mappin_korean_green_pressed" x="110" y="89" width="40" height="60" />
+      <instance id="3:2785" name="map_icon_mappin_lgbt_green_pressed" x="160" y="89" width="40" height="60" />
+      <instance id="3:2786" name="map_icon_mappin_menstruation_green_pressed" x="210" y="89" width="40" height="60" />
+      <instance id="3:2787" name="map_icon_mappin_muslim_green_pressed" x="260" y="89" width="40" height="60" />
+      <instance id="3:2788" name="map_icon_mappin_parent_child_green_pressed" x="310" y="89" width="40" height="60" />
+      <instance id="3:2789" name="map_icon_mappin_park_green_pressed" x="360" y="89" width="40" height="60" />
+      <instance id="3:2790" name="map_icon_mappin_taxi_green_pressed" x="410" y="89" width="40" height="60" />
+      <instance id="3:2791" name="map_icon_mappin_toilet_green_pressed" x="460" y="89" width="40" height="60" />
+      <instance id="3:2792" name="map_icon_mappin_trashcan_green_pressed" x="510" y="89" width="40" height="60" />
+      <instance id="3:2793" name="map_icon_mappin_parkridding_green_pressed" x="560" y="89" width="40" height="60" />
+      <instance id="3:2794" name="map_icon_mappin_playground_green_pressed" x="610" y="89" width="40" height="60" />
+      <instance id="3:2795" name="map_icon_mappin_vegan_green_pressed" x="660" y="89" width="40" height="60" />
+      <instance id="3:2796" name="map_icon_mappin_waterfountain_green_pressed" x="710" y="89" width="40" height="60" />
+      <instance id="3:2797" name="map_icon_mappin_roadblock_green_pressed" x="760" y="89" width="40" height="60" />
+      <instance id="3:2798" name="map_icon_mappin_school_green_pressed" x="810" y="89" width="40" height="60" />
+    </frame>
+    <instance id="3:2799" name="map_icon_findmylocation" x="507" y="660" width="54" height="54" />
+    <frame id="3:2800" name="map_icon_mark-pointer" x="119" y="649" width="174" height="92">
+      <symbol id="3:2801" name="Property 1=map-mark-pointer-press" x="10" y="10" width="72" height="72" />
+      <symbol id="3:2815" name="Property 1=map-mark-pointer" x="92" y="10" width="72" height="72" />
+    </frame>
+    <frame id="3:2829" name="map_icon_circle_level" x="304" y="649" width="192" height="80">
+      <symbol id="3:2830" name="Property 1=img-circle-level-1" x="10" y="10" width="44" height="44" />
+      <symbol id="3:2835" name="Property 1=img-circle-level-2" x="64" y="10" width="48" height="48" />
+      <symbol id="3:2840" name="Property 1=img-circle-level-3" x="122" y="10" width="60" height="60" />
+    </frame>
+    <frame id="3:2845" name="map_icon_route" x="572" y="666" width="69.29000091552734" height="39.64500045776367">
+      <symbol id="3:2846" name="state=close" x="29.645000457763672" y="29.645000457763672" width="19.645000457763672" height="19.645000457763672" />
+      <symbol id="3:2854" name="state=show" x="59.290000915527344" y="29.645000457763672" width="19.645000457763672" height="19.645000457763672" />
+    </frame>
+    <frame id="3:2861" name="Frame 8" x="652" y="664" width="78" height="44">
+      <instance id="3:2862" name="map_icon_filter-white 1" x="10" y="10" width="24" height="24" />
+      <instance id="3:2863" name="map_icon_map" x="44" y="10" width="24" height="24" />
+    </frame>
+    <instance id="3:2864" name="map_icon_rubbish truck" x="741" y="662" width="25.156999588012695" height="44.27799987792969" />
+    <text id="3:2865" name="｜Town Pass Design System" x="62" y="45" width="328" height="32" />
+  </frame>
+  <frame id="3:4518" name="device system" x="-620" y="5173" width="1360" height="1634">
+    <text id="3:4519" name="Status bar" x="70" y="200" width="178" height="48" />
+    <text id="3:4520" name="Home indicator" x="70" y="598" width="264" height="48" />
+    <text id="3:4521" name="Keyboard" x="70" y="1046" width="165" height="48" />
+    <text id="3:4522" name="Head indicator" x="70" y="856" width="253" height="48" />
+    <line id="3:4523" name="Line 1" x="290" y="224" width="1000" height="0.00009135681011684937" />
+    <vector id="3:4524" name="Line 2" x="364.5" y="621.4999389648438" width="925.5000000000728" height="0.0008694239213582478" />
+    <line id="3:4525" name="Line 3" x="264" y="1070" width="1026" height="0.00009135681193583878" />
+    <line id="3:4526" name="Line 4" x="342" y="880" width="948" height="0.00009135681466432288" />
+    <frame id="3:4527" name="device system_status bar" x="119" y="280" width="395" height="232">
+      <symbol id="3:4528" name="Size=Default, Background Color=light, Text Color=Black" x="10" y="10" width="375" height="44" />
+      <symbol id="3:4543" name="Size=Default, Background Color=Transparent, Text Color=Black" x="10" y="64" width="375" height="44" />
+      <symbol id="3:4558" name="Size=Default, Background Color=Transparent, Text Color=White" x="10" y="118" width="375" height="44" />
+      <symbol id="3:4573" name="Size=Small, Background Color=White, Text Color=Black" x="10" y="172" width="375" height="20" />
+      <symbol id="3:4595" name="Size=Small, Background Color=White, Text Color=White" x="10" y="202" width="375" height="20" />
+    </frame>
+    <frame id="3:4617" name="device system_home indicator" x="119" y="678" width="395" height="98">
+      <symbol id="3:4618" name="Background Color=Transparent, Bar Color=Black" x="10" y="10" width="375" height="34" />
+      <symbol id="3:4620" name="Background Color=Transparent, Bar Color=White" x="10" y="54" width="375" height="34" />
+    </frame>
+    <symbol id="3:4622" name="device system_head indicator" x="119" y="936" width="183" height="30" />
+    <frame id="3:4624" name="device system_keyboard" x="119" y="1126" width="810" height="409">
+      <symbol id="3:4625" name="Layout=english" x="20" y="20" width="375" height="291" />
+      <symbol id="3:4687" name="Layout=numbers" x="415" y="20" width="375" height="369" />
+    </frame>
+    <text id="3:4716" name="｜Town Pass Components" x="62" y="45" width="302" height="32" />
+  </frame>
+  <frame id="3:4717" name="list item" x="2300" y="5173" width="1360" height="2156">
+    <text id="3:4718" name="Table item/single" x="70" y="200" width="301" height="48" />
+    <text id="3:4719" name="Table item/double" x="70" y="702" width="315" height="48" />
+    <text id="3:4720" name="Table item/component/event" x="70" y="1412" width="503" height="48" />
+    <text id="3:4721" name="List item/title" x="70" y="1660" width="234" height="48" />
+    <text id="3:4722" name="Table item/component/read and unread" x="70" y="1062" width="691" height="48" />
+    <line id="3:4723" name="Line 1" x="403" y="224" width="887" height="0.00009135681284533348" />
+    <vector id="3:4724" name="Line 2" x="418" y="725" width="872.000000092944" height="1.0001621031515242" />
+    <line id="3:4725" name="Line 3" x="610" y="1436" width="680" height="0.00009135681375482818" />
+    <line id="3:4726" name="Line 5" x="171" y="1684" width="1119" height="0.00009135680920735467" />
+    <line id="3:4727" name="Line 4" x="798" y="1086" width="492" height="0.0000913568219402805" />
+    <frame id="3:4728" name="list item_table item/single" x="119" y="282" width="415" height="340">
+      <symbol id="3:4729" name="typle=H2" x="10" y="10" width="395" height="56" />
+      <symbol id="3:4736" name="typle=H3" x="10" y="76" width="395" height="56" />
+      <symbol id="3:4743" name="typle=H3-with item" x="10" y="142" width="395" height="56" />
+      <symbol id="3:4750" name="typle=H3-with icon" x="10" y="208" width="395" height="56" />
+      <symbol id="3:4757" name="typle=typle5" x="10" y="274" width="395" height="56" />
+    </frame>
+    <frame id="3:4764" name="list item_table item/double" x="119" y="782" width="415" height="200">
+      <symbol id="3:4765" name="typle=H2" x="10" y="10" width="395" height="91" />
+      <symbol id="3:4774" name="typle=H3" x="10" y="111" width="395" height="79" />
+    </frame>
+    <frame id="3:4783" name="list item_table item/component/read and unread" x="119" y="1142" width="415" height="190">
+      <symbol id="3:4784" name="Property 1=unread" x="10" y="10" width="395" height="80" />
+      <symbol id="3:4794" name="Property 1=read" x="10" y="100" width="395" height="80" />
+    </frame>
+    <symbol id="3:4804" name="Table item/Component/event" x="119" y="1492" width="375" height="88" />
+    <frame id="3:4811" name="list item_title" x="119" y="1740" width="415" height="316">
+      <symbol id="3:4812" name="style=Default" x="10" y="10" width="395" height="48" />
+      <symbol id="3:4814" name="style=double line" x="10" y="68" width="395" height="64" />
+      <symbol id="3:4817" name="style=with line text" x="10" y="142" width="395" height="48" />
+      <symbol id="3:4820" name="style=withicon" x="10" y="200" width="395" height="48" />
+      <symbol id="3:4823" name="style=withicon＆text" x="10" y="258" width="395" height="48" />
+    </frame>
+    <text id="3:4827" name="｜Town Pass Components" x="62" y="45" width="302" height="32" />
+  </frame>
+  <frame id="3:4828" name="button" x="6680" y="5173" width="1360" height="2125">
+    <text id="3:4829" name="Button/m" x="70" y="200" width="165" height="48" />
+    <text id="3:4830" name="Button/L" x="70" y="669" width="154" height="48" />
+    <line id="3:4831" name="Line 1" x="262" y="224" width="1028" height="0.00009135681466432288" />
+    <line id="3:4832" name="Line 2" x="262" y="693" width="1028" height="0.00009135681466432288" />
+    <frame id="3:4833" name="button/m" x="119" y="280" width="386" height="309">
+      <symbol id="3:4834" name="type=Default, State=Primary" x="10" y="10" width="175" height="48" />
+      <symbol id="3:4837" name="type=Hover, State=Primary" x="195" y="10" width="175" height="48" />
+      <symbol id="3:4840" name="type=Default, State=Second" x="10" y="68" width="175" height="48" />
+      <symbol id="3:4843" name="type=Hover, State=Second" x="195" y="68" width="175" height="48" />
+      <symbol id="3:4846" name="type=Default, State=Alarm" x="10" y="126" width="175" height="48" />
+      <symbol id="3:4849" name="type=Hover, State=Alarm" x="195" y="126" width="175" height="48" />
+      <symbol id="3:4852" name="type=Default, State=Remider" x="10" y="184" width="175" height="48" />
+      <symbol id="3:4855" name="type=Hover, State=Remider" x="195" y="184" width="175" height="48" />
+      <symbol id="3:4858" name="type=Hover, State=Disable" x="10" y="242" width="175" height="48" />
+    </frame>
+    <frame id="3:4861" name="button/l" x="119" y="749" width="762" height="340">
+      <symbol id="3:4862" name="state=Primary, type=Default" x="10" y="10" width="366" height="56" />
+      <symbol id="3:4865" name="state=Primary, type=Hover" x="386" y="10" width="366" height="56" />
+      <symbol id="3:4867" name="state=Second, type=Default" x="10" y="76" width="366" height="56" />
+      <symbol id="3:4870" name="state=Second, type=Hover" x="386" y="76" width="366" height="56" />
+      <symbol id="3:4873" name="state=Alarm, type=Default" x="10" y="142" width="366" height="56" />
+      <symbol id="3:4876" name="state=Alarm, type=Hover" x="386" y="142" width="366" height="56" />
+      <symbol id="3:4879" name="state=Remider, type=Default" x="10" y="208" width="366" height="56" />
+      <symbol id="3:4882" name="state=Remider, type=Hover" x="386" y="208" width="366" height="56" />
+      <symbol id="3:4885" name="state=Disable, type=Default" x="10" y="274" width="366" height="56" />
+    </frame>
+    <text id="3:4888" name="Section_check square" x="70" y="1169" width="377" height="48" />
+    <text id="3:4889" name="Section_one line text" x="70" y="1623" width="361" height="48" />
+    <vector id="3:4890" name="Line 2" x="483" y="1193" width="807.0000000000073" height="0.00014999989252828527" />
+    <vector id="3:4891" name="Line 3" x="467" y="1647" width="823.0000000000073" height="0.0001529738674435066" />
+    <symbol id="3:4892" name="section_one line text_button/m" x="119" y="1740" width="393" height="139" />
+    <symbol id="3:4901" name="section_check square_button/m" x="119" y="1249" width="393" height="139" />
+    <symbol id="3:4912" name="section_check squere_button/l" x="119" y="1399" width="393" height="136" />
+    <symbol id="3:4920" name="section_one line text_button/l" x="119" y="1890" width="393" height="132" />
+    <text id="3:4926" name="｜Town Pass Components" x="62" y="45" width="302" height="32" />
+  </frame>
+  <frame id="3:4927" name="pop up" x="8140" y="5173" width="1360" height="1860">
+    <text id="3:4928" name="Pop up/type1" x="70" y="200" width="229" height="48" />
+    <text id="3:4929" name="Pop up/type2" x="70" y="669" width="236" height="48" />
+    <text id="3:4930" name="Pop up/type3" x="70" y="1263" width="236" height="48" />
+    <line id="3:4931" name="Line 1" x="316" y="224" width="974" height="0.00009135681648331229" />
+    <line id="3:4932" name="Line 2" x="340" y="693" width="950" height="0.00009135681375482818" />
+    <line id="3:4933" name="Line 3" x="340" y="1287" width="950" height="0.00009135681375482818" />
+    <symbol id="3:4934" name="Pop up/type1" x="119" y="280" width="327" height="310" />
+    <symbol id="3:4949" name="Pop up/type2" x="120" y="749" width="327" height="434" />
+    <symbol id="3:4964" name="Pop up/type 3" x="119" y="1388" width="327" height="374" />
+    <text id="3:4978" name="｜Town Pass Components" x="62" y="45" width="302" height="32" />
+  </frame>
+  <frame id="3:4979" name="menu" x="3760" y="5173" width="1360" height="565">
+    <text id="3:4980" name="Menu" x="70" y="200" width="95" height="48" />
+    <line id="3:4981" name="Line 1" x="198" y="224" width="1092" height="0.00009135681102634408" />
+    <frame id="3:4982" name="Menu/Components" x="119" y="280" width="415" height="184">
+      <symbol id="3:4983" name="style=grey" x="10" y="10" width="395" height="48" />
+      <symbol id="3:4989" name="style=primary" x="10" y="68" width="395" height="48" />
+      <symbol id="3:4995" name="style=white" x="10" y="126" width="395" height="48" />
+    </frame>
+    <text id="3:5001" name="｜Town Pass Components" x="62" y="45" width="302" height="32" />
+  </frame>
+  <frame id="3:5002" name="search bar" x="3760" y="6948" width="1360" height="461">
+    <text id="3:5003" name="Search" x="70" y="200" width="119" height="48" />
+    <line id="3:5004" name="Line 1" x="198" y="224" width="1092" height="0.00009135681102634408" />
+    <symbol id="3:5005" name="searchbar" x="119" y="280" width="343" height="80" />
+    <text id="3:5015" name="｜Town Pass Design Tokens" x="62" y="45" width="326" height="32" />
+  </frame>
+  <frame id="3:5016" name="tag" x="5220" y="6442" width="1360" height="420">
+    <text id="3:5017" name="Tag" x="70" y="200" width="65" height="48" />
+    <line id="3:5018" name="Line 1" x="170" y="224" width="1120" height="0.00009135680920735467" />
+    <symbol id="3:5019" name="tag" x="119" y="280" width="136" height="40" />
+    <text id="3:5023" name="｜Town Pass Components" x="62" y="45" width="302" height="32" />
+  </frame>
+  <frame id="3:5024" name="card" x="9600" y="5173" width="1360" height="779">
+    <text id="3:5025" name="card" x="70" y="200" width="76" height="48" />
+    <line id="3:5026" name="Line 1" x="170" y="224" width="1120" height="0.00009135680920735467" />
+    <symbol id="3:5027" name="card" x="119" y="280" width="328" height="400" />
+    <text id="3:5031" name="｜Town Pass Components" x="62" y="45" width="302" height="32" />
+  </frame>
+  <frame id="3:5032" name="text field" x="3760" y="5852" width="1360" height="994">
+    <text id="3:5033" name="Text field" x="70" y="200" width="161" height="48" />
+    <line id="3:5034" name="Line 1" x="271" y="224" width="1019" height="0.00009135681193583878" />
+    <text id="3:5035" name="｜Town Pass Components" x="62" y="45" width="302" height="32" />
+  </frame>
+  <frame id="3:5036" name="tab" x="5220" y="5173" width="1360" height="1176">
+    <text id="3:5037" name="Tab/single" x="70" y="200" width="184" height="48" />
+    <text id="3:5038" name="Tab/double" x="70" y="594" width="198" height="48" />
+    <text id="3:5039" name="Tab/triple" x="70" y="876" width="171" height="48" />
+    <line id="3:5040" name="Line 1" x="271" y="224" width="1019" height="0.00009135681193583878" />
+    <line id="3:5041" name="Line 2" x="291" y="618" width="999" height="0.00009135681557381758" />
+    <line id="3:5042" name="Line 3" x="271" y="900" width="1019" height="0.00009135681193583878" />
+    <frame id="3:5043" name="tab/single" x="119" y="280" width="220" height="234">
+      <symbol id="3:5044" name="variant=primary, state=defualt" x="10" y="10" width="200" height="46" />
+      <symbol id="3:5047" name="variant=primary, state=select" x="10" y="66" width="200" height="46" />
+      <symbol id="3:5049" name="variant=secondary, state=defualt" x="10" y="122" width="200" height="46" />
+      <symbol id="3:5051" name="variant=secondary, state=select" x="10" y="178" width="200" height="46" />
+    </frame>
+    <frame id="3:5053" name="tab/double" x="119" y="674" width="420" height="122">
+      <symbol id="3:5054" name="variant=primery" x="10" y="10" width="400" height="46" />
+      <symbol id="3:5057" name="variant=secondary" x="10" y="66" width="400" height="46" />
+    </frame>
+    <frame id="3:5060" name="tab/triple" x="119" y="956" width="375" height="125">
+      <symbol id="3:5061" name="variant=primary" x="10" y="10" width="355" height="46" />
+      <symbol id="3:5065" name="variant=secondary" x="10" y="66" width="355" height="49" />
+    </frame>
+    <text id="3:5070" name="｜Town Pass Components" x="62" y="45" width="302" height="32" />
+  </frame>
+  <frame id="3:5071" name="top navigation" x="840" y="5173" width="1360" height="720">
+    <text id="3:5072" name="Top navigation" x="70" y="200" width="255" height="48" />
+    <line id="3:5073" name="Line 1" x="360" y="224" width="930" height="0.00009135681102634408" />
+    <frame id="3:5074" name="top navigation" x="119" y="280" width="415" height="340">
+      <symbol id="3:5075" name="Type=with logo" x="10" y="10" width="395" height="56" />
+      <symbol id="3:5085" name="Type=with two iconbtn_logo" x="10" y="76" width="395" height="56" />
+      <symbol id="3:5098" name="Type=with two iconbtn" x="10" y="142" width="395" height="56" />
+      <symbol id="3:5110" name="Type=text button" x="10" y="208" width="395" height="56" />
+      <symbol id="3:5117" name="Type=without iconbtn" x="10" y="274" width="395" height="56" />
+    </frame>
+    <text id="3:5123" name="｜Town Pass Components" x="70" y="45" width="302" height="32" />
+  </frame>
+  <frame id="3:5124" name="foot tab bar" x="840" y="5990" width="1360" height="763">
+    <text id="3:5125" name="Foot tab bar" x="70" y="200" width="213" height="48" />
+    <text id="3:5126" name="example" x="70" y="454" width="144" height="48" />
+    <line id="3:5127" name="Line 1" x="307" y="224" width="983" height="0.00009135681284533348" />
+    <line id="3:5128" name="Line 2" x="233" y="478" width="1057" height="0.00009135681739280699" />
+    <symbol id="3:5129" name="foot tab bar" x="119" y="280" width="375" height="94" />
+    <instance id="3:5144" name="foot tab bar" x="119" y="534" width="375" height="94" />
+    <instance id="3:5145" name="foot tab bar" x="514" y="534" width="375" height="60" />
+    <text id="3:5146" name="選擇服務項目" x="214" y="647" width="185.42636108398438" height="20" />
+    <text id="3:5147" name="不顯示home indicator" x="609" y="647" width="185.42636108398438" height="20" />
+    <text id="3:5148" name="｜Town Pass Design Tokens" x="62" y="45" width="326" height="32" />
+  </frame>
+  <frame id="3:5149" name="text field/component" x="3879" y="6139" width="406" height="619">
+    <symbol id="3:5150" name="Status=default" x="20" y="20" width="366" height="110" />
+    <symbol id="3:5159" name="Status=focus" x="20" y="190" width="366" height="110" />
+    <symbol id="3:5168" name="Status=error" x="20" y="343" width="366" height="110" />
+    <symbol id="3:5177" name="Status=disable" x="20" y="481" width="366" height="110" />
+  </frame>
+  <frame id="3:5683" name=" Illustration" x="2300" y="2299" width="1360" height="889">
+    <text id="3:5684" name="Illustration" x="70" y="200" width="180" height="48" />
+    <line id="3:5685" name="Line 1" x="260" y="224" width="1030" height="0.00009135681239058613" />
+    <frame id="3:5686" name="Frame 9" x="119" y="280" width="1171" height="520">
+      <symbol id="3:5687" name="illustration_icon_booking_L" x="10" y="10" width="160" height="160" />
+      <symbol id="3:5706" name="illustration_icon_booking_M" x="180" y="48" width="84" height="84" />
+      <symbol id="3:5725" name="illustration_icon_booking_S" x="274" y="60" width="60" height="60" />
+      <symbol id="3:5744" name="illustration_icon_location_lost1" x="344" y="32.52198028564453" width="109.70999908447266" height="114.95603942871094" />
+      <symbol id="3:5763" name="illustration_icon_location_lost2" x="463.7099914550781" y="10" width="160" height="160" />
+      <symbol id="3:5789" name="illustration_icon_mailbox" x="633.7099609375" y="10" width="160" height="160" />
+      <symbol id="3:5802" name="illustration_icon_gov" x="803.7099609375" y="44.4432258605957" width="126.50525128235768" height="100.03399284007992" />
+      <symbol id="3:5829" name="illustration_icon_sales" x="940.2152099609375" y="10" width="160" height="160" />
+      <symbol id="3:5852" name="illustration_icon_ticket sales" x="10" y="180" width="160" height="160" />
+      <symbol id="3:5880" name="illustration_icon_phone_upload" x="180" y="180" width="160" height="160" />
+      <symbol id="3:5896" name="illustration_icon_wallet" x="350" y="180" width="160" height="160" />
+      <symbol id="3:5909" name="illustration_icon_info" x="520" y="180" width="160" height="160" />
+      <symbol id="3:5932" name="illustration_icon_box" x="690" y="180" width="160" height="160" />
+      <symbol id="3:5968" name="illustration_icon_satisfy" x="860" y="180" width="160" height="160" />
+      <symbol id="3:5991" name="illustration_icon_mobile pay" x="10" y="350" width="160" height="160" />
+      <symbol id="3:6010" name="illustration_icon_chair" x="180" y="416.40350341796875" width="52.37400817871094" height="27.1929931640625" />
+      <symbol id="3:6023" name="illustration_icon_store" x="242.37400817871094" y="418" width="24" height="24" />
+      <symbol id="3:6043" name="illustration_icon_city_expo " x="276.3740234375" y="418" width="24" height="24" />
+      <symbol id="3:6052" name="illustration_icon_ticket_area" x="310.3740234375" y="418" width="24" height="24" />
+    </frame>
+    <text id="3:6066" name="｜Town Pass Illustration" x="62" y="45" width="277" height="32" />
+  </frame>
+</canvas>
