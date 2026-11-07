@@ -51,7 +51,9 @@ class SpeakMessageHandler extends TPWebMessageHandler {
 
   static const double defaultRate = 0.45;
   static const double minRate = 0.2;
-  static const double maxRate = 0.7;
+  /// flutter_tts 允許的最大值。視障者習慣用一般 3～5 倍的速度聆聽，
+  /// 所以上限不能照長輩的需求寫死；實際能多快依各平台的 TTS 引擎而定。
+  static const double maxRate = 1.0;
   static const int maxLength = 200;
 
   @override

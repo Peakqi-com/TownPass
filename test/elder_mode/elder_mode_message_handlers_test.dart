@@ -99,15 +99,16 @@ void main() {
       expect(replies, [true]);
     });
 
-    test('接受 {text, rate}，語速限制在 0.2～0.7', () async {
+    test('接受 {text, rate}，語速限制在 0.2～1.0（視障者習慣高速聆聽，上限放到套件允許的最大值）', () async {
       final tts = _FakeTts();
       final handler = SpeakMessageHandler(tts: tts);
 
       await _invoke(handler, {'text': '看醫生', 'rate': 0.6});
+      await _invoke(handler, {'text': '視障者常用的高速', 'rate': 0.95});
       await _invoke(handler, {'text': '太快', 'rate': 5});
       await _invoke(handler, {'text': '太慢', 'rate': 0});
 
-      expect(tts.spoken, [('看醫生', 0.6), ('太快', 0.7), ('太慢', 0.2)]);
+      expect(tts.spoken, [('看醫生', 0.6), ('視障者常用的高速', 0.95), ('太快', 1.0), ('太慢', 0.2)]);
     });
 
     test('空字串、空白或格式錯誤時回覆 false，而且不唸', () async {
