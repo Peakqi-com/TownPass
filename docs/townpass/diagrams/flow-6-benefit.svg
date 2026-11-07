@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="330" viewBox="0 0 1180 330" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif" role="img" aria-label="⑥ 權益提醒（M6）">
+<title>⑥ 權益提醒（M6）</title>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#738995"/></marker>
+  <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#738995"/></marker>
+</defs>
+<rect x="1" y="1" width="1178" height="328" rx="20" fill="white" stroke="#E3E7E9" stroke-width="2"/>
+<rect x="1" y="1" width="1178" height="6" rx="3" fill="#5AB4C5"/>
+<text x="32.0" y="38.0" font-size="20" font-weight="700" fill="#30383D" text-anchor="start" dominant-baseline="central">⑥ 權益提醒（M6）</text><text x="32.0" y="64.0" font-size="13" font-weight="400" fill="#738995" text-anchor="start" dominant-baseline="central">由生日自動判斷資格；重陽禮金可以設定手機通知，App 關掉也會跳出來</text>
+<path d="M255.0,165.0 L290.0,165.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M510.0,165.0 L530.0,165.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M830.0,165.0 L860.0,165.0 L860.0,110.0 L885.0,110.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M860.0,165.0 L860.0,220.0 L885.0,220.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="45.0" y="134.5" width="210.0" height="61.0" rx="12.0" fill="#F1F3F4" stroke="#CAD1D5" stroke-width="1.5"/>
+<text x="150.0" y="156.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">台北通帳號的生日</text>
+<text x="150.0" y="175.5" font-size="12.5" font-weight="400" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">userinfo</text>
+<rect x="290.0" y="134.5" width="220.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="400.0" y="156.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">算年齡、比對資格</text>
+<text x="400.0" y="175.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">原住民門檻降 10 歲</text>
+<rect x="530.0" y="134.5" width="300.0" height="61.0" rx="12.0" fill="#5AB4C5" stroke="#5AB4C5" stroke-width="2"/>
+<text x="680.0" y="156.0" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">權益卡片</text>
+<text x="680.0" y="175.5" font-size="12.5" font-weight="400" fill="#EDF8FA" text-anchor="middle" dominant-baseline="central">「可能可以領 3,000 元，還有 6 天截止」</text>
+<rect x="885.0" y="79.5" width="250.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="1010.0" y="101.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">線上申請匯款</text>
+<text x="1010.0" y="120.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">open_external 開社會局網站</text>
+<rect x="885.0" y="189.5" width="250.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="1010.0" y="211.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">提醒我申請</text>
+<text x="1010.0" y="230.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">reminder：11/12 早上 9 點通知</text>
+<text x="40.0" y="300.0" font-size="12.5" font-weight="400" fill="#738995" text-anchor="start" dominant-baseline="central">也可以打給戶籍地的區公所社會課（撥號前有確認頁）。</text>
+</svg>

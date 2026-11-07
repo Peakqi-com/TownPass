@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="560" viewBox="0 0 1080 560" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif" role="img" aria-label="M12 補助小幫手：三題篩出「可能可以申請」的補助">
+<title>M12 補助小幫手：三題篩出「可能可以申請」的補助</title>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#738995"/></marker>
+  <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#738995"/></marker>
+</defs>
+<rect x="1" y="1" width="1078" height="558" rx="20" fill="white" stroke="#E3E7E9" stroke-width="2"/>
+<rect x="1" y="1" width="1078" height="6" rx="3" fill="#5AB4C5"/>
+<text x="32.0" y="38.0" font-size="20" font-weight="700" fill="#30383D" text-anchor="start" dominant-baseline="central">M12 補助小幫手：三題篩出「可能可以申請」的補助</text><text x="32.0" y="64.0" font-size="13" font-weight="400" fill="#738995" text-anchor="start" dominant-baseline="central">答案只存在手機的記憶體裡，不上傳；最後由社會局審核</text>
+<path d="M540,155.5 V190 M190,190 H890" fill="none" stroke="#91A0A8" stroke-width="1.8"/>
+<path d="M190.0,190.0 L190.0,215.5" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M540.0,190.0 L540.0,215.5" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M890.0,190.0 L890.0,224.5" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M190,294.5 V318 M540,294.5 V318 M890,285.5 V318 M190,318 H890" fill="none" stroke="#91A0A8" stroke-width="1.8"/>
+<path d="M190.0,318.0 L190.0,360.5" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M540.0,318.0 L540.0,369.5" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M890.0,318.0 L890.0,369.5" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M190.0,439.5 L190.0,470.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="260.0" y="94.5" width="560.0" height="61.0" rx="12.0" fill="#F1F3F4" stroke="#CAD1D5" stroke-width="1.5"/>
+<text x="540.0" y="116.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">自動帶入（不用問）</text>
+<text x="540.0" y="135.5" font-size="12.5" font-weight="400" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">年齡・原住民身分（門檻降 10 歲）・行政區 ← 台北通帳號</text>
+<rect x="30.0" y="215.5" width="320.0" height="79.0" rx="12.0" fill="#FDF8ED" stroke="#F5BA4B" stroke-width="2"/>
+<text x="190.0" y="237.0" font-size="15" font-weight="700" fill="#3C2B0B" text-anchor="middle" dominant-baseline="central">① 有身心障礙證明嗎？</text>
+<text x="190.0" y="256.5" font-size="12.5" font-weight="400" fill="#AD7B2B" text-anchor="middle" dominant-baseline="central">有 → 看不清楚／聽不清楚／其他</text>
+<text x="190.0" y="274.5" font-size="12.5" font-weight="400" fill="#AD7B2B" text-anchor="middle" dominant-baseline="central">沒有・不知道</text>
+<rect x="380.0" y="215.5" width="320.0" height="79.0" rx="12.0" fill="#FDF8ED" stroke="#F5BA4B" stroke-width="2"/>
+<text x="540.0" y="237.0" font-size="15" font-weight="700" fill="#3C2B0B" text-anchor="middle" dominant-baseline="central">② 家裡收入</text>
+<text x="540.0" y="256.5" font-size="12.5" font-weight="400" fill="#AD7B2B" text-anchor="middle" dominant-baseline="central">有低收或中低收證明</text>
+<text x="540.0" y="274.5" font-size="12.5" font-weight="400" fill="#AD7B2B" text-anchor="middle" dominant-baseline="central">沒有，但收入不高・不知道</text>
+<rect x="730.0" y="224.5" width="320.0" height="61.0" rx="12.0" fill="#FDF8ED" stroke="#F5BA4B" stroke-width="2"/>
+<text x="890.0" y="246.0" font-size="15" font-weight="700" fill="#3C2B0B" text-anchor="middle" dominant-baseline="central">③ 家裡有人需要別人照顧嗎？</text>
+<text x="890.0" y="265.5" font-size="12.5" font-weight="400" fill="#AD7B2B" text-anchor="middle" dominant-baseline="central">要・不要・不知道</text>
+<rect x="30.0" y="360.5" width="320.0" height="79.0" rx="12.0" fill="#5AB4C5" stroke="#5AB4C5" stroke-width="2"/>
+<text x="190.0" y="382.0" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">您可能可以申請</text>
+<text x="190.0" y="401.5" font-size="12.5" font-weight="400" fill="#EDF8FA" text-anchor="middle" dominant-baseline="central">老人津貼・身障生活補助・長照…</text>
+<text x="190.0" y="419.5" font-size="12.5" font-weight="400" fill="#EDF8FA" text-anchor="middle" dominant-baseline="central">收入「不知道」也列出，標「要看家裡收入」</text>
+<rect x="380.0" y="369.5" width="320.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="540.0" y="391.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">不用申請，會自動入帳或減免</text>
+<text x="540.0" y="410.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">例如已是低收、中低收的身障生活補助</text>
+<rect x="730.0" y="369.5" width="320.0" height="61.0" rx="12.0" fill="#FDF3EC" stroke="#FD853A" stroke-width="2"/>
+<text x="890.0" y="391.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">答「不知道」的提示</text>
+<text x="890.0" y="410.5" font-size="12.5" font-weight="400" fill="#AE501F" text-anchor="middle" dominant-baseline="central">例如照顧題附 1966 按鈕</text>
+<rect x="40.0" y="483.5" width="1000.0" height="43.0" rx="12.0" fill="#FFFFFF" stroke="#CAD1D5" stroke-width="1.5"/>
+<text x="540.0" y="505.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">每張卡片：一句話＋大約金額・要準備什麼（勾選）・戶籍地社會課地址電話・家人能不能代辦・申請準備單（可複製傳給家人）</text>
+</svg>

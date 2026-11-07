@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="480" viewBox="0 0 1180 480" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif" role="img" aria-label="③ 找服務">
+<title>③ 找服務</title>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#738995"/></marker>
+  <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#738995"/></marker>
+</defs>
+<rect x="1" y="1" width="1178" height="478" rx="20" fill="white" stroke="#E3E7E9" stroke-width="2"/>
+<rect x="1" y="1" width="1178" height="6" rx="3" fill="#5AB4C5"/>
+<text x="32.0" y="38.0" font-size="20" font-weight="700" fill="#30383D" text-anchor="start" dominant-baseline="central">③ 找服務</text><text x="32.0" y="64.0" font-size="13" font-weight="400" fill="#738995" text-anchor="start" dominant-baseline="central">比對完全在手機上執行，不用 AI 模型；頁面打開後斷網也能用</text>
+<path d="M250.0,215.0 L320.0,215.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M430.0,245.5 L430.0,299.5" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M250.0,125.0 L560.0,125.0 L560.0,165.0 L585.0,165.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M540.0,215.0 L560.0,215.0 L560.0,165.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M855.0,165.0 L870.0,165.0 L870.0,125.0 L890.0,125.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M870.0,165.0 L870.0,245.0 L890.0,245.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M250.0,420.0 L890.0,420.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="50.0" y="103.5" width="200.0" height="43.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="150.0" y="125.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">打字</text>
+<rect x="50.0" y="184.5" width="200.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="150.0" y="206.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">點一下開始說話</text>
+<text x="150.0" y="225.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">再點一下停止</text>
+<rect x="50.0" y="389.5" width="200.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="150.0" y="411.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">點分類</text>
+<text x="150.0" y="430.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">看病・交通・權益…</text>
+<rect x="320.0" y="184.5" width="220.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="430.0" y="206.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">listen</text>
+<text x="430.0" y="225.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">在手機上辨識，不上傳</text>
+<rect x="320.0" y="299.5" width="220.0" height="61.0" rx="12.0" fill="#FDF3EC" stroke="#FD853A" stroke-width="2"/>
+<text x="430.0" y="321.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">手機不支援離線辨識</text>
+<text x="430.0" y="340.5" font-size="12.5" font-weight="400" fill="#AE501F" text-anchor="middle" dominant-baseline="central">提示改用打字</text>
+<rect x="585.0" y="134.5" width="270.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="720.0" y="156.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">正規化、比對</text>
+<text x="720.0" y="175.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">services.json 的長輩說法 phrases</text>
+<rect x="890.0" y="94.5" width="240.0" height="61.0" rx="12.0" fill="#5AB4C5" stroke="#5AB4C5" stroke-width="2"/>
+<text x="1010.0" y="116.0" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">「你是說：…？」</text>
+<text x="1010.0" y="135.5" font-size="12.5" font-weight="400" fill="#EDF8FA" text-anchor="middle" dominant-baseline="central">最多三個大按鈕</text>
+<rect x="890.0" y="214.5" width="240.0" height="61.0" rx="12.0" fill="#FDF3EC" stroke="#FD853A" stroke-width="2"/>
+<text x="1010.0" y="236.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">都對不上</text>
+<text x="1010.0" y="255.5" font-size="12.5" font-weight="400" fill="#AE501F" text-anchor="middle" dominant-baseline="central">「要不要打 1999 問問看」</text>
+<rect x="890.0" y="398.5" width="240.0" height="43.0" rx="12.0" fill="#5AB4C5" stroke="#5AB4C5" stroke-width="2"/>
+<text x="1010.0" y="420.0" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">該分類的服務清單</text>
+<rect x="404.2" y="279.0" width="51.5" height="22" rx="11" fill="white" stroke="#E3E7E9"/>
+<text x="430.0" y="290.0" font-size="12.5" font-weight="600" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">不支援</text>
+<rect x="572.0" y="204.0" width="89.0" height="22" rx="11" fill="white" stroke="#E3E7E9"/>
+<text x="616.5" y="215.0" font-size="12.5" font-weight="600" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">辨識出的文字</text>
+<rect x="850.5" y="97.0" width="39.0" height="22" rx="11" fill="white" stroke="#E3E7E9"/>
+<text x="870.0" y="108.0" font-size="12.5" font-weight="600" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">找到</text>
+<rect x="850.5" y="211.0" width="39.0" height="22" rx="11" fill="white" stroke="#E3E7E9"/>
+<text x="870.0" y="222.0" font-size="12.5" font-weight="600" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">沒有</text>
+</svg>

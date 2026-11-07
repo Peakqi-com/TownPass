@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="300" viewBox="0 0 1180 300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif" role="img" aria-label="① 開啟長輩模式">
+<title>① 開啟長輩模式</title>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#738995"/></marker>
+  <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#738995"/></marker>
+</defs>
+<rect x="1" y="1" width="1178" height="298" rx="20" fill="white" stroke="#E3E7E9" stroke-width="2"/>
+<rect x="1" y="1" width="1178" height="6" rx="3" fill="#5AB4C5"/>
+<text x="32.0" y="38.0" font-size="20" font-weight="700" fill="#30383D" text-anchor="start" dominant-baseline="central">① 開啟長輩模式</text><text x="32.0" y="64.0" font-size="13" font-weight="400" fill="#738995" text-anchor="start" dominant-baseline="central">打開時先在首頁前墊一筆「選模式」的瀏覽紀錄，城市通的返回鍵就能回去換模式</text>
+<path d="M240.0,175.0 L265.0,175.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M465.0,175.0 L490.0,175.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M690.0,175.0 L715.0,175.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M915.0,175.0 L940.0,175.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="40.0" y="144.5" width="200.0" height="61.0" rx="12.0" fill="#F1F3F4" stroke="#CAD1D5" stroke-width="1.5"/>
+<text x="140.0" y="166.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">台北通「我的服務」</text>
+<text x="140.0" y="185.5" font-size="12.5" font-weight="400" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">點「長輩模式」</text>
+<circle cx="40.0" cy="144.5" r="12" fill="#468D9B" stroke="white" stroke-width="2"/>
+<text x="40.0" y="144.5" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">1</text>
+<rect x="265.0" y="144.5" width="200.0" height="61.0" rx="12.0" fill="#F1F3F4" stroke="#CAD1D5" stroke-width="1.5"/>
+<text x="365.0" y="166.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">WebView 載入網頁</text>
+<text x="365.0" y="185.5" font-size="12.5" font-weight="400" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">Vercel 東京</text>
+<circle cx="265.0" cy="144.5" r="12" fill="#468D9B" stroke="white" stroke-width="2"/>
+<text x="265.0" y="144.5" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">2</text>
+<rect x="490.0" y="135.5" width="200.0" height="79.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="590.0" y="157.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">向 App 要資料</text>
+<text x="590.0" y="176.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">userinfo：姓名・生日・行政區</text>
+<text x="590.0" y="194.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">a11y_state：報讀軟體・字級</text>
+<circle cx="490.0" cy="135.5" r="12" fill="#468D9B" stroke="white" stroke-width="2"/>
+<text x="490.0" y="135.5" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">3</text>
+<rect x="715.0" y="144.5" width="200.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="815.0" y="166.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">讀手機裡的設定</text>
+<text x="815.0" y="185.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">模式・語速・家人設定的按鈕</text>
+<circle cx="715.0" cy="144.5" r="12" fill="#468D9B" stroke="white" stroke-width="2"/>
+<text x="715.0" y="144.5" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">4</text>
+<rect x="940.0" y="144.5" width="200.0" height="61.0" rx="12.0" fill="#5AB4C5" stroke="#5AB4C5" stroke-width="2"/>
+<text x="1040.0" y="166.0" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">算年齡、篩選</text>
+<text x="1040.0" y="185.5" font-size="12.5" font-weight="400" fill="#EDF8FA" text-anchor="middle" dominant-baseline="central">首頁按鈕・權益卡片 → 畫面</text>
+<circle cx="940.0" cy="144.5" r="12" fill="#468D9B" stroke="white" stroke-width="2"/>
+<text x="940.0" y="144.5" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">5</text>
+<text x="40.0" y="270.0" font-size="12.5" font-weight="400" fill="#738995" text-anchor="start" dominant-baseline="central">第一次使用（還沒選模式）會先到「選模式」頁；同時預載全部頁面，之後斷網也能在各頁之間切換。</text>
+</svg>

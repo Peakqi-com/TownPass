@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="400" viewBox="0 0 1180 400" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif" role="img" aria-label="⑤ 家人代設定（M7）">
+<title>⑤ 家人代設定（M7）</title>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#738995"/></marker>
+  <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#738995"/></marker>
+</defs>
+<rect x="1" y="1" width="1178" height="398" rx="20" fill="white" stroke="#E3E7E9" stroke-width="2"/>
+<rect x="1" y="1" width="1178" height="6" rx="3" fill="#5AB4C5"/>
+<text x="32.0" y="38.0" font-size="20" font-weight="700" fill="#30383D" text-anchor="start" dominant-baseline="central">⑤ 家人代設定（M7）</text><text x="32.0" y="64.0" font-size="13" font-weight="400" fill="#738995" text-anchor="start" dominant-baseline="central">設定內容直接編在 QR code 裡，全程不經過伺服器</text>
+<rect x="40" y="86" width="1100" height="124" rx="18" fill="#F1F3F4" fill-opacity="0.55" stroke="#CAD1D5" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="60.0" y="108.0" font-size="14" font-weight="700" fill="#5E6D76" text-anchor="start" dominant-baseline="central">家人的手機</text>
+<rect x="40" y="246" width="1100" height="124" rx="18" fill="#EDF8FA" fill-opacity="0.55" stroke="#B4E2EA" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="60.0" y="268.0" font-size="14" font-weight="700" fill="#356C77" text-anchor="start" dominant-baseline="central">長輩的手機</text>
+<path d="M320.0,162.0 L400.0,162.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M640.0,162.0 L740.0,162.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M320.0,322.0 L390.0,322.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M650.0,322.0 L730.0,322.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M980.0,162.0 L1060.0,162.0 L1060.0,228.0 L520.0,228.0 L520.0,291.5" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+<rect x="80.0" y="131.5" width="240.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="200.0" y="153.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">長輩模式「我是家人」</text>
+<text x="200.0" y="172.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">幫長輩設定</text>
+<rect x="400.0" y="131.5" width="240.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="520.0" y="153.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">勾首頁按鈕</text>
+<text x="520.0" y="172.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">填家人電話與行政區</text>
+<rect x="740.0" y="131.5" width="240.0" height="61.0" rx="12.0" fill="#5AB4C5" stroke="#5AB4C5" stroke-width="2"/>
+<text x="860.0" y="153.0" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">產生 QR code</text>
+<text x="860.0" y="172.5" font-size="12.5" font-weight="400" fill="#EDF8FA" text-anchor="middle" dominant-baseline="central">設定內容在 QR 裡</text>
+<rect x="80.0" y="300.5" width="240.0" height="43.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="200.0" y="322.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">「家人幫我設定」</text>
+<rect x="390.0" y="291.5" width="260.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="520.0" y="313.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">qr_code_scan 掃描</text>
+<text x="520.0" y="332.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">檢查格式、版本、隱藏字元</text>
+<rect x="730.0" y="291.5" width="260.0" height="61.0" rx="12.0" fill="#5AB4C5" stroke="#5AB4C5" stroke-width="2"/>
+<text x="860.0" y="313.0" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">存在手機裡</text>
+<text x="860.0" y="332.5" font-size="12.5" font-weight="400" fill="#EDF8FA" text-anchor="middle" dominant-baseline="central">首頁按鈕換好・唸「設定好了」</text>
+<rect x="714.5" y="217.0" width="151.0" height="22" rx="11" fill="white" stroke="#E3E7E9"/>
+<text x="790.0" y="228.0" font-size="12.5" font-weight="600" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">長輩的手機對準 QR 掃描</text>
+</svg>

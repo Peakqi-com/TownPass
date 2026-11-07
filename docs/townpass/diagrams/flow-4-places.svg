@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="380" viewBox="0 0 1180 380" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif" role="img" aria-label="④ 附近據點（M9 吃飯上課、M10 視障出門）">
+<title>④ 附近據點（M9 吃飯上課、M10 視障出門）</title>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#738995"/></marker>
+  <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#738995"/></marker>
+</defs>
+<rect x="1" y="1" width="1178" height="378" rx="20" fill="white" stroke="#E3E7E9" stroke-width="2"/>
+<rect x="1" y="1" width="1178" height="6" rx="3" fill="#5AB4C5"/>
+<text x="32.0" y="38.0" font-size="20" font-weight="700" fill="#30383D" text-anchor="start" dominant-baseline="central">④ 附近據點（M9 吃飯上課、M10 視障出門）</text><text x="32.0" y="64.0" font-size="13" font-weight="400" fill="#738995" text-anchor="start" dominant-baseline="central">開放資料由後端代理：解決跨網域、Big5 亂碼、TWD97 座標與檔案太大的問題</text>
+<path d="M265.0,150.0 L295.0,150.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M565.0,150.0 L600.0,150.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M840.0,150.0 L895.0,150.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1010.0,180.5 L1010.0,251.5" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M895.0,290.0 L840.0,290.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M600.0,290.0 L495.0,290.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="35.0" y="119.5" width="230.0" height="61.0" rx="12.0" fill="#F1F3F4" stroke="#CAD1D5" stroke-width="1.5"/>
+<text x="150.0" y="141.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">行政區或目前位置</text>
+<text x="150.0" y="160.5" font-size="12.5" font-weight="400" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">userinfo 地址・location</text>
+<rect x="295.0" y="119.5" width="270.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="430.0" y="141.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">fetch /api/opendata/…</text>
+<text x="430.0" y="160.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">?q=中山區 或 ?near=緯度,經度</text>
+<rect x="600.0" y="119.5" width="240.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="720.0" y="141.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">白名單檢查</text>
+<text x="720.0" y="160.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">只代理登記過的 28 個來源</text>
+<rect x="895.0" y="119.5" width="230.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="1010.0" y="141.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">快取有就直接回</text>
+<text x="1010.0" y="160.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">CDN 快取</text>
+<path d="M895.0,260.5 a115.0,9 0 0,1 230.0,0 v59.0 a115.0,9 0 0,1 -230.0,0 z" fill="#FCF2DF" stroke="#AD7B2B" stroke-width="2"/>
+<path d="M895.0,260.5 a115.0,9 0 0,0 230.0,0" fill="none" stroke="#AD7B2B" stroke-width="2"/>
+<text x="1010.0" y="288.0" font-size="15" font-weight="700" fill="#3C2B0B" text-anchor="middle" dominant-baseline="central">data.taipei</text>
+<text x="1010.0" y="307.5" font-size="12.5" font-weight="400" fill="#AD7B2B" text-anchor="middle" dominant-baseline="central">沒有快取才抓</text>
+<rect x="600.0" y="259.5" width="240.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
+<text x="720.0" y="281.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">Big5 轉碼・座標換算</text>
+<text x="720.0" y="300.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">依距離或行政區篩選</text>
+<rect x="165.0" y="259.5" width="330.0" height="61.0" rx="12.0" fill="#5AB4C5" stroke="#5AB4C5" stroke-width="2"/>
+<text x="330.0" y="281.0" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">一句話摘要＋大字電話按鈕</text>
+<text x="330.0" y="300.5" font-size="12.5" font-weight="400" fill="#EDF8FA" text-anchor="middle" dominant-baseline="central">斷網或讀不到：說明並給 1999</text>
+<rect x="978.0" y="209.0" width="64.0" height="22" rx="11" fill="white" stroke="#E3E7E9"/>
+<text x="1010.0" y="220.0" font-size="12.5" font-weight="600" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">沒有快取</text>
+<rect x="521.8" y="261.0" width="76.5" height="22" rx="11" fill="white" stroke="#E3E7E9"/>
+<text x="560.0" y="272.0" font-size="12.5" font-weight="600" fill="#5E6D76" text-anchor="middle" dominant-baseline="central">回傳前幾筆</text>
+</svg>
