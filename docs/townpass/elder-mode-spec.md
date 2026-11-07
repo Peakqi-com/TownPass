@@ -348,7 +348,24 @@ P0＝Demo 主線，今天一定要做；P1＝今天做得完，加分；P2＝決
 | 語速 | **視障者用報讀軟體時習慣一般 3～5 倍速**（隊長補充的 insight）。報讀軟體開著時不自己唸，尊重使用者在報讀軟體設定的速度；沒開時，自己唸的速度可以在模式頁調整：慢 0.4、正常 0.5、快 0.75、最快 1.0（flutter_tts 的 rate；0.5 約為正常語速，各平台實際上限不同，⚠️ iOS 可能達不到 3 倍）。預設：都還好＝慢，看不清楚＝正常。App 端 `speak` 的上限因此從 0.7 放寬到 1.0 |
 | 內容 | 高速、跳著聽的人最需要**重點在標題和第一句**；不要開場白 |
 
-驗證（2026-11-07，Playwright）：所有可互動元素都有名稱、圖示都隱藏、首頁與找服務頁載入後焦點在 h1、搜尋結果由 live region 讀出。⚠️ 仍需用實機開 VoiceOver／TalkBack 實測。
+| 不唸兩次 | 換畫面時焦點移到標題，報讀軟體會自己唸，這時不再 `say()`；已經 `say()` 的訊息不再加 `role="alert"` |
+
+**原生報讀機制的對照**（2026-11-07 隊長補充：除了 TalkBack／VoiceOver，也要支援第三方報讀軟體、無障礙標籤、添加焦點、焦點順序、無障礙通知）
+
+| 機制 | Android | iOS | 我們的網頁 |
+|---|---|---|---|
+| 第三方報讀軟體 | 透過系統的 AccessibilityService | 只有 VoiceOver | 不綁定特定報讀軟體，只遵守標準無障礙語意，任何報讀軟體都讀得到。App 偵測報讀軟體用 Flutter 的 `accessibleNavigation`；✅ 查 Flutter 3.47.6 引擎原始碼確認：Android 是看「觸控探索」有沒有開（`AccessibilityBridge.java` 的 `isTouchExplorationEnabled`），所以第三方報讀軟體只要開了觸控探索也偵測得到；iOS 是 `UIAccessibilityIsVoiceOverRunning` |
+| 無障礙標籤 | `contentDescription` | `accessibilityLabel` | 可見文字、必要時 `aria-label`、`img` 的 `alt` |
+| 添加焦點 | `importantForAccessibility` | `isAccessibilityElement` | 只用原生的互動元素；裝飾圖示 `aria-hidden` |
+| 焦點順序 | `nextFocusForward` | `accessibilityElements` | DOM 順序＝視覺順序；不用正數 `tabindex` |
+| 無障礙通知 | `announceForAccessibility` | `UIAccessibilityPostNotification` | live region（`role="status"`）。**不從 App 端呼叫原生通知**：✅ Flutter 3.47.6 的 `SemanticsService` 說明寫，Android 已棄用 announcement 事件（會讓 TalkBack 清掉正在唸的內容），建議改用隱含的播報機制；網頁的 live region 就是這種機制。同時用兩種還會唸兩次 |
+
+說明：天坦、解說、點明、保益、永德是中國大陸市場的報讀軟體。臺灣視障者在手機上主要用 VoiceOver 和 TalkBack（數發部 113 年調查，見 taipei-disability-services.md §A.1）。
+
+驗證：
+- 2026-11-07（Playwright，390px）：13 個功能頁面加上撥號確認頁，在三種模式下（共 45 種組合）都檢查過：每頁一個 h1、載入後焦點在標題、所有可互動元素都有名稱、沒有正數 tabindex、焦點順序和視覺順序一致、圖示都隱藏、沒有重複 id、觸控範圍 ≥ 48。修掉 2 處會唸兩次的地方（`ServiceCard`、`VisionScreen` 的錯誤訊息同時有 `role="alert"` 和 `say()`）。
+- 檢查腳本：作品 repo 的 `scripts/a11y-check.js`，貼到 Chrome DevTools 的 Console 執行；App 裡的 WebView 可以用 `chrome://inspect` 連上去跑。
+- ⚠️ 仍需用實機開 VoiceOver／TalkBack 實測。
 
 ### 4.1 色彩：給辨色能力退化的長輩
 
