@@ -23,6 +23,8 @@
 | App | Flutter **3.47.6**（FVM，見 `.fvmrc`）、Dart ≥ 3.13 | iOS 最低 15（UIScene、SPM）；Android AGP 9.1.0、Kotlin 2.4.0、Gradle 9.3.1、Java 17 |
 | App 狀態／路由 | 沿用現有的 GetX、`TPRoute` | 不要另外引入 Riverpod、Bloc、go_router 等 |
 | App 新套件 | pub.dev 上 MIT／BSD／Apache 的套件 | iOS 優先選支援 Swift Package Manager 的（CocoaPods 已進入維護模式） |
+| App 新套件（已核准） | **flutter_tts**（MIT，`speak` Handler）、**speech_to_text**（BSD-3-Clause，`listen` Handler） | 2026-11-07 隊長核准。speech_to_text 一定要用 `onDevice: true`，並先檢查裝置是否支援離線辨識，不支援就回錯誤，**不可退回雲端辨識** |
+| 微服務新套件（已核准） | **qrcode**（MIT，家人代設定產生 QR code） | 2026-11-07 隊長核准 |
 | 微服務前端 | **Vue 3 + Vite + Pinia + Tailwind + TypeScript**（官方範例）；React；**Next.js（React）**；純 HTML／CSS／JS | 必須能在 WebView 中執行。指引原文：「語言、框架不限」 |
 | 後端（選配） | Java：**Spring Boot 4.x + Java 21 + Maven**（指引範例；競賽須知列 Spring、Hibernate、Tomcat）；Python：FastAPI、Flask（往屆得獎作品）；Node：**Next.js Route Handlers**（和前端同一個專案） | 指引原文：「語言不限」。一定要附 `Dockerfile`（「可移轉、可維運、可上架」）；埠號讀環境變數 `PORT`；前後端不同網域時要設定 CORS |
 | 資料庫 | **指引未指定**（只有 #49 寫「一般後端：登入、資料庫…」屬於允許事項；#11 提到 Hibernate） | 選型前**先問使用者**。條件：免費、開源、可移轉（建議用 PostgreSQL／MySQL 之類，附 Docker 設定）。能直接即時抓開放資料的話，就不需要資料庫 |
@@ -101,6 +103,12 @@ assets/svg/        108 個圖示（snake_case）
 - UI 設計系統（Figma UI Kit、色票、字級、無障礙、Figma MCP 讀取流程）：[`docs/townpass/design-system.md`](docs/townpass/design-system.md)
 - 後端與部署（Firebase／Cloud Run／Next.js + Vercel、串回城市通）：[`docs/townpass/deployment.md`](docs/townpass/deployment.md)
 - 開放資料（data.taipei 已驗證的 30 個資料集、編碼／座標／CORS 問題、題目方向）：[`docs/townpass/open-data.md`](docs/townpass/open-data.md)。找新資料集時先搜尋 `docs/townpass/open-data/data-taipei-catalog.csv`（全部 2,816 筆）
+- 往屆得獎作品（2024、2025 共 12 件的點子、技術、今年規則下的踩線點與發想觀察）：[`docs/townpass/past-winners.md`](docs/townpass/past-winners.md)
+- **長輩模式功能規格（開發時以這份為準）**：模組、服務清單 JSON 規格、介面規範、架構與串接流程、開發順序：[`docs/townpass/elder-mode-spec.md`](docs/townpass/elder-mode-spec.md)
+- 本屆題目「數位平權 × 友善共融／用不了」的用戶研究（三份，每條主張標 ✅ 已查證／⚠️ 未查證；未查證的不可寫成「研究指出」）：
+  - 長輩、視障、聽障的使用障礙、WCAG 規範、**WebView 技術限制**（TTS／語音辨識／麥克風／字級放大）：[`docs/townpass/accessibility-research.md`](docs/townpass/accessibility-research.md)
+  - 長輩的數位習慣、臺北市近四年長者服務、微服務做法：[`docs/townpass/taipei-elderly-services.md`](docs/townpass/taipei-elderly-services.md)
+  - 視障、聽障的使用習慣、臺北市相關服務與溝通管道、微服務做法：[`docs/townpass/taipei-disability-services.md`](docs/townpass/taipei-disability-services.md)
 
 ## 4. 開發慣例
 
