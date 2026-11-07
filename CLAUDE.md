@@ -110,6 +110,17 @@ assets/svg/        108 個圖示（snake_case）
   - 長輩的數位習慣、臺北市近四年長者服務、微服務做法：[`docs/townpass/taipei-elderly-services.md`](docs/townpass/taipei-elderly-services.md)
   - 視障、聽障的使用習慣、臺北市相關服務與溝通管道、微服務做法：[`docs/townpass/taipei-disability-services.md`](docs/townpass/taipei-disability-services.md)
   - 補助的資格、金額、應備文件、申請管道、代辦（含 services.json 資格規則草稿）：[`docs/townpass/taipei-subsidies.md`](docs/townpass/taipei-subsidies.md)
+- 防詐先問一下（M11）的 165 官方文章查證紀錄：[`docs/townpass/antifraud-research.md`](docs/townpass/antifraud-research.md)
+
+### 3.1 文件同步規則（和作品 repo）
+
+作品 repo [townpass2026-peakqi](https://github.com/Peakqi-com/townpass2026-peakqi) 的 `docs/` 是本 repo `docs/townpass/` 的**複本**，兩邊必須一致。
+
+- **唯一來源是本 repo 的 `docs/townpass/`**。新增或修改文件一律在這裡做，**不要直接改作品 repo 的 `docs/`**（下次同步會被蓋掉）。
+- 改完文件後，到作品 repo（預設在 `../townpass2026-peakqi`）執行 `npm run docs:sync`，把兩個 repo 的變更都 commit。作品 repo 的 `npm run docs:check` 可以檢查兩邊是否一致（不一致時 exit code 1）。
+- 架構圖、流程圖改 `docs/townpass/diagrams/build_diagrams.py` 後重跑（`python3 docs/townpass/diagrams/build_diagrams.py`），再同步；不要手改 SVG。
+- 不同步、兩邊各自保留的檔案：`*.pdf`（提案簡報、規劃書）、`diagrams/build_diagrams.py`（只放在本 repo）。
+- 作品 repo 的 README 引用了 `docs/diagrams/*.svg` 和部分文件，改檔名或刪檔前先在作品 repo 搜尋引用處。
 
 ## 4. 開發慣例
 
