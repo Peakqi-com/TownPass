@@ -185,10 +185,10 @@ extension MyServiceIdExt on MyServiceItemId {
           category: MyServiceCategory.explore,
           destinationUrl: '',
         ),
-      // TODO: 服務名稱、說明、分類確定後更新；正式圖示從 Figma 匯出後放進 assets/svg/ 並重跑 build_runner
+      // TODO: 正式圖示從 Figma 匯出後放進 assets/svg/ 並重跑 build_runner
       MyServiceItemId.peakqiService => MyServiceItem(
-          title: '我的新服務',
-          description: '一句話介紹這個服務',
+          title: '用得了',
+          description: '看不清楚、聽不清楚，都用得了',
           icon: Assets.svg.iconInfo.svg(),
           category: MyServiceCategory.other,
           destinationUrl: 'https://townpass2026-peakqi.vercel.app/',
