@@ -220,7 +220,7 @@ def architecture():
 
     d.group(40, 330, 780, 250, "②「用得了」微服務")
     pages = d.box(610, 400, ["前端頁面 M1～M12", "townpass2026-peakqi・Next.js 16", "React 19・Tailwind 4・Vercel 東京"], "ours", w=330)
-    data = d.box(170, 515, ["services.json", "M3 服務清單 30 筆", "打包在前端，斷網可用"], "ours", w=220)
+    data = d.box(170, 515, ["services.json", "M3 服務清單 31 筆", "打包在前端，斷網可用"], "ours", w=220)
     bridge = d.box(420, 515, ["bridge.ts・elder.ts", "呼叫 App 能力", "一般瀏覽器改用 mock"], "ours", w=220)
     api = d.box(680, 515, ["後端 /api/opendata", "白名單代理・Big5 轉碼", "TWD97 換算・CDN 快取"], "ours", w=230)
     od = d.db(1000, 515, ["data.taipei", "開放資料 37 個來源"], w=220)

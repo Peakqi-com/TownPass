@@ -91,6 +91,24 @@ curl -L 'https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=
 | [五癌篩檢醫療院所](https://data.taipei/dataset/detail?id=ae20d75c-dffb-4d4f-85e1-9c512189005c)（`cancer-screening`） | 481 | UTF-8 BOM | 「行政區」欄位是代碼 | 子宮頸癌、口腔癌、大腸癌、乳癌、肺癌各一欄（Y／空白），「貼心小提醒」是官方提醒文字 |
 | [假牙補助醫療院所名單](https://data.taipei/dataset/detail?id=76b8b514-e793-4cca-8dcf-065d5af4b760)（`denture-clinics`） | 6 | Big5 | 地址（「區域」欄位是院區所在區） | 聯醫 6 院區；資格與流程見 `taipei-subsidies.md` A.12 |
 
+### 3.2 公車預估到站（M16，2026-11-07 實測，作品 repo 的 `/api/bus/*`）
+
+data.taipei 的資料集頁面只放一份說明用的小 CSV，真正的資料在臺北市公運處的 blob（gzip 壓縮的 UTF-8 JSON，回應沒有 `Content-Encoding`，也沒有 CORS 標頭，只能從伺服器端抓再自己解壓）。臺北是 `https://tcgbusfs.blob.core.windows.net/blobbus/<檔名>`，新北把 `blobbus` 換成 `ntpcbus`。
+
+| 檔案 | 資料集 | 大小（gz／解壓） | 用途 |
+|---|---|---|---|
+| `GetEstimateTime.gz` | [臺北市預估到站時間(公車)](https://data.taipei/dataset/detail?id=f11a5af0-7b37-48ef-98cc-f6f102ed43c6)、[新北市預估到站時間](https://data.taipei/dataset/detail?id=1e26ecf6-d5b4-494b-b94f-bee64938dd64) | 157 KB／2 MB | 即時預估，**每 15～20 秒更新**（說明 CSV 寫「每年」是指規格） |
+| `GetRoute.gz` | [臺北市路線](https://data.taipei/dataset/detail?id=6a03b03d-90d1-4d9e-a952-c940fd869772)、[新北市路線](https://data.taipei/dataset/detail?id=1f5998d2-d9e4-4d9f-8cbb-fe2d29b99c3c) | 77 KB／1 MB | RouteID → 路線名、起訖站。同一個 Id 會因聯營、附屬路線重複，要去重 |
+| `GetStop.gz` | [臺北市站牌](https://data.taipei/dataset/detail?id=62bc76da-6e6b-46ee-8976-c1945092d504)、[新北市站牌](https://data.taipei/dataset/detail?id=010244b7-c4ed-4b03-9436-c6cbe634d483) | 1.4 MB／9.4 MB | StopID → 站名、站序、方向 |
+
+- **一個 StopID 就是「某路線、某方向、某一站」**（全檔不重複）。設定只要記 `{ 市別, RouteID, StopID }`；不能只用站名＋路線＋方向（環狀路線同方向就有同名站）。
+- **方向看站牌檔的 `goBack`**（0 去程「往 destinationZh」、1 返程「往 departureZh」）。預估檔的 `GoBack` 是「車子目前在跑哪個方向」，實測有 2,929 筆和站牌方向不同，不能拿來判斷。
+- `EstimateTime` 是字串、單位秒；`-1` 尚未發車、`-2` 交管不停靠、`-3` 末班車已過、`-4` 今日未營運（公運處〈臺北市Data.Taipei平台API說明文件〉V6.3）。
+- 臺北、新北兩份的 RouteID、StopID 沒有交集；307 在臺北那份（RouteID 16111），新北主管的路線（例如藍1）只在新北那份。
+- ⚠️ 資料集頁面直接列的 `TstStop.json` 只有 1 筆範例、`TstRoute.json` 停在 2025-12，不能用；一律用 `Get*.gz`。
+- ⚠️ 站牌裁撤後 StopID 會消失（預估檔有 571 筆在站牌檔找不到），查不到時請家人重新設定。
+- 〈臺北市敬老愛心卡補助搭乘公車捷運路線表〉停在 2025-06，起迄站以路線檔為準。
+
 ## 4. 不建議使用（名稱和內容不符）
 
 | 資料集 | 問題 |
