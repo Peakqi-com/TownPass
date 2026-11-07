@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!-- 正式版也需要網路（原本只宣告在 debug／profile 的 manifest） -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 長輩模式 listen Handler：裝置端語音辨識 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <application
         android:label="Town Pass"
         android:name="${applicationName}"
@@ -63,6 +67,26 @@
         <intent>
             <action android:name="android.intent.action.VIEW" />
             <data android:scheme="tel" />
+        </intent>
+        <!-- 長輩模式 open_external：簡訊（聽障者 119／110 簡訊範本）、https（LINE 等外部 App） -->
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="sms" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="sms" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <!-- 長輩模式 speak／listen：系統 TTS 與語音辨識服務（Android 11+ 套件可見性） -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
         </intent>
         <!-- If your application checks for inAppBrowserView launch mode support -->
         <intent>

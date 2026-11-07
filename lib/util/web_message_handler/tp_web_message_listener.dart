@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:town_pass/util/web_message_handler/elder_mode_message_handlers.dart';
+import 'package:town_pass/util/web_message_handler/elder_mode_platform.dart';
 import 'package:town_pass/util/web_message_handler/tp_web_message_handler.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
@@ -16,6 +18,12 @@ abstract class TPWebMessageListener {
         OpenLinkMessageHandler(),
         NotifyMessageHandler(),
         QRCodeScanMessageHandler(),
+        // 長輩模式新增（docs/townpass/elder-mode-spec.md M0）
+        SpeakMessageHandler(tts: FlutterTtsAdapter()),
+        A11yStateMessageHandler(read: readSystemA11yState),
+        HapticMessageHandler(haptics: SystemHaptics()),
+        OpenExternalMessageHandler(launcher: ExternalAppLauncher()),
+        ListenMessageHandler(recognizer: SpeechToTextRecognizer()),
       ];
 
   static List<TPWebMessageHandler> get messageHandler => _cachedMessageHandlers;

@@ -109,6 +109,7 @@ assets/svg/        108 個圖示（snake_case）
   - 長輩、視障、聽障的使用障礙、WCAG 規範、**WebView 技術限制**（TTS／語音辨識／麥克風／字級放大）：[`docs/townpass/accessibility-research.md`](docs/townpass/accessibility-research.md)
   - 長輩的數位習慣、臺北市近四年長者服務、微服務做法：[`docs/townpass/taipei-elderly-services.md`](docs/townpass/taipei-elderly-services.md)
   - 視障、聽障的使用習慣、臺北市相關服務與溝通管道、微服務做法：[`docs/townpass/taipei-disability-services.md`](docs/townpass/taipei-disability-services.md)
+  - 補助的資格、金額、應備文件、申請管道、代辦（含 services.json 資格規則草稿）：[`docs/townpass/taipei-subsidies.md`](docs/townpass/taipei-subsidies.md)
 
 ## 4. 開發慣例
 

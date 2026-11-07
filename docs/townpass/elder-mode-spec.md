@@ -8,6 +8,7 @@
 > | [`accessibility-research.md`](accessibility-research.md) | WebView 技術限制、介面與互動層證據 |
 > | [`taipei-elderly-services.md`](taipei-elderly-services.md) | 長輩數位習慣、市府長者服務（市府原頁查證）、資料集 |
 > | [`taipei-disability-services.md`](taipei-disability-services.md) | 視障與聽障的管道、溝通需求、資料集 |
+| [`taipei-subsidies.md`](taipei-subsidies.md) | 補助的資格、金額、應備文件、申請管道、代辦（市府原頁查證） |
 >
 > 規劃書和研究結果衝突時，以研究結果為準，修正對照見 §9。每個事實的出處都在三份研究文件裡，這份不重複列；標 ⚠️ 的是還沒查證、或需要實機確認的項目。
 
@@ -51,6 +52,7 @@
 | **M9** | 附近共餐、上課 | 長輩 | P1 | ✅ |
 | **M10** | 視障出門（捷運無障礙、有聲號誌） | 視障、聽障 | P1 | ✅ 要登記新資料來源 |
 | **M11** | 防詐先問一下 | 長輩 | P2 | 決選時當「下一步」 |
+| **M12** | 補助小幫手 | 長輩、視障、聽障 | P1 | ✅ 篩選、清單、代辦準備單；線上送件要看各補助 |
 | **後端** | 開放資料代理（已完成） | — | — | ✅ 已上線 |
 
 P0＝Demo 主線，今天一定要做；P1＝今天做得完，加分；P2＝決選問答時當作下一步說明。
@@ -66,14 +68,17 @@ P0＝Demo 主線，今天一定要做；P1＝今天做得完，加分；P2＝決
 | Handler `name` | 網頁送出 | App 回覆 | 做法 | 優先 |
 |---|---|---|---|---|
 | `speak` | `{ text, rate? }` | `true／false` | flutter_tts 呼叫系統 TTS，挑 `zh-TW` 且不需網路的聲音 | P0 |
-| `a11y_state` | `null` | `{ screenReader, textScale }` | `MediaQuery.accessibleNavigation`、`MediaQuery.textScalerOf` | P0 |
-| `text_scale` | — | 併在 `a11y_state` | 網頁用回傳的倍率設定根字級（雙平台一致） | P0 |
+| `a11y_state` | `null` | `{ screenReader, textScale }` | `PlatformDispatcher` 的 `accessibleNavigation`、`textScaleFactor`。網頁用 `textScale` 設定根字級（雙平台一致，見下方說明） | P0 |
 | `haptic` | `'light'｜'medium'` | `true` | Flutter 內建 `HapticFeedback`，不需新套件 | P0 |
 | `open_external` | `url` | `true／false` | `launchUrl(uri, mode: LaunchMode.externalApplication)`，給 LINE、簡訊、VRS | P0 |
-| `listen` | `{ locale: 'zh-TW' }` | `{ text }`／`{ error }` | speech_to_text，`onDevice: true`；先呼叫 `hasOnDeviceSupport`，沒有就回錯誤、網頁改用打字 | P1 |
+| `listen` | `{ action: 'start'｜'stop'｜'cancel', locale? }` | 先回 `{ status: 'listening' }`，再回 `{ text }` 或 `{ error }` | speech_to_text，`onDevice: true`。**只開放長輩模式網域**。Android 先用 `MainActivity` 的原生方法確認 `SpeechRecognizer.isOnDeviceRecognitionAvailable`（API 31+），不可用就回 `offline_unavailable`，因為套件在不支援時會默默改用雲端辨識；iOS 由套件設定 `requiresOnDeviceRecognition` | P1 |
 | `set_start_service` | `serviceId` | `true` | 讓設定頁的「APP 起始頁面」可以選長輩模式，長輩一打開 App 就進來 | P2 |
 
 **為什麼不用內建的 `launch_map` 開 LINE**：`launch_map` 先呼叫 `canLaunchUrl`，Android 11 以上沒宣告的 scheme 會回 `false`，就不會開啟；而且它用預設的開啟模式，https 連結不一定會跳到 LINE App。新增 `open_external` 比改動內建 Handler 安全。
+
+**字級為什麼由網頁處理**：城市通的 WebView 不跟隨系統字級（Android 的 flutter_inappwebview 固定 `textZoom=100`，iOS 不跟隨 Dynamic Type）。曾考慮在 App 端改 Android 的 `textZoom`，但網頁同時依 `textScale` 放大時，Android 會被放大兩次，所以統一由網頁依 `a11y_state.textScale` 設定根字級，全站字級用 `rem`。App 端因此完全不用改 `tp_web_view.dart`。
+
+**實作位置**：`lib/util/web_message_handler/elder_mode_message_handlers.dart`（邏輯，單元測試在 `test/elder_mode/`）、`elder_mode_platform.dart`（接套件的薄層）、`lib/util/elder_mode_config.dart`（信任網域）。網頁端是作品 repo 的 `src/lib/townpass/elder.ts`。
 
 **主程式要補的設定**：
 
@@ -81,7 +86,7 @@ P0＝Demo 主線，今天一定要做；P1＝今天做得完，加分；P2＝決
 |---|---|---|
 | Android | `RECORD_AUDIO` | 語音辨識 |
 | Android | `<queries>` 加 `sms`、`https`，以及 `TTS_SERVICE` intent | 簡訊、LINE 連結、TTS（Android 11+ 的套件可見性） |
-| Android | WebView 的 `textZoom` 跟隨系統字級，**只對長輩模式生效** | 目前固定為 100，系統放大字不會影響網頁 |
+| Android | 正式版 manifest 補上 `INTERNET` | 原本只宣告在 debug／profile，release 版的 WebView 會連不上網 |
 | iOS | `NSMicrophoneUsageDescription`、`NSSpeechRecognitionUsageDescription` | 語音辨識。少了任何一個，App 會閃退 |
 | iOS | `LSApplicationQueriesSchemes` 加 `sms`、`line` | `canOpenURL` 檢查 |
 
@@ -257,6 +262,45 @@ P0＝Demo 主線，今天一定要做；P1＝今天做得完，加分；P2＝決
 
 說出或打出對方講了什麼 → 本機比對常見詐騙說法 → 一鍵打給家人或 165。**永遠不說「這不是詐騙」**，只說「這很像詐騙，先問家人或 165」，避免長輩誤以為安全。
 
+### M12 補助小幫手（延續服務＋新服務）
+
+**情境**：「我不知道自己能領什麼補助。」「我想幫我媽申請，要帶什麼？」
+
+**流程**
+```
+年齡、原住民身分 ← userinfo（birthday、nativePeople；原住民門檻降 10 歲）
+→ 最多問三題（大按鈕，都有「不知道」）：
+   1. 有身心障礙證明嗎？（有 → 看不清楚／聽不清楚／其他）
+   2. 家裡收入：有低收或中低收證明／沒有，但收入不高／不知道
+   3. 家裡有人需要別人照顧嗎？
+→ 「您可能可以申請」卡片，依符合程度排序
+```
+答案只存在手機裡，不上傳。
+
+**卡片內容**（一次只看一張，大字）
+- 一句話說明＋大約金額，例如「中低收入老人生活津貼：每月 8,329 元或 4,164 元，要看家裡收入」。
+- **要準備什麼**：勾選清單（身分證、印章、申請人本人的郵局或台北富邦存摺……）。
+- **怎麼申請**：依管道顯示按鈕。區公所社會課（依 `userinfo` 的行政區帶出地址和電話）→ `open_external` 開地圖；1999 轉分機 → `1999agree`，旁邊並排「用文字」（1999 LINE、1957 LINE 文字客服）；確定能線上辦的才顯示「線上申請」。
+- **家人代辦**：標示「可以代辦」並寫要帶什麼（代申請人身分證明影本／委託書）→ 一鍵產生「申請準備單」文字，用 `open_external` 開 LINE 分享。
+- 底部固定：主責機關、官方連結、查證日期，以及一行字「最後由社會局審核，這裡只是幫您先看看」。
+
+**資格規則**：寫在 M3 服務清單的 `eligibility` 欄位（草稿見 [`taipei-subsidies.md`](taipei-subsidies.md) 文末，16 筆，都已查證）。市府調整資格或金額時只改 JSON，不改程式。
+
+**設計亮點**
+- **只說「可能可以申請」，不說「符合」**，避免長輩誤會；收入題答「不知道」時仍列出主要津貼，並標「要看家裡收入」。
+- **打中三個卡點**：不知道能領（主動列出）、看不懂要準備什麼（勾選清單）、只能臨櫃或打電話（地址、撥號，以及給聽障者的文字管道）。
+- **家人是共同使用者**：準備單直接傳給子女，對應「42.2% 的長輩靠別人操作」。
+
+**查證後的重要事實**（細節與來源見 `taipei-subsidies.md`）
+- 中低收入老人生活津貼和身障生活補助**不需要先有低收或中低收入戶身分**，門檻是全家每人每月收入 ≤ 39,960 元（115 年），比中低收入戶的 29,635 元寬；兩者只能擇優領一項。
+- **線上申辦大多靠不住**：社會局頁面連到的台北服務通案件頁，2026-11-07 實測是 404。確定能線上辦的只有輔具補助、1966 長照、重陽禮金匯款、台北通金質會員下載低收／中低收電子證明。所以主要管道是**戶籍地區公所社會課**和 1999。
+- 長照的自付比例要寫「第一類、第二類、第三類」（114/6/19 修法後的名稱）。
+- 衛福部 1957 福利諮詢專線：每天 8:00–22:00，有網頁文字諮詢和 LINE 文字客服。
+
+**⚠️ 限制**
+- 收入和財產門檻每年調整；`verified` 日期要顯示在畫面上。
+- 特別照顧津貼、緊急救援的費用、扶老修繕的金額有矛盾或沒有 115 年資料，第一版不列，或標「請洽 1999」。
+
 ### 後端：開放資料代理（已完成）
 
 作品 repo 的 `GET /api/opendata/{source}`：處理 CORS、Big5 轉碼、TWD97 座標轉換、白名單（不能當成任意轉址的跳板）、記憶體加 Vercel CDN 快取，支援 `near`、`radius`、`q`、`limit`。目前有 21 個來源，M9、M10 要新增約 9 個。
@@ -283,6 +327,41 @@ P0＝Demo 主線，今天一定要做；P1＝今天做得完，加分；P2＝決
 | 文字 | 句子短、用常用字；錯誤訊息不出現代碼和英文，一句話說原因，加一個按鈕說下一步 | 劉秀丹 2006；規劃書 |
 | 語言 | 華語為主。台語、客語的**預錄播報**列為第二階段；**不宣稱支援台語辨識** | 台語辨識錯誤率約 30%（Breeze Taigi 2026） |
 | 動畫 | 不閃爍；支援 `prefers-reduced-motion` | WCAG 2.3.x |
+
+### 4.1 色彩：給辨色能力退化的長輩
+
+**依據**
+- W3C WAI 的高齡文獻回顧：年紀大以後對短波長光的敏感度下降，**紅、黃比藍、綠容易看清楚**，深藍可能和黑色混在一起；對比敏感度也會下降（[WAI-AGE 文獻回顧 §2.3.1](https://www.w3.org/TR/wai-age-literature/)、[Developing Websites for Older People](https://www.w3.org/WAI/older-users/developing/)）。
+- 年齡造成的辨色退化以藍黃還是紅綠為主，學界仍有爭論（[Barbur 等 2015](https://openaccess.city.ac.uk/id/eprint/12513/1/Color%20vision%20changes%20in%20normal%20aging%20Barbur%20et%20all%202015.pdf)）。所以配色要**同時**照顧紅綠和藍黃兩種混淆。
+
+**原則**
+1. **鮮豔，但靠明暗分開**：只用「深色底配白字」時，6 種深色的明度太接近，色覺異常的人分不出色相，就只剩明度可以分辨。所以混搭「深底白字」與「亮底深字」。
+2. **暖色優先**：藍色系最多兩個，而且一深一淺。
+3. **紅色只給「求助」**，其他按鈕不用紅色。
+4. **顏色固定跟著服務類別**，不跟著位置。家人換了按鈕，「叫車」永遠是黃色。
+5. **不只靠顏色**：每顆按鈕都有圖示加文字；按下時的狀態用粗框，不靠變色（WCAG 1.4.1）。
+6. **大字對比 ≥ 4.5:1**：按鈕文字 28px 粗體屬於大字，WCAG AAA 的門檻是 4.5:1；內文維持 7:1。
+
+**長輩模式色票**（城市通 Figma UI Kit 的延伸，只用在長輩模式的服務按鈕；AppBar、內文、分隔線仍用城市通色票）
+
+| 類別 | 底色 | 文字 | 對比 | 聯想 |
+|---|---|---|---|---|
+| 叫車 | `#FEC84B` 黃 | `#1D2939` 深字 | 9.5:1 | 計程車黃 |
+| 我的權益、補助 | `#17B26A` 綠 | `#1D2939` 深字 | 5.3:1 | 錢 |
+| 看醫生 | `#0E7090` 深青 | 白字 | 5.6:1 | 接近城市通主色 |
+| 共餐、上課 | `#22CCEE` 淺藍 | `#1D2939` 深字 | 7.7:1 | — |
+| 聽不清楚（文字管道） | `#6927DA` 紫 | 白字 | 7.2:1 | — |
+| 家人 | `#7A2E0E` 咖啡 | 白字 | 9.4:1 | 暖色 |
+| **求助**（固定在底部） | `#D92D20` 紅 | 白字 | 4.8:1 | 緊急 |
+
+**驗算**：[`elder-palette/check_palette.py`](elder-palette/check_palette.py) 計算 8 種視覺條件（正常、紅色盲、綠色盲、藍黃色盲，各自再加上水晶體老化）下每兩色的最小色差（CIEDE2000）。
+
+| 配色 | 8 種條件中最差的一組 |
+|---|---|
+| 提案簡報原配色 | **ΔE00 3.1**（紅色盲加水晶體老化時，「繳費」和「家人」幾乎同色） |
+| 長輩模式色票 | **ΔE00 10.1**（藍黃色盲加水晶體老化時，「權益」和「共餐」） |
+
+⚠️ 色覺異常模擬採用 Machado 2009 的矩陣；水晶體老化是粗略近似，不是臨床模型。分數只用來比較配色的相對好壞。最後仍要找長輩實際看過。
 
 ---
 
@@ -396,10 +475,11 @@ userinfo.birthday → 年齡 → 比對 services.json 的 eligibility
 | 1 | 服務清單 `services.json` 第一版（約 20 筆，含 `phrases`、`alt_channels`、`source`） | 作品 | M3 |
 | 2 | 首頁、模式、權益卡片、我要看醫生、我要叫車、聽不清楚的文字替代與求助卡 | 作品 | M1、M4、M5、M6、M8 |
 | 3 | 打字找服務＋關鍵字比對 | 作品 | M2 |
-| 2'（同時） | `speak`、`a11y_state`、`haptic`、`open_external`、權限與 `<queries>`、`textZoom` | TownPass | M0 |
+| 2'（同時） | `speak`、`a11y_state`、`haptic`、`open_external`、`listen`、權限與 `<queries>` | TownPass | M0 |
 | 4 | 家人代設定（QR） | 作品 | M7 |
 | 5 | `listen`＋飛航模式實測 zh-TW 離線辨識 | TownPass | M0、M2 |
 | 6 | 附近共餐、視障出門（新增資料來源） | 作品 | M9、M10 |
+| 7 | 補助小幫手（和 M6 共用年齡與資格判斷） | 作品 | M12 |
 | Demo 前 | `account.json` 生日改成 1940 年（85 歲以上可示範 3,000 元級距）並完全重啟；用飛航模式完整跑一次；預熱 TTS | TownPass | — |
 
 ## 8. Demo 劇本（2 分鐘）
