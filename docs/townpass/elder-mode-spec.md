@@ -55,7 +55,10 @@
 | **M10** | 視障出門（捷運無障礙、有聲號誌） | 視障、聽障 | ✅ 新增 7 個開放資料來源 |
 | **M11** | 防詐先問一下 | 長輩 | ✅ `/antifraud`：點選或打字（可說話）說出對方講了什麼，比對 165 官方整理的 6 種手法，給官方提醒與下一步（掛電話、問家人、問 165）。永遠不說「安全」；聽不清楚模式有 165 LINE 查網址 |
 | **M12** | 補助小幫手 | 長輩、視障、聽障 | ✅ 篩選、應備文件、戶籍地社會課、家人代辦準備單。可線上申請的只有輔具補助與重陽禮金匯款，其餘依官方管道到區公所或打 1966 |
-| **後端** | 開放資料代理 | — | ✅ 已上線，28 個來源 |
+| **M13** | 颱風、地震時去哪裡（`/shelter`） | 長輩、視障、聽障 | ✅ 用台北通帳號的「里」對〈可供避難收容處所一覽表〉的服務里別，不用輸入地址；可選颱風淹水／地震，有無障礙設施、同一條路的排前面 |
+| **M14** | 照顧家人（`/care`） | 家人 | ✅ 失智症篩檢合約醫院、喘息服務特約單位（依服務範圍）、家庭照顧者服務中心、健康服務中心 |
+| **M15** | 打疫苗、做篩檢（`/health/places`） | 長輩 | ✅ 依行政區列出公費流感、肺炎鏈球菌疫苗、五癌篩檢的合約院所，以及假牙補助院所（M12 新增假牙補助，見 `taipei-subsidies.md` A.12） |
+| **後端** | 開放資料代理 | — | ✅ 已上線，37 個來源 |
 
 ---
 
@@ -333,7 +336,7 @@
 
 ### 後端：開放資料代理（已完成）
 
-作品 repo 的 `GET /api/opendata/{source}`：處理 CORS、Big5 轉碼、TWD97 座標轉換、白名單（不能當成任意轉址的跳板）、記憶體加 Vercel CDN 快取，支援 `near`、`radius`、`q`、`limit`。目前有 21 個來源，M9、M10 要新增約 9 個。
+作品 repo 的 `GET /api/opendata/{source}`：處理 CORS、Big5 轉碼、TWD97 座標轉換、白名單（不能當成任意轉址的跳板）、記憶體加 Vercel CDN 快取，支援 `near`、`radius`、`q`、`limit`。目前有 37 個來源（M9、M10、M13～M15 都已接上）。
 
 ---
 
@@ -446,9 +449,9 @@
         │ HTTPS 載入網頁
 ② 「用得了」微服務（townpass2026-peakqi・Next.js 16・React 19・Tailwind 4・Vercel 東京）
    前端頁面 M1～M12
-   ├ services.json：M3 服務清單 27 筆（打包在前端，斷網可用）
+   ├ services.json：M3 服務清單 30 筆（打包在前端，斷網可用）
    ├ bridge.ts・elder.ts：呼叫 App 能力；一般瀏覽器改用 mock
-   └ 後端 /api/opendata：白名單代理、Big5 轉碼、TWD97 換算、CDN 快取 ──HTTPS──► data.taipei（28 個來源）
+   └ 後端 /api/opendata：白名單代理、Big5 轉碼、ODS 解析、TWD97 換算、CDN 快取 ──HTTPS──► data.taipei（37 個來源）
         │ postMessage 雙向溝通
 ③ App 原生能力：flutterObject ⇄ TPWebMessageListener，依訊息名稱分派
    內建（官方）：userinfo・location・phone_call・1999agree・open_link・launch_map・notify・qr_code_scan
@@ -569,7 +572,7 @@ userinfo.birthday → 年齡（原住民門檻降 10 歲）→ 比對資格
 | 地圖（如需要） | Leaflet＋OpenStreetMap | BSD-2、ODbL | ✅ 在允許清單；M10 以一句話為主，可以不放地圖 |
 | 後端 | Next.js Route Handlers（同一個專案） | — | ✅ 已上線 |
 | 部署 | Vercel Hobby（東京 `hnd1`）＋ Dockerfile | — | ✅ |
-| 資料 | data.taipei（政府資料開放授權條款第 1 版） | — | ✅ 21 個來源已上線；約 9 個待新增 |
+| 資料 | data.taipei（政府資料開放授權條款第 1 版） | — | ✅ 37 個來源已上線 |
 | AI | **執行時不使用雲端 AI**。語音辨識用系統裝置端引擎；服務比對用關鍵字 | — | 裝置端小模型（flutter_edge_ai）列為下一步 |
 
 **不採用**：whisper.cpp WebAssembly（Android WebView 跑不了，見 §9）、網頁 Web Speech API（Android 不支援朗讀；辨識預設送到雲端）、flutter_map（微服務是網頁，用 Leaflet 就好）、sherpa-onnx（小米 k2-fsa 團隊，和「不使用大陸廠牌套件」的原則不符）。

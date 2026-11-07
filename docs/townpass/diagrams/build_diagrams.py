@@ -220,10 +220,10 @@ def architecture():
 
     d.group(40, 330, 780, 250, "②「用得了」微服務")
     pages = d.box(610, 400, ["前端頁面 M1～M12", "townpass2026-peakqi・Next.js 16", "React 19・Tailwind 4・Vercel 東京"], "ours", w=330)
-    data = d.box(170, 515, ["services.json", "M3 服務清單 27 筆", "打包在前端，斷網可用"], "ours", w=220)
+    data = d.box(170, 515, ["services.json", "M3 服務清單 30 筆", "打包在前端，斷網可用"], "ours", w=220)
     bridge = d.box(420, 515, ["bridge.ts・elder.ts", "呼叫 App 能力", "一般瀏覽器改用 mock"], "ours", w=220)
     api = d.box(680, 515, ["後端 /api/opendata", "白名單代理・Big5 轉碼", "TWD97 換算・CDN 快取"], "ours", w=230)
-    od = d.db(1000, 515, ["data.taipei", "開放資料 28 個來源"], w=220)
+    od = d.db(1000, 515, ["data.taipei", "開放資料 37 個來源"], w=220)
     d.edge([wv.side("b"), pages.side("t")], "HTTPS 載入網頁", (610, 304))
     bus_y = 466
     d.edge([pages.side("b"), (610, bus_y), (170, bus_y), data.side("t")])
@@ -368,7 +368,7 @@ def flow_places():
     d = Diagram(1180, 380, "④ 附近據點（M9 吃飯上課、M10 視障出門）", "開放資料由後端代理：解決跨網域、Big5 亂碼、TWD97 座標與檔案太大的問題")
     src = d.box(150, 150, ["行政區或目前位置", "userinfo 地址・location"], "official", w=230)
     req = d.box(430, 150, ["fetch /api/opendata/…", "?q=中山區 或 ?near=緯度,經度"], "ours", w=270)
-    wl = d.box(720, 150, ["白名單檢查", "只代理登記過的 28 個來源"], "ours", w=240)
+    wl = d.box(720, 150, ["白名單檢查", "只代理登記過的 37 個來源"], "ours", w=240)
     hit = d.box(1010, 150, ["快取有就直接回", "CDN 快取"], "ours", w=230)
     od = d.db(1010, 290, ["data.taipei", "沒有快取才抓"], w=230)
     conv = d.box(720, 290, ["Big5 轉碼・座標換算", "依距離或行政區篩選"], "ours", w=240)

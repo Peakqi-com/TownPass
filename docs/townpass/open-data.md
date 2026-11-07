@@ -75,6 +75,22 @@ curl -L 'https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=
 | [防空疏散避難設施](https://data.taipei/dataset/detail?id=70a6216e-3730-4d1d-b334-62fca2dd71cd) | 22,443，3MB | UTF-8 | 「緯經度」單一欄位 | 可容納人數、地下樓層數 |
 | [河濱自行車租借站](https://data.taipei/dataset/detail?id=f63886b7-7627-4e2a-94c0-27a2c0f55c60) | 9 | UTF-8 | 同時有 TWD97 與 WGS84 | 營業時間、租借費率、免費飲水／打氣（**可以拿來驗證座標轉換**） |
 
+### 3.1 長輩服務：避難、照顧家人、打疫苗做篩檢（2026-11-07 實際下載，作品 repo 已接進代理）
+
+都沒有座標，用行政區（或里）篩選。代理 id 寫在括號裡。
+
+| 資料集 | 筆數 | 編碼 | 行政區怎麼來 | 注意 |
+|---|---|---|---|---|
+| [可供避難收容處所一覽表](https://data.taipei/dataset/detail?id=aaf97773-3631-40e2-b3cc-da87bf2ce1d5)（`shelters`） | 419 | **ODS 試算表**（目錄寫 CSV） | 「鄉鎮」欄位 | 第一張工作表「清冊」才是清單，第二張是里名譯名；檔尾 2 列加總沒有編號。「服務里別」列出負責的里，用台北通帳號的 `village` 就能對到。水災、震災的值是「是／否／備用」。**有聯絡人、管理人的姓名與電話，代理不傳給前端** |
+| [失智症篩檢、確診評估及關懷服務計畫合約醫院](https://data.taipei/dataset/detail?id=1417e9ae-4c86-4f74-88a2-d7031712db44)（`dementia-screening`） | 11 家 | UTF-8 BOM | 醫院地址 | ⚠️ **左右兩份清單並排**：「12區健康服務中心」＋電話是 12 區健康服務中心，右邊醫院欄位是另一份清單，同一列沒有對應（例如「萬華區」那列是北投的關渡醫院、「北投區」那列醫院是空的）。只能當全市清單用 |
+| [長照喘息服務特約單位](https://data.taipei/dataset/detail?id=959c34b2-9698-4d99-8987-d389efe18c04)（`ltc-respite-providers`） | 巷弄式 26、社區式 56、居家式 165、住宿式 65 | Big5 | 行政區域代碼 | 4 個資源。「服務區別」大多是「全區」，要依服務範圍篩，不能用地點篩。住宿式含新北市機構（65000…），代理沒收 |
+| [家庭照顧者服務中心](https://data.taipei/dataset/detail?id=e3cec007-4212-4944-989e-5078e4f5f3bb)（`caregiver-centers`） | 4 | UTF-8 BOM | 地址 | 東西南北 4 區中心，全市都列 |
+| [健康服務中心](https://data.taipei/dataset/detail?id=d4c6d4e0-c2b4-48e3-99b4-f670d820326b)（`health-centers`） | 12 | Big5 | 「行政區」欄位是代碼（63000040） | 有網址 |
+| [流感疫苗合約醫療院所(成人)](https://data.taipei/dataset/detail?id=0db13d34-51e3-497a-a023-286d5ef692ea)（`flu-vaccine-adult`） | 382 | UTF-8 BOM | 行政區域代碼 | 有「語音預約」欄位（多數是空的） |
+| [公費肺炎鏈球菌疫苗合約醫療院所名單](https://data.taipei/dataset/detail?id=92934ab2-3509-4a6b-9cee-9ac556ca2f65)（`pneumococcal-vaccine`） | 288 | UTF-8 BOM | 行政區域代碼 | |
+| [五癌篩檢醫療院所](https://data.taipei/dataset/detail?id=ae20d75c-dffb-4d4f-85e1-9c512189005c)（`cancer-screening`） | 481 | UTF-8 BOM | 「行政區」欄位是代碼 | 子宮頸癌、口腔癌、大腸癌、乳癌、肺癌各一欄（Y／空白），「貼心小提醒」是官方提醒文字 |
+| [假牙補助醫療院所名單](https://data.taipei/dataset/detail?id=76b8b514-e793-4cca-8dcf-065d5af4b760)（`denture-clinics`） | 6 | Big5 | 地址（「區域」欄位是院區所在區） | 聯醫 6 院區；資格與流程見 `taipei-subsidies.md` A.12 |
+
 ## 4. 不建議使用（名稱和內容不符）
 
 | 資料集 | 問題 |
@@ -82,7 +98,6 @@ curl -L 'https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=
 | 各區戶政事務所等候人數 | CSV 只有戶所地址、電話、網址，**沒有等候人數** |
 | 臺北市立聯合醫院門診進度查詢 | 只有各院區的查詢網址，沒有進度資料 |
 | 各運動中心場地開放使用情形 | 年度統計，不是即時人數 |
-| 可供避難收容處所一覽表 | 檔案其實是 ODS 試算表，不是 CSV |
 | 夜間急診動物醫院 | 沒有座標，最後更新 2024-12 |
 
 ---
