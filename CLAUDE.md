@@ -1,3 +1,7 @@
+> ⚠️ **本 repo 已搬家，不再更新（2026-11-07）**
+>
+> 「用得了」參賽作品的城市通 App 已經連同完整 git 歷史，併進 [Peakqi-com/townpass2026-peakqi](https://github.com/Peakqi-com/townpass2026-peakqi) 的 [`townpass/`](https://github.com/Peakqi-com/townpass2026-peakqi/tree/main/townpass) 資料夾；文件在該 repo 的 [`docs/`](https://github.com/Peakqi-com/townpass2026-peakqi/tree/main/docs)。請到那裡開發與提交，不要再 push 到這裡。
+
 # CLAUDE.md — TownPass（城市通）參賽專案
 
 本 repo 是「2026 臺北秋季程式設計節 · 城市通微服務大黑客松」的參賽專案，以 [taipei-doit/TownPass](https://github.com/taipei-doit/TownPass) main（2026/10，Flutter 3.47.6）為基礎。
