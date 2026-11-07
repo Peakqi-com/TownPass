@@ -225,6 +225,8 @@ TownPass 用 `flutter_inappwebview` **6.1.5**（`pubspec.lock`），`TPWebView` 
 | 系統字體放大 | ❌ 被 `textZoom=100` 擋住 | ❌ 不跟隨 Dynamic Type | **App 端設定加網頁 rem** |
 | `navigator.vibrate` | ✅ 要使用者手勢與 VIBRATE 權限 | ❌ 不支援 | iOS 走 Handler（`HapticFeedback`） |
 | `getUserMedia`（麥克風） | ⚠️ 預設拒絕；缺 `RECORD_AUDIO` | ⚠️ 預設拒絕；缺 `NSMicrophoneUsageDescription` | 若網頁錄音，要改 App 三處 |
+| `getUserMedia`（相機） | ⚠️ 預設拒絕；`CAMERA` 權限由 mobile_scanner 合併進來，但 App 不會主動要求執行期授權 | ⚠️ 預設拒絕；影片預設跳全螢幕（`allowsInlineMediaPlayback = false`） | 見 §5.7 |
+| `DeviceOrientation`（羅盤方位） | ✅ 不需要權限（指北的 `deviceorientationabsolute` ⚠️ 未實測） | ⚠️ 預設拒絕（iOS 15+ 權限請求走 `onPermissionRequest`）；`webkitCompassHeading` ⚠️ 未實測 | 見 §5.7 |
 | 螢幕閱讀器讀 DOM | ✅ | ✅（未找到 Apple 官方文件明寫） | 網頁端寫對 ARIA 即可 |
 | 多執行緒 WASM（SharedArrayBuffer） | ❌ 不支援 | ⚠️ 要 COOP/COEP 標頭 | whisper.cpp WASM **不建議** |
 
@@ -291,6 +293,55 @@ TownPass 用 `flutter_inappwebview` **6.1.5**（`pubspec.lock`），`TPWebView` 
 - 選項 B：App 端原生跑 whisper.cpp（不經過 WebView）。**不在允許清單，需隊伍確認**；要整合原生程式，今天的時間風險高。
 - 選項 C（今天最穩）：**先只做打字加關鍵字比對**，語音辨識當作加分項目，最後才接。
 
+### 5.7 相機＋方向導引（「AR 帶我去」）：可行性評估，**目前不做**
+
+2026-11-07 評估「開相機畫面，用方向箭頭和語音帶長輩走到設施、站牌」的點子，結論是做得到，但隊伍決定**先不做**。這裡留下查證結果，之後要重新評估時從這裡開始。
+
+**能做到的範圍**：相機畫面＋方向箭頭＋語音／震動，例如「目的地在你右前方，大約 80 公尺」。
+
+**做不到的範圍**：
+- 沿著馬路逐步導航（「前面路口右轉」）：要有路線規劃服務，不在 CLAUDE.md 允許清單（見 §6.3）。
+- 辨識真實物體（「這是醫院大門」）：需要 ML 模型，而且推論必須在裝置端。
+
+**WebView 現況**（✅ 原始碼：TownPass `lib/util/tp_web_view.dart`、本機 flutter_inappwebview_android 1.1.3、flutter_inappwebview_ios 1.1.2、mobile_scanner 7.4.2）：
+
+| 需要的能力 | 目前狀態 | 要怎麼打開 |
+|---|---|---|
+| 相機畫面 | `TPWebView` 沒有實作 `onPermissionRequest`。Android 走 `request.deny()`（`InAppWebViewChromeClient.java`）；iOS 的 `requestMediaCapturePermissionFor`（`InAppWebView.swift`，iOS 15+）走 `decisionHandler(.deny)` | 實作 `onPermissionRequest`，**只對自己的網域**回傳 `GRANT` |
+| iOS 相機畫面留在頁面內 | `InAppWebViewSettings.swift` 的 `allowsInlineMediaPlayback` 預設 `false`，影片會跳全螢幕 | `initialSettings` 設成 `true`；`<video>` 加 `playsinline` |
+| iOS 羅盤 | `requestDeviceOrientationAndMotionPermissionFor`（`InAppWebView.swift`，iOS 15+）同樣進 `onPermissionRequest`，預設拒絕 | 和相機用同一段放行程式；網頁要在使用者手勢內呼叫 `DeviceOrientationEvent.requestPermission()` |
+| Android 羅盤 | 感測器不需要權限 | 不用改 |
+| 定位 | `onGeolocationPermissionsShowPrompt` 已經自動允許；另有內建 `location` Handler | 不用改 |
+| 語音、震動 | 已有 `speak`、`haptic` Handler | 不用改 |
+| Android 相機執行期授權 | manifest 的 `CAMERA` 來自 mobile_scanner 7.4.2；App 沒有主動要求授權的程式（pubspec 沒有 `permission_handler`）。長輩沒用過掃碼的話，網頁要相機會失敗 | 在 `MainActivity.kt` 用幾行 `ActivityCompat.requestPermissions`（不用新套件），或加 `permission_handler`（**新套件，需隊伍確認**） |
+| iOS 相機權限說明 | `Info.plist` 的 `NSCameraUsageDescription` 是英文「scan QR codes」 | 改成中文，並說明也用在導引 |
+
+**未實測、重新評估時第一件事要在實機確認**（判斷手機朝向的關鍵）：
+- iOS WKWebView 的 `deviceorientation` 事件有沒有 `webkitCompassHeading`
+- Android WebView 有沒有 `deviceorientationabsolute`
+
+抓不到的話，要改成新增一個 `heading` Handler，在 App 端讀羅盤。注意 geolocator 的 `Position.heading` 是 GPS 算出的**移動方向**，站著不動時沒有意義，不能當羅盤用。
+
+**資料面的限制**：導引需要目的地的經緯度（✅ 作品 repo `src/lib/opendata/sources.ts`）。
+- **有座標**：公廁、AED、飲水機、藥局、圖書館、運動中心、捷運無障礙電梯、友善店家、YouBike、停車場等（`geo` 設定或自行轉換座標的來源）。
+- **沒有座標**：避難所、失智篩檢醫院、喘息服務單位、樂齡學習據點等（`hasGeo: false`），以及 M9 的長輩服務據點（只有地址或行政區）。
+- **公車站牌**：M16 的程式沒有讀座標欄位，公運處 `GetStop` 檔有沒有經緯度 ⚠️ 未確認。
+- 把地址轉成座標要用地理編碼服務（例如 TGOS、Nominatim），不在允許清單（見 §6.3）。
+
+**設計上要注意的地方**（評估時的判斷，不是研究結論）：
+- **只能指直線方向**：中間可能隔著馬路或圍牆，畫面和語音都要講明「這是方向，不是路線」。
+- **視障者用不到相機畫面**：看不清楚模式應該做不開相機的版本，只用語音和震動提示偏左、偏右。
+- **長輩邊走邊舉手機容易跌倒**：設計成「停下來，舉起手機看方向，再放下來走」，走路時只用語音報距離。
+- **聽不清楚模式**：只顯示箭頭和震動，不出聲音。
+- **精準度**：在高樓之間，GPS 誤差可能有十幾公尺，羅盤在室內和靠近鐵器時也會偏（⚠️ 未實測，屬一般經驗）。快到的時候要改說「就在附近」，不要假裝很精準。
+- **離線**：沒有 AI 推論，不受裝置端規則限制；GPS 和羅盤離線可用，只要目的地座標先抓好，斷網也能指方向。
+
+**重新評估時的建議順序**：
+1. App 端最小改動：`onPermissionRequest`（只放行自己的網域）、`allowsInlineMediaPlayback`、中文權限說明、Android 相機授權。
+2. 做一個測試頁，用 iPhone 和 Android 實機確認羅盤和相機。**這一步沒過，後面不要做。**
+3. 網頁端做共用的「帶我去」元件：輸入目的地座標，輸出方向、距離、語音、震動，依模式切換相機版、純語音版、純箭頭版。
+4. 先接有座標的功能（捷運無障礙電梯、廁所、AED）。
+
 ---
 
 ## 6. 對照提案
@@ -326,6 +377,9 @@ TownPass 用 `flutter_inappwebview` **6.1.5**（`pubspec.lock`），`TPWebView` 
 | flutter_tts | App 端 TTS | MIT（pub.dev ✅） | **需隊伍確認**（屬於「pub.dev 上 MIT 的套件」類別，但 CLAUDE.md 要求新增依賴前先問） |
 | speech_to_text | App 端語音辨識 | BSD-3-Clause（pub.dev ✅） | **需隊伍確認**，而且要確認裝置端辨識是否符合規則 |
 | flutter_map | 地圖 | BSD-3 | **需隊伍確認**；建議改用網頁端 Leaflet |
+| 路線規劃服務（例如 OSRM、GraphHopper、openrouteservice） | §5.7 沿路逐步導航 | 未查證 | **需隊伍確認**；§5.7 目前不做 |
+| 地理編碼服務（例如 TGOS、Nominatim） | §5.7 把只有地址的設施轉成座標 | 未查證 | **需隊伍確認**；§5.7 目前不做 |
+| permission_handler | §5.7 Android 相機執行期授權 | 未查證 | 可改用 `MainActivity.kt` 自己寫，不需要新套件 |
 
 ---
 
