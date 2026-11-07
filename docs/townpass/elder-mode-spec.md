@@ -107,6 +107,12 @@ P0＝Demo 主線，今天一定要做；P1＝今天做得完，加分；P2＝決
 
 **技術**：Next.js（App Router）＋Tailwind 4（城市通色票）；模式和設定存 `localStorage`，所有讀寫都用 try/catch（⚠️ WebView 重啟後是否保留要實機確認）。
 
+**實作（2026-11-07）**：作品 repo 的 `src/components/elder/`（`ElderProvider`、`HomeScreen`、`ModePicker`、`ServiceButton`、`PageShell`、`CallConfirm`）、`src/lib/elder/`（`profile.ts` 年齡、問候、重陽禮金規則，有單元測試；`home.ts` 按鈕與電話設定）。
+- 看不清楚模式的字級至少 1.3 倍。字級達 1.25 倍以上時，大按鈕改成單欄、圖示在左；1999／1966／求助改放在頁面最下方（不固定在畫面上，避免擋住三分之一的螢幕），求助獨佔一排。
+- 撥號確認頁 `/call/[id]` 只接受 `home.ts` 登記的號碼，網址帶其他號碼一律 404。1999 走 App 內建的 `1999agree`（自帶確認對話框），不另做確認頁。
+- 按鈕回饋：震動＋大字（`role="status"`）＋唸出；螢幕閱讀器開啟時只震動；聽不清楚模式不出聲。
+- 還沒做的模組先用 `src/app/[section]/page.tsx` 佔位頁，完成時新增同名資料夾取代。
+
 ### M2 找服務
 
 **做什麼**：三種輸入方式，結果最多三個大按鈕，順序固定。
