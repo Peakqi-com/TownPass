@@ -23,7 +23,7 @@
 | App | Flutter **3.47.6**（FVM，見 `.fvmrc`）、Dart ≥ 3.13 | iOS 最低 15（UIScene、SPM）；Android AGP 9.1.0、Kotlin 2.4.0、Gradle 9.3.1、Java 17 |
 | App 狀態／路由 | 沿用現有的 GetX、`TPRoute` | 不要另外引入 Riverpod、Bloc、go_router 等 |
 | App 新套件 | pub.dev 上 MIT／BSD／Apache 的套件 | iOS 優先選支援 Swift Package Manager 的（CocoaPods 已進入維護模式） |
-| App 新套件（已核准） | **flutter_tts**（MIT，`speak` Handler）、**speech_to_text**（BSD-3-Clause，`listen` Handler） | 2026-11-07 隊長核准。speech_to_text 一定要用 `onDevice: true`，並先檢查裝置是否支援離線辨識，不支援就回錯誤，**不可退回雲端辨識** |
+| App 新套件（已核准） | **flutter_tts**（MIT，`speak` Handler）、**speech_to_text**（BSD-3-Clause，`listen` Handler）、**timezone**（BSD-2-Clause，`reminder` Handler 排程通知；原本就是 flutter_local_notifications 的間接依賴） | 2026-11-07 隊長核准。speech_to_text 一定要用 `onDevice: true`，並先檢查裝置是否支援離線辨識，不支援就回錯誤，**不可退回雲端辨識** |
 | 微服務新套件（已核准） | **qrcode**（MIT，家人代設定產生 QR code） | 2026-11-07 隊長核准 |
 | 微服務前端 | **Vue 3 + Vite + Pinia + Tailwind + TypeScript**（官方範例）；React；**Next.js（React）**；純 HTML／CSS／JS | 必須能在 WebView 中執行。指引原文：「語言、框架不限」 |
 | 後端（選配） | Java：**Spring Boot 4.x + Java 21 + Maven**（指引範例；競賽須知列 Spring、Hibernate、Tomcat）；Python：FastAPI、Flask（往屆得獎作品）；Node：**Next.js Route Handlers**（和前端同一個專案） | 指引原文：「語言不限」。一定要附 `Dockerfile`（「可移轉、可維運、可上架」）；埠號讀環境變數 `PORT`；前後端不同網域時要設定 CORS |

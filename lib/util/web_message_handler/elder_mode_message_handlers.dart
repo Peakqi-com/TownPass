@@ -39,6 +39,14 @@ abstract interface class ElderModeSpeechRecognizer {
   Future<void> cancel();
 }
 
+/// 排程本機通知（提醒）。
+abstract interface class ElderModeReminders {
+  /// 在 [at] 跳出通知；同一個 [id] 再設定會取代舊的。沒有通知權限等原因失敗時回傳 false。
+  Future<bool> schedule({required int id, required String title, required String body, required DateTime at});
+
+  Future<void> cancel(int id);
+}
+
 typedef A11yStateReader = ({bool screenReader, double textScale}) Function();
 
 /// `speak`：唸出文字。
@@ -223,6 +231,95 @@ class ListenMessageHandler extends TPWebMessageHandler {
         reply({'status': 'stopped'});
       case 'cancel':
         await recognizer.cancel();
+        reply({'status': 'cancelled'});
+      default:
+        reply({'error': 'bad_request'});
+    }
+  }
+}
+
+/// `reminder`：排程或取消本機通知，例如「重陽禮金明天截止」。
+///
+/// 網頁送出：
+/// - `{ action: 'set', id: 'double-ninth-2026', title, body, at: '2026-11-12T09:00:00+08:00' }`
+///   → 回覆 `{ status: 'scheduled', at }`（UTC）或 `{ error }`
+/// - `{ action: 'cancel', id }` → 回覆 `{ status: 'cancelled' }`
+///
+/// 內建的 `notify` 只能立即通知；這個 Handler 讓 App 關掉時也能在指定時間提醒（不需要伺服器）。
+/// 把關：
+/// 1. 只開放長輩模式的網域，避免其他微服務排程大量通知。
+/// 2. 時間一定要帶時區（才確定是哪個時刻），而且要在 1 分鐘後到 400 天內。
+/// 3. 標題最多 40 字、內容最多 120 字；id 只能用小寫英數與 `-`。
+/// 4. 同一個 id 固定對到同一個通知編號，再設定就會取代舊的；編號從 [idBase] 起算，
+///    不會和內建 `notify`（從 0 遞增）重疊。
+class ReminderMessageHandler extends TPWebMessageHandler {
+  ReminderMessageHandler({required this.reminders, DateTime Function()? now}) : now = now ?? DateTime.now;
+
+  final ElderModeReminders reminders;
+  final DateTime Function() now;
+
+  static const int idBase = 1000000000;
+  static const int maxTitleLength = 40;
+  static const int maxBodyLength = 120;
+  static const Duration minLead = Duration(minutes: 1);
+  static const Duration maxLead = Duration(days: 400);
+  static final RegExp _idPattern = RegExp(r'^[a-z0-9-]{1,40}$');
+  static final RegExp _hasZone = RegExp(r'(Z|[+-]\d{2}:?\d{2})$');
+
+  @override
+  String get name => 'reminder';
+
+  /// 把網頁的 id 轉成通知編號（FNV-1a），同一個 id 永遠得到同一個編號。
+  static int notificationId(String id) {
+    int hash = 0x811c9dc5;
+    for (final int unit in id.codeUnits) {
+      hash ^= unit;
+      hash = (hash * 0x01000193) & 0xffffffff;
+    }
+    return idBase + hash % idBase;
+  }
+
+  @override
+  Future<void> handle({
+    required Object? message,
+    required WebUri? sourceOrigin,
+    required bool isMainFrame,
+    required onReply,
+  }) async {
+    void reply(Map<String, String> data) => onReply?.call(replyWebMessage(data: data));
+
+    if (!ElderModeConfig.isTrustedOrigin(sourceOrigin)) {
+      reply({'error': 'forbidden'});
+      return;
+    }
+
+    switch (message) {
+      case {'action': 'set', 'id': String id, 'title': String title, 'body': String body, 'at': String at}:
+        final DateTime? when = _hasZone.hasMatch(at) ? DateTime.tryParse(at)?.toUtc() : null;
+        final String t = title.trim();
+        final String b = body.trim();
+        if (!_idPattern.hasMatch(id) ||
+            when == null ||
+            t.isEmpty ||
+            t.length > maxTitleLength ||
+            b.isEmpty ||
+            b.length > maxBodyLength) {
+          reply({'error': 'bad_request'});
+          return;
+        }
+        final DateTime current = now().toUtc();
+        if (!when.isAfter(current.add(minLead))) {
+          reply({'error': 'past'});
+          return;
+        }
+        if (when.isAfter(current.add(maxLead))) {
+          reply({'error': 'too_far'});
+          return;
+        }
+        final bool ok = await reminders.schedule(id: notificationId(id), title: t, body: b, at: when);
+        reply(ok ? {'status': 'scheduled', 'at': when.toIso8601String()} : {'error': 'permission_denied'});
+      case {'action': 'cancel', 'id': String id} when _idPattern.hasMatch(id):
+        await reminders.cancel(notificationId(id));
         reply({'status': 'cancelled'});
       default:
         reply({'error': 'bad_request'});

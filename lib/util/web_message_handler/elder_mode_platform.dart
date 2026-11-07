@@ -2,10 +2,12 @@ import 'dart:io' show Platform;
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
+import 'package:timezone/timezone.dart' as tz;
 import 'package:town_pass/util/web_message_handler/elder_mode_message_handlers.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -114,6 +116,62 @@ class SpeechToTextRecognizer implements ElderModeSpeechRecognizer {
 
   @override
   Future<void> cancel() => _speech.cancel();
+}
+
+/// 用 App 已有的 flutter_local_notifications 排程本機通知（App 關掉也會跳出來）。
+///
+/// 時間一律換成 UTC 排程，不需要載入時區資料庫，也不受手機時區設定影響。
+/// Android 用 inexact 模式：不需要「精確鬧鐘」權限，可能晚幾分鐘，對提醒申請截止日已經足夠。
+/// 通知頻道沿用 NotificationService 的設定。
+class LocalNotificationReminders implements ElderModeReminders {
+  final FlutterLocalNotificationsPlugin _plugin = FlutterLocalNotificationsPlugin();
+
+  Future<bool> _ensurePermission() async {
+    if (Platform.isAndroid) {
+      final android = _plugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
+      return await android?.requestNotificationsPermission() ?? true;
+    }
+    if (Platform.isIOS) {
+      final ios = _plugin.resolvePlatformSpecificImplementation<IOSFlutterLocalNotificationsPlugin>();
+      return await ios?.requestPermissions(alert: true, badge: true, sound: true) ?? false;
+    }
+    return false;
+  }
+
+  @override
+  Future<bool> schedule({required int id, required String title, required String body, required DateTime at}) async {
+    try {
+      if (!await _ensurePermission()) return false;
+      await _plugin.zonedSchedule(
+        id: id,
+        title: title,
+        body: body,
+        scheduledDate: tz.TZDateTime.from(at.toUtc(), tz.UTC),
+        notificationDetails: const NotificationDetails(
+          android: AndroidNotificationDetails(
+            'TownPass android notification id',
+            'TownPass android notification channel name',
+            importance: Importance.max,
+            priority: Priority.max,
+          ),
+          iOS: DarwinNotificationDetails(),
+        ),
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+      );
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  @override
+  Future<void> cancel(int id) async {
+    try {
+      await _plugin.cancel(id: id);
+    } catch (_) {
+      // 已經不存在的提醒，取消失敗也沒關係
+    }
+  }
 }
 
 /// 讀取系統的無障礙狀態；不需要 BuildContext。

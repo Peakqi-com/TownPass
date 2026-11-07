@@ -24,6 +24,7 @@ abstract class TPWebMessageListener {
         HapticMessageHandler(haptics: SystemHaptics()),
         OpenExternalMessageHandler(launcher: ExternalAppLauncher()),
         ListenMessageHandler(recognizer: SpeechToTextRecognizer()),
+        ReminderMessageHandler(reminders: LocalNotificationReminders()),
       ];
 
   static List<TPWebMessageHandler> get messageHandler => _cachedMessageHandlers;

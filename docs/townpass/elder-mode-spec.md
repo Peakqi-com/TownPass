@@ -46,7 +46,7 @@
 | **M3** | 服務清單（跨局處規格） | 全部 | ✅ 26 筆，每筆附來源與查證日期 |
 | **M4** | 我要看醫生 | 長輩、聽障 | ✅ |
 | **M5** | 我要叫車 | 長輩、身障者 | ✅ |
-| **M6** | 我的權益（敬老卡、重陽禮金、疫苗、健檢） | 長輩 | ✅ 依生日判斷資格、說明、截止日倒數、線上申請禮金匯款。未做：手機推播提醒；敬老卡餘額要市府介接，目前引導打 1999 |
+| **M6** | 我的權益（敬老卡、重陽禮金、疫苗、健檢） | 長輩 | ✅ 依生日判斷資格、說明、截止日倒數、線上申請禮金匯款、「提醒我申請」（`reminder` Handler 排程手機通知）。敬老卡餘額要市府介接，目前引導打 1999 |
 | **M7** | 家人（代設定、打給家人） | 長輩 | ✅ |
 | **M8** | 聽不清楚（文字替代、求助卡、溝通卡、手語翻譯） | 聽障 | ✅ App 已開放簡訊連結（Android `<queries>`、iOS `LSApplicationQueriesSchemes`）；簡訊能否帶入內文要實機確認 |
 | **M9** | 附近共餐、上課 | 長輩 | ✅ |
@@ -70,6 +70,7 @@
 | `haptic` | `'light'｜'medium'` | `true` | Flutter 內建 `HapticFeedback`，不需新套件 | ✅ |
 | `open_external` | `url` | `true／false` | `launchUrl(uri, mode: LaunchMode.externalApplication)`，給 LINE、簡訊、VRS | ✅ |
 | `listen` | `{ action: 'start'｜'stop'｜'cancel', locale? }` | 先回 `{ status: 'listening' }`，再回 `{ text }` 或 `{ error }` | speech_to_text，`onDevice: true`。**只開放長輩模式網域**。Android 先用 `MainActivity` 的原生方法確認 `SpeechRecognizer.isOnDeviceRecognitionAvailable`（API 31+），不可用就回 `offline_unavailable`，因為套件在不支援時會默默改用雲端辨識；iOS 由套件設定 `requiresOnDeviceRecognition` | ✅ |
+| `reminder` | `{ action: 'set', id, title, body, at }`／`{ action: 'cancel', id }` | `{ status: 'scheduled', at }`／`{ status: 'cancelled' }`／`{ error }` | 用 App 已有的 flutter_local_notifications 排程本機通知（App 關掉也會跳），時間換成 UTC，不需要時區資料庫。**只開放長輩模式網域**；`at` 要帶時區、在 1 分鐘後到 400 天內；同一個 id 再設定會取代舊的（通知編號從 10 億起算，不和內建 `notify` 重疊）。Android 用 inexact 模式，不需要精確鬧鐘權限 | ✅ |
 | `set_start_service` | `serviceId` | `true` | 讓設定頁的「APP 起始頁面」可以選長輩模式，長輩一打開 App 就進來 | 未做（下一步） |
 
 **為什麼不用內建的 `launch_map` 開 LINE**：`launch_map` 先呼叫 `canLaunchUrl`，Android 11 以上沒宣告的 scheme 會回 `false`，就不會開啟；而且它用預設的開啟模式，https 連結不一定會跳到 LINE App。新增 `open_external` 比改動內建 Handler 安全。
@@ -207,7 +208,7 @@
 
 **資料**：`9a1aefde…`（健檢院所，Big5）、`0db13d34…`（流感院所）、`f999b187…`（肺鏈院所）、`074036e5…`（敬老卡公車路線）。
 
-**限制**：內建 `notify` 只能立即通知；要做「10/1 早上提醒」這類排程，要另外寫 Handler（類似往屆 ParkFlow 的 `timer_set`），列為下一步。
+**提醒**：內建 `notify` 只能立即通知，所以新增 `reminder` Handler（類似往屆 ParkFlow 的 `timer_set`）排程手機通知。重陽禮金卡有「提醒我申請」：截止前一天（11/12）早上 9 點提醒，已經過了就改成截止當天早上 9 點（`src/lib/elder/reminders.ts`）。
 
 ### M7 家人（新服務）
 
@@ -481,7 +482,7 @@ userinfo.addresses[].town 或 location
 ```
 userinfo.birthday → 年齡 → 比對 services.json 的 eligibility
 → 首頁卡片「您可領 3,000 元，還有 6 天截止」→ 按下 → open_link（線上同意書）
-→ 選擇提醒 → notify（立即通知；排程提醒是下一步）
+→ 「提醒我申請」→ reminder（排程手機通知，App 關掉也會跳）
 ```
 
 ---

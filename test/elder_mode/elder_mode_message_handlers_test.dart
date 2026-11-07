@@ -60,6 +60,21 @@ class _FakeLauncher implements ElderModeLauncher {
   }
 }
 
+class _FakeReminders implements ElderModeReminders {
+  final scheduled = <({int id, String title, String body, DateTime at})>[];
+  final cancelled = <int>[];
+  bool result = true;
+
+  @override
+  Future<bool> schedule({required int id, required String title, required String body, required DateTime at}) async {
+    scheduled.add((id: id, title: title, body: body, at: at));
+    return result;
+  }
+
+  @override
+  Future<void> cancel(int id) async => cancelled.add(id);
+}
+
 class _FakeRecognizer implements ElderModeSpeechRecognizer {
   bool onDeviceAvailable = true;
   final calls = <String>[];
@@ -295,6 +310,117 @@ void main() {
       ]);
       expect(await _invoke(handler, null), [
         {'error': 'bad_request'},
+      ]);
+    });
+  });
+
+  group('reminder', () {
+    // 2026-11-07 15:00（臺北時間）
+    final now = DateTime.parse('2026-11-07T15:00:00+08:00');
+    ReminderMessageHandler handlerWith(_FakeReminders reminders) => ReminderMessageHandler(reminders: reminders, now: () => now);
+    Map<String, Object?> setMessage({String id = 'double-ninth-2026', String at = '2026-11-12T09:00:00+08:00'}) => {
+          'action': 'set',
+          'id': id,
+          'title': '重陽禮金明天截止',
+          'body': '還沒申請的話，明天（11/13）前可以線上申請匯款。',
+          'at': at,
+        };
+
+    test('排程本機通知，回覆排定的時間（UTC）', () async {
+      final reminders = _FakeReminders();
+      final replies = await _invoke(handlerWith(reminders), setMessage());
+
+      expect(replies, [
+        {'status': 'scheduled', 'at': '2026-11-12T01:00:00.000Z'},
+      ]);
+      expect(reminders.scheduled.single.title, '重陽禮金明天截止');
+      expect(reminders.scheduled.single.at, DateTime.utc(2026, 11, 12, 1));
+    });
+
+    test('同一個 id 一定對到同一個通知編號（再設定會取代），而且不會和內建 notify 的編號（從 0 遞增）重疊', () async {
+      final reminders = _FakeReminders();
+      await _invoke(handlerWith(reminders), setMessage());
+      await _invoke(handlerWith(reminders), setMessage());
+      await _invoke(handlerWith(reminders), setMessage(id: 'health-check-2027'));
+
+      final ids = reminders.scheduled.map((r) => r.id).toList();
+      expect(ids[0], ids[1]);
+      expect(ids[2], isNot(ids[0]));
+      expect(ids.every((id) => id >= ReminderMessageHandler.idBase), isTrue);
+    });
+
+    test('取消提醒', () async {
+      final reminders = _FakeReminders();
+      final handler = handlerWith(reminders);
+      await _invoke(handler, setMessage());
+
+      expect(await _invoke(handler, {'action': 'cancel', 'id': 'double-ninth-2026'}), [
+        {'status': 'cancelled'},
+      ]);
+      expect(reminders.cancelled.single, reminders.scheduled.single.id);
+    });
+
+    test('只開放長輩模式的網域，其他微服務不能排程通知', () async {
+      final reminders = _FakeReminders();
+
+      expect(await _invoke(handlerWith(reminders), setMessage(), origin: _otherOrigin), [
+        {'error': 'forbidden'},
+      ]);
+      expect(reminders.scheduled, isEmpty);
+    });
+
+    test('時間要帶時區，而且要在 1 分鐘後到 400 天內', () async {
+      final reminders = _FakeReminders();
+      final handler = handlerWith(reminders);
+
+      expect(await _invoke(handler, setMessage(at: '2026-11-12T09:00:00')), [
+        {'error': 'bad_request'},
+      ], reason: '沒有時區，無法確定是哪個時刻');
+      expect(await _invoke(handler, setMessage(at: '2026-11-07T15:00:30+08:00')), [
+        {'error': 'past'},
+      ]);
+      expect(await _invoke(handler, setMessage(at: '2026-11-01T09:00:00+08:00')), [
+        {'error': 'past'},
+      ]);
+      expect(await _invoke(handler, setMessage(at: '2028-01-01T09:00:00+08:00')), [
+        {'error': 'too_far'},
+      ]);
+      expect(await _invoke(handler, setMessage(at: 'tomorrow')), [
+        {'error': 'bad_request'},
+      ]);
+      expect(reminders.scheduled, isEmpty);
+    });
+
+    test('id、標題、內容格式不對就拒絕', () async {
+      final reminders = _FakeReminders();
+      final handler = handlerWith(reminders);
+
+      expect(await _invoke(handler, {...setMessage(), 'id': 'Bad ID!'}), [
+        {'error': 'bad_request'},
+      ]);
+      expect(await _invoke(handler, {...setMessage(), 'title': ''}), [
+        {'error': 'bad_request'},
+      ]);
+      expect(await _invoke(handler, {...setMessage(), 'title': '長' * 41}), [
+        {'error': 'bad_request'},
+      ]);
+      expect(await _invoke(handler, {...setMessage(), 'body': '長' * 121}), [
+        {'error': 'bad_request'},
+      ]);
+      expect(await _invoke(handler, {'action': 'dance'}), [
+        {'error': 'bad_request'},
+      ]);
+      expect(await _invoke(handler, null), [
+        {'error': 'bad_request'},
+      ]);
+      expect(reminders.scheduled, isEmpty);
+    });
+
+    test('沒有通知權限（排程失敗）時回覆 permission_denied', () async {
+      final reminders = _FakeReminders()..result = false;
+
+      expect(await _invoke(handlerWith(reminders), setMessage()), [
+        {'error': 'permission_denied'},
       ]);
     });
   });
