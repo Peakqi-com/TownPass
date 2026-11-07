@@ -1,4 +1,6 @@
-# 長輩模式功能規格（合併版）
+# 「用得了」功能規格（合併版）
+
+> 服務名稱：**用得了**（2026-11-07 定名，回應子題「用不了 #身體限制」）。開發代號是「長輩模式」：程式碼、Handler、色票、檔名（`elder-mode-*`）都沿用代號，指的是同一個服務。
 
 > 2026-11-07 整理。這份文件是**開發時唯一要看的規格**，合併了四份文件：
 >
@@ -8,7 +10,7 @@
 > | [`accessibility-research.md`](accessibility-research.md) | WebView 技術限制、介面與互動層證據 |
 > | [`taipei-elderly-services.md`](taipei-elderly-services.md) | 長輩數位習慣、市府長者服務（市府原頁查證）、資料集 |
 > | [`taipei-disability-services.md`](taipei-disability-services.md) | 視障與聽障的管道、溝通需求、資料集 |
-| [`taipei-subsidies.md`](taipei-subsidies.md) | 補助的資格、金額、應備文件、申請管道、代辦（市府原頁查證） |
+> | [`taipei-subsidies.md`](taipei-subsidies.md) | 補助的資格、金額、應備文件、申請管道、代辦（市府原頁查證） |
 >
 > 規劃書和研究結果衝突時，以研究結果為準，修正對照見 §9。每個事實的出處都在三份研究文件裡，這份不重複列；標 ⚠️ 的是還沒查證、或需要實機確認的項目。
 
@@ -69,9 +71,9 @@
 | `a11y_state` | `null` | `{ screenReader, textScale }` | `PlatformDispatcher` 的 `accessibleNavigation`、`textScaleFactor`。網頁用 `textScale` 設定根字級（雙平台一致，見下方說明） | ✅ |
 | `haptic` | `'light'｜'medium'` | `true` | Flutter 內建 `HapticFeedback`，不需新套件 | ✅ |
 | `open_external` | `url` | `true／false` | `launchUrl(uri, mode: LaunchMode.externalApplication)`，給 LINE、簡訊、VRS | ✅ |
-| `listen` | `{ action: 'start'｜'stop'｜'cancel', locale? }` | 先回 `{ status: 'listening' }`，再回 `{ text }` 或 `{ error }` | speech_to_text，`onDevice: true`。**只開放長輩模式網域**。Android 先用 `MainActivity` 的原生方法確認 `SpeechRecognizer.isOnDeviceRecognitionAvailable`（API 31+），不可用就回 `offline_unavailable`，因為套件在不支援時會默默改用雲端辨識；iOS 由套件設定 `requiresOnDeviceRecognition` | ✅ |
-| `reminder` | `{ action: 'set', id, title, body, at }`／`{ action: 'cancel', id }` | `{ status: 'scheduled', at }`／`{ status: 'cancelled' }`／`{ error }` | 用 App 已有的 flutter_local_notifications 排程本機通知（App 關掉也會跳），時間換成 UTC，不需要時區資料庫。**只開放長輩模式網域**；`at` 要帶時區、在 1 分鐘後到 400 天內；同一個 id 再設定會取代舊的（通知編號從 10 億起算，不和內建 `notify` 重疊）。Android 用 inexact 模式，不需要精確鬧鐘權限 | ✅ |
-| `set_start_service` | `serviceId` | `true` | 讓設定頁的「APP 起始頁面」可以選長輩模式，長輩一打開 App 就進來 | 未做（下一步） |
+| `listen` | `{ action: 'start'｜'stop'｜'cancel', locale? }` | 先回 `{ status: 'listening' }`，再回 `{ text }` 或 `{ error }` | speech_to_text，`onDevice: true`。**只開放本服務網域**。Android 先用 `MainActivity` 的原生方法確認 `SpeechRecognizer.isOnDeviceRecognitionAvailable`（API 31+），不可用就回 `offline_unavailable`，因為套件在不支援時會默默改用雲端辨識；iOS 由套件設定 `requiresOnDeviceRecognition` | ✅ |
+| `reminder` | `{ action: 'set', id, title, body, at }`／`{ action: 'cancel', id }` | `{ status: 'scheduled', at }`／`{ status: 'cancelled' }`／`{ error }` | 用 App 已有的 flutter_local_notifications 排程本機通知（App 關掉也會跳），時間換成 UTC，不需要時區資料庫。**只開放本服務網域**；`at` 要帶時區、在 1 分鐘後到 400 天內；同一個 id 再設定會取代舊的（通知編號從 10 億起算，不和內建 `notify` 重疊）。Android 用 inexact 模式，不需要精確鬧鐘權限 | ✅ |
+| `set_start_service` | `serviceId` | `true` | 讓設定頁的「APP 起始頁面」可以選「用得了」，長輩一打開 App 就進來 | 未做（下一步） |
 
 **為什麼不用內建的 `launch_map` 開 LINE**：`launch_map` 先呼叫 `canLaunchUrl`，Android 11 以上沒宣告的 scheme 會回 `false`，就不會開啟；而且它用預設的開啟模式，https 連結不一定會跳到 LINE App。新增 `open_external` 比改動內建 Handler 安全。
 
@@ -155,7 +157,7 @@
 ```
 
 規則：
-- `action.type` 只能是既有或 M0 新增的 Handler 名稱（`phone_call`、`1999agree`、`open_link`、`open_external`、`launch_map`），長輩模式不自己發明動作。
+- `action.type` 只能是既有或 M0 新增的 Handler 名稱（`phone_call`、`1999agree`、`open_link`、`open_external`、`launch_map`），本服務不自己發明動作。
 - 每筆都要有 `fallback`；只能打電話的服務，**一定要有 `alt_channels`**，沒有就在畫面上寫「這項服務目前只能打電話，可以請家人代打」。
 - `source` 和 `verified` 必填。電話號碼一律寫死在清單裡，不從網路即時抓。
 - 清單是一個 JSON 檔，放在作品 repo，以 AGPL 授權開源，對應簡報 p.7「各局處自助上架」。
@@ -222,7 +224,7 @@
 ### M7 家人（新服務）
 
 **家人代設定**：
-1. 家人在自己的手機打開長輩模式，按「幫長輩設定」。
+1. 家人在自己的手機打開「用得了」，按「幫長輩設定」。
 2. 勾選 4～6 個按鈕、填家人電話和行政區，畫面產生 QR code。**設定內容直接編在 QR 裡，不經過伺服器**。
 3. 長輩手機按「家人幫我設定」，用內建的 `qr_code_scan` 掃描。
 4. 長輩手機存到本機，並唸出「設定好了，有事按這些按鈕」。
@@ -432,7 +434,7 @@
 
 圖由 `docs/townpass/diagrams/build_diagrams.py` 產生（色票取自城市通 UI Kit）；內容要改時改那支程式再重跑。
 
-![長輩模式架構：使用者從城市通 App 的服務頁開啟長輩模式，TPWebView 用 HTTPS 載入長輩模式微服務（Next.js），微服務的 bridge 用 postMessage 和 App 的 TPWebMessageListener 雙向溝通，分派給內建 Handler 與長輩模式新增的 6 個 Handler；後端 /api/opendata 代理 data.taipei 開放資料](diagrams/architecture.svg)
+![「用得了」架構：使用者從城市通 App 的服務頁開啟「用得了」，TPWebView 用 HTTPS 載入「用得了」微服務（Next.js），微服務的 bridge 用 postMessage 和 App 的 TPWebMessageListener 雙向溝通，分派給內建 Handler 與本服務新增的 6 個 Handler；後端 /api/opendata 代理 data.taipei 開放資料](diagrams/architecture.svg)
 
 <details>
 <summary>文字版</summary>
@@ -440,9 +442,9 @@
 ```
 使用者：長輩・視障者・聽障者
 ① 城市通 App（TownPass fork・Flutter 3.47.6）
-   服務頁「長輩模式」（my_service_model.dart，預設置頂）→ TPWebView（flutter_inappwebview）
+   服務頁「用得了」（my_service_model.dart，預設置頂）→ TPWebView（flutter_inappwebview）
         │ HTTPS 載入網頁
-② 長輩模式微服務（townpass2026-peakqi・Next.js 16・React 19・Tailwind 4・Vercel 東京）
+② 「用得了」微服務（townpass2026-peakqi・Next.js 16・React 19・Tailwind 4・Vercel 東京）
    前端頁面 M1～M12
    ├ services.json：M3 服務清單 27 筆（打包在前端，斷網可用）
    ├ bridge.ts・elder.ts：呼叫 App 能力；一般瀏覽器改用 mock
@@ -459,14 +461,14 @@
 
 ### 5.2 主要流程
 
-**① 開啟長輩模式**
-![開啟長輩模式：點服務、WebView 載入網頁、向 App 要 userinfo 與 a11y_state、讀手機裡的設定、算年齡並篩出首頁按鈕與權益卡片](diagrams/flow-1-open.svg)
+**① 開啟「用得了」**
+![開啟「用得了」：點服務、WebView 載入網頁、向 App 要 userinfo 與 a11y_state、讀手機裡的設定、算年齡並篩出首頁按鈕與權益卡片](diagrams/flow-1-open.svg)
 
 <details>
 <summary>文字版</summary>
 
 ```
-台北通「我的服務」→ 點「長輩模式」→ WebView 載入 Vercel 網址
+台北通「我的服務」→ 點「用得了」→ WebView 載入 Vercel 網址
 → bridge：userinfo（姓名、生日、行政區）、a11y_state（報讀軟體、字級）
 → 讀手機裡的設定（模式、語速、家人設定的按鈕）
 → 算年齡 → 篩出首頁按鈕和權益卡片 → 畫面
@@ -531,7 +533,7 @@ userinfo.addresses[].town 或 location
 <summary>文字版</summary>
 
 ```
-家人手機：長輩模式「我是家人」→ 勾首頁按鈕、填電話與行政區 → 產生 QR（設定內容在 QR 裡）
+家人手機：「用得了」→「我是家人」→ 勾首頁按鈕、填電話與行政區 → 產生 QR（設定內容在 QR 裡）
 長輩手機：「家人幫我設定」→ qr_code_scan → 檢查格式、版本、隱藏字元 → 存在手機裡 → 唸「設定好了」
 （全程不經過伺服器）
 ```
@@ -590,7 +592,7 @@ userinfo.birthday → 年齡（原住民門檻降 10 歲）→ 比對資格
 
 ## 8. Demo 劇本（2 分鐘）
 
-1. **開場**（0:00）：台北通 → 我的服務 → 長輩模式。畫面：「午安，陳阿嬤」＋「重陽禮金 3,000 元，還有 6 天截止」。
+1. **開場**（0:00）：台北通 → 我的服務 → 用得了。畫面：「午安，陳阿嬤」＋「重陽禮金 3,000 元，還有 6 天截止」。
 2. **說一句話**（0:20）：「我要去看醫生」→ 三個大按鈕（聯醫掛號、叫車、1966），跨三個機關。
 3. **分流**（0:45）：按「叫車」→「有身障證明嗎？沒有」→ 敬老計程車，說明「復康巴士其實只限身障者」。
 4. **切換聽不清楚模式**（1:05）：同一個首頁，撥號按鈕旁出現「用文字」→ 打開緊急求助卡。

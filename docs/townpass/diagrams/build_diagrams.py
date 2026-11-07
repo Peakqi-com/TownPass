@@ -209,16 +209,16 @@ class Diagram:
 # 5.1 架構圖
 # =====================================================================
 def architecture():
-    d = Diagram(1180, 954, "長輩模式架構", "① 城市通 App 開啟 → ② 長輩模式微服務 → ③ App 原生能力；資料來自 data.taipei")
+    d = Diagram(1180, 954, "「用得了」架構", "① 城市通 App 開啟 → ②「用得了」微服務 → ③ App 原生能力；資料來自 data.taipei")
     user = d.box(250, 110, ["長輩・視障者・聽障者"], "user", pill=True, w=230)
 
     d.group(40, 150, 780, 128, "① 城市通 App", "gray")
-    svc = d.box(250, 222, ["服務頁「長輩模式」", "my_service_model.dart，預設置頂"], "ours", w=300)
+    svc = d.box(250, 222, ["服務頁「用得了」", "my_service_model.dart，預設置頂"], "ours", w=300)
     wv = d.box(610, 222, ["TPWebView", "TownPass fork・Flutter 3.47.6"], "official", w=300)
     d.edge([user.side("b"), svc.side("t")])
     d.edge([svc.side("r"), wv.side("l")])
 
-    d.group(40, 330, 780, 250, "② 長輩模式微服務")
+    d.group(40, 330, 780, 250, "②「用得了」微服務")
     pages = d.box(610, 400, ["前端頁面 M1～M12", "townpass2026-peakqi・Next.js 16", "React 19・Tailwind 4・Vercel 東京"], "ours", w=330)
     data = d.box(170, 515, ["services.json", "M3 服務清單 27 筆", "打包在前端，斷網可用"], "ours", w=220)
     bridge = d.box(420, 515, ["bridge.ts・elder.ts", "呼叫 App 能力", "一般瀏覽器改用 mock"], "ours", w=220)
@@ -304,9 +304,9 @@ def subsidy():
 # 5.2 主要流程
 # =====================================================================
 def flow_open():
-    d = Diagram(1180, 300, "① 開啟長輩模式", "打開時先在首頁前墊一筆「選模式」的瀏覽紀錄，城市通的返回鍵就能回去換模式")
+    d = Diagram(1180, 300, "① 開啟「用得了」", "打開時先在首頁前墊一筆「選模式」的瀏覽紀錄，城市通的返回鍵就能回去換模式")
     steps = [
-        (["台北通「我的服務」", "點「長輩模式」"], "official"),
+        (["台北通「我的服務」", "點「用得了」"], "official"),
         (["WebView 載入網頁", "Vercel 東京"], "official"),
         (["向 App 要資料", "userinfo：姓名・生日・行政區", "a11y_state：報讀軟體・字級"], "ours"),
         (["讀手機裡的設定", "模式・語速・家人設定的按鈕"], "ours"),
@@ -386,7 +386,7 @@ def flow_family():
     d = Diagram(1180, 400, "⑤ 家人代設定（M7）", "設定內容直接編在 QR code 裡，全程不經過伺服器")
     d.group(40, 86, 1100, 124, "家人的手機", "gray")
     d.group(40, 246, 1100, 124, "長輩的手機")
-    f1 = d.box(200, 162, ["長輩模式「我是家人」", "幫長輩設定"], "ours", w=240)
+    f1 = d.box(200, 162, ["「用得了」→「我是家人」", "幫長輩設定"], "ours", w=240)
     f2 = d.box(520, 162, ["勾首頁按鈕", "填家人電話與行政區"], "ours", w=240)
     f3 = d.box(860, 162, ["產生 QR code", "設定內容在 QR 裡"], "result", w=240)
     e1 = d.box(200, 322, ["「家人幫我設定」"], "ours", w=240)

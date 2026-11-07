@@ -104,7 +104,7 @@ assets/svg/        108 個圖示（snake_case）
 - 後端與部署（Firebase／Cloud Run／Next.js + Vercel、串回城市通）：[`docs/townpass/deployment.md`](docs/townpass/deployment.md)
 - 開放資料（data.taipei 已驗證的 30 個資料集、編碼／座標／CORS 問題、題目方向）：[`docs/townpass/open-data.md`](docs/townpass/open-data.md)。找新資料集時先搜尋 `docs/townpass/open-data/data-taipei-catalog.csv`（全部 2,816 筆）
 - 往屆得獎作品（2024、2025 共 12 件的點子、技術、今年規則下的踩線點與發想觀察）：[`docs/townpass/past-winners.md`](docs/townpass/past-winners.md)
-- **長輩模式功能規格（開發時以這份為準）**：模組、服務清單 JSON 規格、介面規範、架構與串接流程、開發順序：[`docs/townpass/elder-mode-spec.md`](docs/townpass/elder-mode-spec.md)
+- **「用得了」功能規格（開發時以這份為準；開發代號「長輩模式」）**：模組、服務清單 JSON 規格、介面規範、架構與串接流程、開發順序：[`docs/townpass/elder-mode-spec.md`](docs/townpass/elder-mode-spec.md)
 - 本屆題目「數位平權 × 友善共融／用不了」的用戶研究（三份，每條主張標 ✅ 已查證／⚠️ 未查證；未查證的不可寫成「研究指出」）：
   - 長輩、視障、聽障的使用障礙、WCAG 規範、**WebView 技術限制**（TTS／語音辨識／麥克風／字級放大）：[`docs/townpass/accessibility-research.md`](docs/townpass/accessibility-research.md)
   - 長輩的數位習慣、臺北市近四年長者服務、微服務做法：[`docs/townpass/taipei-elderly-services.md`](docs/townpass/taipei-elderly-services.md)

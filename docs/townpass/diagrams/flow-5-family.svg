@@ -17,7 +17,7 @@
 <path d="M650.0,322.0 L730.0,322.0" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <path d="M980.0,162.0 L1060.0,162.0 L1060.0,228.0 L520.0,228.0 L520.0,291.5" fill="none" stroke="#91A0A8" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
 <rect x="80.0" y="131.5" width="240.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
-<text x="200.0" y="153.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">長輩模式「我是家人」</text>
+<text x="200.0" y="153.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">「用得了」→「我是家人」</text>
 <text x="200.0" y="172.5" font-size="12.5" font-weight="400" fill="#356C77" text-anchor="middle" dominant-baseline="central">幫長輩設定</text>
 <rect x="400.0" y="131.5" width="240.0" height="61.0" rx="12.0" fill="#EDF8FA" stroke="#5AB4C5" stroke-width="2"/>
 <text x="520.0" y="153.0" font-size="15" font-weight="700" fill="#30383D" text-anchor="middle" dominant-baseline="central">勾首頁按鈕</text>
